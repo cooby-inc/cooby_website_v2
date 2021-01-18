@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Landkit" />
+    <meta property="og:title" content="Cooby | Customer Platform Built for Messaging" />
     <meta property="og:image" content="https://cooby.co/assets/img/cooby-app-logo-dark.png">
     <meta property="og:url" content="https://cooby.co" />
     <meta property="og:description" content="厭倦商用軟體複雜難解的介面，追求簡單、好用、高效率，我們為保險業務個人設計一套客戶管理系統，Cooby 就如此誕生了。" />
@@ -45,13 +45,19 @@
     <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
     <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
     <!-- Map -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="./assets/css/theme.min.css">
 
-    <title>Landkit</title>
+    <title>Cooby | Customer Platform Built for Messaging</title>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -74,449 +80,15 @@
   </head>
   <body class="bg-light">
 
-    <!-- MODALS
-    ================================================== -->
-    <!-- Example -->
-    <div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
 
-            <!-- Close -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-
-            <!-- Image -->
-            <div class="text-center">
-              <img src="./assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
-            </div>
-
-            <!-- Heading -->
-            <h2 class="font-weight-bold text-center mb-1" id="modalExampleTitle">
-              Schedule a demo with us
-            </h2>
-
-            <!-- Text -->
-            <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
-              We can help you solve company communication.
-            </p>
-
-            <!-- Form -->
-            <form>
-              <div class="row">
-                <div class="col-12 col-md-6">
-
-                  <!-- First name -->
-                  <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First name">
-                    <label for="registrationFirstNameModal">First name</label>
-                  </div>
-
-                </div>
-                <div class="col-12 col-md-6">
-
-                  <!-- Last name -->
-                  <div class="form-label-group">
-                    <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last name">
-                    <label for="registrationLastNameModal">Last name</label>
-                  </div>
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6">
-
-                  <!-- Email -->
-                  <div class="form-label-group">
-                    <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
-                    <label for="registrationEmailModal">Email</label>
-                  </div>
-
-                </div>
-                <div class="col-12 col-md-6">
-
-                  <!-- Password -->
-                  <div class="form-label-group">
-                    <input type="password" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
-                    <label for="registrationPasswordModal">Password</label>
-                  </div>
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-
-                  <!-- Submit -->
-                  <button class="btn btn-block btn-primary mt-3 lift">
-                    Request a demo
-                  </button>
-
-                </div>
-              </div>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Signup: Horizontal  -->
-    <div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="card card-row">
-            <div class="row no-gutters">
-              <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(./assets/img/photos/photo-8.jpg);">
-
-                <!-- Image (placeholder) -->
-                <img src="./assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                <!-- Shape -->
-                <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-                  <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"/></svg>
-                </div>
-
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="card-body">
-
-                  <!-- Close -->
-                  <button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-
-                  <!-- Heading -->
-                  <h2 class="mb-0 font-weight-bold text-center" id="modalSignupHorizontalTitle">
-                    Sign Up
-                  </h2>
-
-                  <!-- Text -->
-                  <p class="mb-6 text-center text-muted">
-                    Simplify your workflow in minutes.
-                  </p>
-
-                  <!-- Form -->
-                  <form class="mb-6">
-
-                    <!-- Email -->
-                    <div class="form-group">
-                      <label class="sr-only" for="modalSignupHorizontalEmail">
-                        Your email
-                      </label>
-                      <input type="email" class="form-control" id="modalSignupHorizontalEmail" placeholder="Your email">
-                    </div>
-
-                    <!-- Password -->
-                    <div class="form-group mb-5">
-                      <label class="sr-only" for="modalSignupHorizontalPassword">
-                        Create a password
-                      </label>
-                      <input type="password" class="form-control" id="modalSignupHorizontalPassword" placeholder="Create a password">
-                    </div>
-
-                    <!-- Submit -->
-                    <button class="btn btn-block btn-primary" type="submit">
-                      Sign up
-                    </button>
-
-                  </form>
-
-                  <!-- Text -->
-                  <p class="mb-0 font-size-sm text-center text-muted">
-                    Already have an account? <a href="./signin-illustration.html">Log in</a>.
-                  </p>
-
-                </div>
-              </div>
-
-            </div> <!-- / .row -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Signup: Vertical  -->
-    <div class="modal fade" id="modalSignupVertical" tabindex="-1" role="dialog" aria-labelledby="modalSignupVerticalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="card">
-
-            <!-- Close -->
-            <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-
-            <!-- Image -->
-            <img src="./assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
-
-            <!-- Shape -->
-            <div class="position-relative">
-              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>
-              </div>
-            </div>
-
-            <!-- Body -->
-            <div class="card-body">
-
-              <!-- Heading -->
-              <h2 class="mb-0 font-weight-bold text-center" id="modalSignupVerticalTitle">
-                Sign Up
-              </h2>
-
-              <!-- Text -->
-              <p class="mb-6 text-center text-muted">
-                Simplify your workflow in minutes.
-              </p>
-
-              <!-- Form -->
-              <form class="mb-6">
-
-                <!-- Email -->
-                <div class="form-group">
-                  <label class="sr-only" for="modalSignupVerticalEmail">
-                    Your email
-                  </label>
-                  <input type="email" class="form-control" id="modalSignupVerticalEmail" placeholder="Your email">
-                </div>
-
-                <!-- Password -->
-                <div class="form-group mb-5">
-                  <label class="sr-only" for="modalSignupVerticalPassword">
-                    Create a password
-                  </label>
-                  <input type="password" class="form-control" id="modalSignupVerticalPassword" placeholder="Create a password">
-                </div>
-
-                <!-- Submit -->
-                <button class="btn btn-block btn-primary" type="submit">
-                  Sign up
-                </button>
-
-              </form>
-
-              <!-- Text -->
-              <p class="mb-0 font-size-sm text-center text-muted">
-                Already have an account? <a href="./signin-illustration.html">Log in</a>.
-              </p>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Signin: Horizontal  -->
-    <div class="modal fade" id="modalSigninHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSigninHorizontalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="card card-row">
-            <div class="row no-gutters">
-              <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(./assets/img/photos/photo-1.jpg);">
-
-                <!-- Image (placeholder) -->
-                <img src="./assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                <!-- Shape -->
-                <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-                  <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"/></svg>
-                </div>
-
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="card-body">
-
-                  <!-- Close -->
-                  <button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-
-                  <!-- Heading -->
-                  <h2 class="mb-0 font-weight-bold text-center" id="modalSigninHorizontalTitle">
-                    Sign In
-                  </h2>
-
-                  <!-- Text -->
-                  <p class="mb-6 text-center text-muted">
-                    Simplify your workflow in minutes.
-                  </p>
-
-                  <!-- Form -->
-                  <form class="mb-6">
-
-                    <!-- Email -->
-                    <div class="form-group">
-                      <label class="sr-only" for="modalSigninHorizontalEmail">
-                        Your email
-                      </label>
-                      <input type="email" class="form-control" id="modalSigninHorizontalEmail" placeholder="Your email">
-                    </div>
-
-                    <!-- Password -->
-                    <div class="form-group mb-5">
-                      <label class="sr-only" for="modalSigninHorizontalPassword">
-                        Enter your password
-                      </label>
-                      <input type="password" class="form-control" id="modalSigninHorizontalPassword" placeholder="Enter your password">
-                    </div>
-
-                    <!-- Submit -->
-                    <button class="btn btn-block btn-primary" type="submit">
-                      Sign in
-                    </button>
-
-                  </form>
-
-                  <!-- Text -->
-                  <p class="mb-0 font-size-sm text-center text-muted">
-                    Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
-                  </p>
-
-                </div>
-              </div>
-
-            </div> <!-- / .row -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Signup: Vertical  -->
-    <div class="modal fade" id="modalSigninVertical" tabindex="-1" role="dialog" aria-labelledby="modalSigninVerticalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="card">
-
-            <!-- Close -->
-            <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-
-            <!-- Image -->
-            <img src="./assets/img/photos/photo-21.jpg" alt="..." class="card-img-top">
-
-            <!-- Shape -->
-            <div class="position-relative">
-              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>
-              </div>
-            </div>
-
-            <!-- Body -->
-            <div class="card-body">
-
-              <!-- Heading -->
-              <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
-                Sign In
-              </h2>
-
-              <!-- Text -->
-              <p class="mb-6 text-center text-muted">
-                Simplify your workflow in minutes.
-              </p>
-
-              <!-- Form -->
-              <form class="mb-6">
-
-                <!-- Email -->
-                <div class="form-group">
-                  <label class="sr-only" for="modalSigninVerticalEmail">
-                    Your email
-                  </label>
-                  <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Your email">
-                </div>
-
-                <!-- Password -->
-                <div class="form-group mb-5">
-                  <label class="sr-only" for="modalSigninVerticalPassword">
-                    Enter your password
-                  </label>
-                  <input type="password" class="form-control" id="modalSigninVerticalPassword" placeholder="Enter your password">
-                </div>
-
-                <!-- Submit -->
-                <button class="btn btn-block btn-primary" type="submit">
-                  Sign in
-                </button>
-
-              </form>
-
-              <!-- Text -->
-              <p class="mb-0 font-size-sm text-center text-muted">
-                Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
-              </p>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Example -->
-    <div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-labelledby="modalPaymentTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-
-            <!-- Close -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-
-            <!-- Heading -->
-            <h2 class="font-weight-bold text-center mb-1" id="modalPaymentTitle">
-              Add Payment
-            </h2>
-
-            <!-- Text -->
-            <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
-              Simplify your workflow in minutes.
-            </p>
-
-            <!-- Form -->
-            <form>
-
-              <!-- Name -->
-              <div class="form-group">
-                <label for="modalPaymentName">Name on card</label>
-                <input class="form-control" id="modalPaymentName" type="text" placeholder="First Last">
-              </div>
-
-              <!-- Name -->
-              <div class="form-group">
-                <label for="modalPaymentNumbber">Card number</label>
-                <input class="form-control" id="modalPaymentNumbber" type="number" placeholder="4242 4242 4242 4242">
-              </div>
-
-              <!-- Name -->
-              <div class="form-group">
-                <label for="modalPaymentDate">Exp. Date</label>
-                <input class="form-control" id="modalPaymentDate" type="text" placeholder="03/2023">
-              </div>
-
-              <!-- Submit -->
-              <button class="btn btn-block btn-primary mt-3 lift">
-                Add Payment Method
-              </button>
-
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
     <!-- NAVBAR
     ================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white cooby-shadow fixed-top">
       <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="./index.html">
+
+        <a class="navbar-brand" href="/">
           <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
         </a>
 
@@ -536,42 +108,48 @@
           <!-- Navigation -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" id="navbarProduct" href="./index.html#product" data-toggle="smooth-scroll">
-                產品
+              <a class="nav-link" id="navbarProduct" href="./features.html">
+                Features
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarService" href="./index.html#service" data-toggle="smooth-scroll">
-                服務
-              </a>
-            </li>
-            <!-- THIS SHOULD BE ADDED AFTER THE APP IS READY -->
-            <li class="nav-item d-none">
-              <a class="nav-link" id="navbarTestimonial" href="./index.html#testimonial" data-toggle="smooth-scroll">
-                用戶分享
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarFAQ" href="./index.html#faq" data-toggle="smooth-scroll">
-                問答集
-              </a>
-            </li>
-            <li class="nav-item d-none">
-              <a class="nav-link" id="navbarTeam" href="./index.html#team" data-toggle="smooth-scroll">
-                團隊
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarContact" href="./index.html#footer" data-toggle="smooth-scroll">
-                聯絡我們
-              </a>
-            </li>
-          </ul>
 
+            <li class="nav-item">
+              <a class="nav-link" id="navbarTeam" href="./pricing.html">
+                Pricing
+              </a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" id="navbarService" href="./blog.html">
+                Blog
+              </a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" id="navbarTeam" href="./careers.html">
+                Career
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbarContact" href="./support.html">
+                Support
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item active" href=".">English</a>
+              <a class="dropdown-item" href="./zh-tw">繁體中文</a>
+            </div>
+          </li>
+          </ul>
           <!-- Button -->
-          <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="./index.html#buy" data-toggle="smooth-scroll">
-            免費試用
-          </a>
+          <div class="ml-auto pb-md-0 pb-8">
+
+            <a class="navbar-btn btn btn-sm btn-primary lift" href="./#try" data-toggle="smooth-scroll">
+              Join Waitlist
+            </a>
+          </div>
 
         </div>
 
@@ -585,7 +163,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-7 text-center">
-            
+
             <!-- Heading -->
             <h1 class="display-2 font-weight-bold text-white">
               Our Newsroom
@@ -593,7 +171,7 @@
 
             <!-- Text -->
             <p class="lead mb-0 text-white-75">
-              Keep up to date with what we're working on! Landkit is an ever evolving theme with regular updates. 
+              Keep up to date with what we're working on! Landkit is an ever evolving theme with regular updates.
             </p>
 
           </div>
@@ -615,7 +193,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            
+
             <!-- Form -->
             <form class="rounded shadow mb-4">
               <div class="input-group input-group-lg">
@@ -641,11 +219,11 @@
 
               </div>
             </form>
-            
+
             <!-- Badges -->
             <div class="row align-items-center">
               <div class="col-auto">
-                
+
                 <!-- Heading -->
                 <h6 class="font-weight-bold text-uppercase text-muted mb-0">
                   Tags:
@@ -653,7 +231,7 @@
 
               </div>
               <div class="col ml-n5">
-                
+
                 <!-- Badges -->
                 <a class="badge badge-pill badge-secondary-soft" href="blog-search.html">
                   <span class="h6 text-uppercase">Design</span>
@@ -682,12 +260,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            
+
             <!-- Card -->
             <div class="card card-row shadow-light-lg mb-6 lift lift-lg">
               <div class="row no-gutters">
                 <div class="col-12">
-                  
+
                   <!-- Badge -->
                   <span class="badge badge-pill badge-light badge-float badge-float-inside">
                     <span class="h6 text-uppercase">Featured</span>
@@ -732,12 +310,12 @@
                     <div class="avatar avatar-sm mr-2">
                       <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
-                    
+
                     <!-- Author -->
                     <h6 class="text-uppercase text-muted mr-2 mb-0">
                       Ab Hadley
                     </h6>
-                    
+
                     <!-- Date -->
                     <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                       <time datetime="2019-05-02">May 02</time>
@@ -761,7 +339,7 @@
       <div class="container">
         <div class="row align-items-center mb-5">
           <div class="col-12 col-md">
-            
+
             <!-- Heading -->
             <h3 class="mb-0">
               Latest Stories
@@ -774,7 +352,7 @@
 
           </div>
           <div class="col-12 col-md-auto">
-            
+
             <!-- Button -->
             <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
               View all
@@ -784,7 +362,7 @@
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
@@ -817,7 +395,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -828,12 +406,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -845,7 +423,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
@@ -878,7 +456,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -889,12 +467,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Adolfo Hess
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -906,7 +484,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
 
@@ -939,7 +517,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -950,12 +528,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -967,7 +545,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card d-lg-none shadow-light-lg lift lift-lg">
 
@@ -1000,7 +578,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1011,12 +589,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1037,7 +615,7 @@
       <div class="container">
         <div class="row align-items-center mb-5">
           <div class="col-12 col-md">
-            
+
             <!-- Heading -->
             <h3 class="mb-0">
               Case Studies
@@ -1050,7 +628,7 @@
 
           </div>
           <div class="col-12 col-md-auto">
-            
+
             <!-- Button -->
             <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
               View all
@@ -1060,7 +638,7 @@
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12">
-            
+
             <!-- Card -->
             <div class="card card-row shadow-light-lg mb-6">
               <div class="row no-gutters">
@@ -1078,7 +656,7 @@
 
                       <!-- Image (placeholder) -->
                       <img src="assets/img/photos/photo-26.jpg" alt="..." class="img-fluid d-md-none invisible">
-                      
+
                     </a>
                   </div>
 
@@ -1119,12 +697,12 @@
                         <div class="avatar avatar-sm mr-2">
                           <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                         </div>
-                        
+
                         <!-- Author -->
                         <h6 class="text-uppercase text-muted mr-2 mb-0">
                           Adolfo Hess
                         </h6>
-                        
+
                         <!-- Date -->
                         <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                           <time datetime="2019-05-02">May 02</time>
@@ -1160,19 +738,19 @@
                         <div class="avatar avatar-sm mr-2">
                           <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                         </div>
-                        
+
                         <!-- Author -->
                         <h6 class="text-uppercase text-muted mr-2 mb-0">
                           Ab Hadley
                         </h6>
-                        
+
                         <!-- Date -->
                         <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                           <time datetime="2019-05-02">May 02</time>
                         </p>
 
                       </a>
-                    
+
                     </div>
                   </div>
 
@@ -1191,7 +769,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            
+
             <!-- Heading -->
             <h3 class="mb-0">
               Popular Stories
@@ -1206,7 +784,7 @@
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-md-6 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 shadow-light-lg lift lift-lg">
 
@@ -1239,7 +817,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1250,12 +828,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1267,7 +845,7 @@
 
           </div>
           <div class="col-12 col-md-6 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 shadow-light-lg lift lift-lg">
 
@@ -1300,7 +878,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1311,12 +889,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Adolfo Hess
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1328,7 +906,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
@@ -1361,7 +939,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1372,12 +950,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1389,7 +967,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
@@ -1422,7 +1000,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1433,12 +1011,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Adolfo Hess
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1450,7 +1028,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
 
@@ -1483,7 +1061,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1494,12 +1072,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1511,7 +1089,7 @@
 
           </div>
           <div class="col-12 col-md-6 col-lg-4 d-flex">
-            
+
             <!-- Card -->
             <div class="card d-lg-none shadow-light-lg lift lift-lg">
 
@@ -1544,7 +1122,7 @@
                 </p>
 
               </a>
-                
+
               <!-- Meta -->
               <a class="card-meta mt-auto" href="#!">
 
@@ -1555,12 +1133,12 @@
                 <div class="avatar avatar-sm mr-2">
                   <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
-                
+
                 <!-- Author -->
                 <h6 class="text-uppercase text-muted mr-2 mb-0">
                   Ab Hadley
                 </h6>
-                
+
                 <!-- Date -->
                 <p class="h6 text-uppercase text-muted mb-0 ml-auto">
                   <time datetime="2019-05-02">May 02</time>
@@ -1581,7 +1159,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-9 col-lg-8 col-xl-7">
-            
+
             <!-- Button -->
             <a href="#!" class="btn btn-block btn-outline-gray-300 d-flex align-items-center">
               <span class="mx-auto">Load more</span> <i class="fe fe-arrow-right"></i>
@@ -1603,10 +1181,10 @@
     <!-- CTA
     ================================================== -->
     <section class="pt-6 pt-md-8 bg-gray-200">
-      <div class="container pb-6 pb-md-8 border-bottom border-gray-300">
+      <div class="container pb-6 pb-md-8 ">
         <div class="row align-items-center">
           <div class="col-12 col-md">
-            
+
             <!-- Heading -->
             <h3 class="mb-1 font-weight-bold">
               Get our stories delivered
@@ -1619,18 +1197,18 @@
 
           </div>
           <div class="col-12 col-md-5">
-                
+
             <!-- Form -->
             <form>
               <div class="row">
                 <div class="col">
-                  
+
                   <!-- Input -->
                   <input type="email" class="form-control" placeholder="Enter your email">
 
                 </div>
                 <div class="col-auto ml-n5">
-                  
+
                   <!-- Button -->
                   <button class="btn btn-primary" type="submit">
                     Subscribe
@@ -1645,9 +1223,43 @@
       </div> <!-- / .container -->
     </section>
 
+    <!-- CTA
+    ================================================== -->
+    <section class="pt-6 pt-md-8 bg-gray-200">
+      <div class="container pb-6 pb-md-8 border-bottom border-gray-300">
+        <div class="row align-items-center">
+          <div class="col-12 col-md">
+
+            <!-- Heading -->
+            <h3 class="font-weight-bold mb-1">
+              Get Cooby app now!
+            </h3>
+
+            <!-- Text -->
+            <p class="text-muted mb-6 mb-md-0">
+              Put your customers and yourself at ease.
+            </p>
+
+          </div>
+
+          <div class="col-auto">
+
+            <a href="#!" class="text-reset d-inline-block mr-1">
+              <img src="assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+            </a>
+
+            <a href="#!" class="text-reset d-inline-block">
+              <img src="assets/img/buttons/button-play.png" class="img-fluid" alt="..." style="max-width: 155px;">
+            </a>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
     <!-- FOOTER
     ================================================== -->
-      <footer class="py-8 py-md-11 bg-gray-200" id="footer">
+      <footer class="py-8 py-md-11 @@classList bg-cooby-light-gray" id="footer">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-4 col-lg-4">
@@ -1656,85 +1268,97 @@
             <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
 
             <!-- Text -->
-            <p class="text-gray-700 mb-2">
-              為保險業務設計的客管系統
+            <p class="text-primary mb-2">
+              Best Customer Platform <br>Built for Messaging
             </p>
 
             <!-- Social -->
             <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
               <li class="list-inline-item list-social-item mr-3">
-                <a href="https://www.instagram.com/coobycrm/" class="text-decoration-none">
-                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
-                </a>
-              </li>
-              <li class="list-inline-item list-social-item mr-3">
-                <a href="https://www.facebook.com/coobyforsales/" class="text-decoration-none">
+                <a href="https://www.facebook.com/coobyhq/" class="text-decoration-none">
                   <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
                 </a>
               </li>
             </ul>
 
           </div>
+
           <div class="col-6 col-md-4 col-lg-2">
 
             <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700">
-              產品與服務
+            <h6 class="font-weight-bold text-uppercase text-primary">
+              Product
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
-                <a href="#product" class="text-reset">
-                  業務產品
+                <a href="./" class="text-reset">
+                  Platform
                 </a>
               </li>
               <li class="mb-3">
-                <a href="#product" class="text-reset">
-                  服務業務
+                <a href="./features.html" class="text-reset">
+                  Features
                 </a>
               </li>
             </ul>
-
           </div>
 
-          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0 d-none">
 
             <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700">
-              法務
+            <h6 class="font-weight-bold text-uppercase text-primary">
+              Legal
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
-                <a href="/privacy" class="text-reset">
-                  隱私條款
+                <a href="./terms.html" class="text-reset">
+                  User Terms of Service
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="./privacy.html" class="text-reset">
+                  Privacy Policy
                 </a>
               </li>
             </ul>
 
           </div>
+
           <div class="col-6 col-md-4 col-lg-2">
 
             <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700">
-              聯絡
+            <h6 class="font-weight-bold text-uppercase text-primary">
+              Contact
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
-                <a href="mailto:wenhshaw@gmail.com" class="text-reset">
-                  寫信給我們
+                <a href="mailto:support@cooby.co" class="text-reset">
+                  Email Us
                 </a>
               </li>
               <li class="mb-3">
-                <a href="https://lin.ee/4WscYE4Cq" class="text-reset">
-                  Line給我們
+                <a href="https://lin.ee/4WscYE4Cq" class="text-reset" target="_blank">
+                  Line Us
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 d-none">
+
+                <a href="#!" class="text-reset d-inline-block mr-1">
+                  <img src="assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+                </a>
+
+                <!--<a href="#!" class="text-reset d-inline-block" style="margin-top:10px;">
+                  <img src="assets/img/buttons/button-play.png" class="img-fluid" alt="..." style="max-width: 155px;">
+                </a>-->
+
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
@@ -1769,6 +1393,6 @@
     <!-- Theme JS -->
     <script src="./assets/js/theme.min.js"></script>
 
-      
+
   </body>
 </html>

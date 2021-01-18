@@ -45,6 +45,12 @@
     <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
     <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
     <!-- Map -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -512,11 +518,12 @@
     
     <!-- NAVBAR
     ================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white cooby-shadow fixed-top">
       <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="./index.html">
+
+        <a class="navbar-brand" href="/">
           <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
         </a>
 
@@ -536,42 +543,48 @@
           <!-- Navigation -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" id="navbarProduct" href="./index.html#product" data-toggle="smooth-scroll">
-                產品
+              <a class="nav-link" id="navbarProduct" href="./features.html">
+                Features
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarService" href="./index.html#service" data-toggle="smooth-scroll">
-                服務
-              </a>
-            </li>
-            <!-- THIS SHOULD BE ADDED AFTER THE APP IS READY -->
-            <li class="nav-item d-none">
-              <a class="nav-link" id="navbarTestimonial" href="./index.html#testimonial" data-toggle="smooth-scroll">
-                用戶分享
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarFAQ" href="./index.html#faq" data-toggle="smooth-scroll">
-                問答集
-              </a>
-            </li>
-            <li class="nav-item d-none">
-              <a class="nav-link" id="navbarTeam" href="./index.html#team" data-toggle="smooth-scroll">
-                團隊
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarContact" href="./index.html#footer" data-toggle="smooth-scroll">
-                聯絡我們
-              </a>
-            </li>
-          </ul>
 
+            <li class="nav-item">
+              <a class="nav-link" id="navbarTeam" href="./pricing.html">
+                Pricing
+              </a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" id="navbarService" href="./blog.html">
+                Blog
+              </a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" id="navbarTeam" href="./careers.html">
+                Career
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbarContact" href="./support.html">
+                Support
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item active" href=".">English</a>
+              <a class="dropdown-item" href="./zh-tw">繁體中文</a>
+            </div>
+          </li>
+          </ul>
           <!-- Button -->
-          <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="./index.html#buy" data-toggle="smooth-scroll">
-            免費試用
-          </a>
+          <div class="ml-auto pb-md-0 pb-8">
+
+            <a class="navbar-btn btn btn-sm btn-primary lift" href="./#try" data-toggle="smooth-scroll">
+              Join Waitlist
+            </a>
+          </div>
 
         </div>
 
@@ -1096,7 +1109,7 @@
 
     <!-- FOOTER
     ================================================== -->
-      <footer class="py-8 py-md-11 bg-gray-200" id="footer">
+      <footer class="py-8 py-md-11 bg-gray-200 bg-cooby-light-gray" id="footer">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-4 col-lg-4">
@@ -1105,85 +1118,97 @@
             <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
 
             <!-- Text -->
-            <p class="text-gray-700 mb-2">
-              為保險業務設計的客管系統
+            <p class="text-primary mb-2">
+              Best Customer Platform <br>Built for Messaging
             </p>
 
             <!-- Social -->
             <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
               <li class="list-inline-item list-social-item mr-3">
-                <a href="https://www.instagram.com/coobycrm/" class="text-decoration-none">
-                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
-                </a>
-              </li>
-              <li class="list-inline-item list-social-item mr-3">
-                <a href="https://www.facebook.com/coobyforsales/" class="text-decoration-none">
+                <a href="https://www.facebook.com/coobyhq/" class="text-decoration-none">
                   <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
                 </a>
               </li>
             </ul>
 
           </div>
+
           <div class="col-6 col-md-4 col-lg-2">
 
             <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700">
-              產品與服務
+            <h6 class="font-weight-bold text-uppercase text-primary">
+              Product
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
-                <a href="#product" class="text-reset">
-                  業務產品
+                <a href="./" class="text-reset">
+                  Platform
                 </a>
               </li>
               <li class="mb-3">
-                <a href="#product" class="text-reset">
-                  服務業務
+                <a href="./features.html" class="text-reset">
+                  Features
                 </a>
               </li>
             </ul>
-
           </div>
 
-          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0 d-none">
 
             <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700">
-              法務
+            <h6 class="font-weight-bold text-uppercase text-primary">
+              Legal
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
-                <a href="/privacy" class="text-reset">
-                  隱私條款
+                <a href="./terms.html" class="text-reset">
+                  User Terms of Service
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="./privacy.html" class="text-reset">
+                  Privacy Policy
                 </a>
               </li>
             </ul>
 
           </div>
+
           <div class="col-6 col-md-4 col-lg-2">
 
             <!-- Heading -->
-            <h6 class="font-weight-bold text-uppercase text-gray-700">
-              聯絡
+            <h6 class="font-weight-bold text-uppercase text-primary">
+              Contact
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
-                <a href="mailto:wenhshaw@gmail.com" class="text-reset">
-                  寫信給我們
+                <a href="mailto:support@cooby.co" class="text-reset">
+                  Email Us
                 </a>
               </li>
               <li class="mb-3">
-                <a href="https://lin.ee/4WscYE4Cq" class="text-reset">
-                  Line給我們
+                <a href="https://lin.ee/4WscYE4Cq" class="text-reset" target="_blank">
+                  Line Us
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 d-none">
+
+                <a href="#!" class="text-reset d-inline-block mr-1">
+                  <img src="assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+                </a>
+
+                <!--<a href="#!" class="text-reset d-inline-block" style="margin-top:10px;">
+                  <img src="assets/img/buttons/button-play.png" class="img-fluid" alt="..." style="max-width: 155px;">
+                </a>-->
+
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
