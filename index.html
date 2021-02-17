@@ -24,13 +24,13 @@
 
       gtag('config', 'UA-58041205-5');
 
-      function signUpTracking(category, label, numeric_value) {
-      gtag('event', "sign_up", {
-      'event_category': category,
-      'event_label': label,
-      'value': numeric_value
-      });
-    }
+      function gaTracking(event_name, category, label, numeric_value) {
+        gtag('event', event_name, {
+        'event_category': category,
+        'event_label': label,
+        'value': numeric_value
+        });
+      }
     </script>
 
 
@@ -145,14 +145,22 @@
           </ul>
           <ul class="navbar-nav ml-auto" style="margin-right: 1rem;">
             <li class="nav-item">
-              <a id="signInSignUp" href="https://web.cooby.co/en/sign-in?utm_source=website&utm_content=navbar" target="_blank">
+              <a id="signInSignUp"
+                 href="https://web.cooby.co/en/sign-in?utm_source=website&utm_content=navbar"
+                 target="_blank"
+                 onclick="gaTracking('log_in', 'Log In', 'Navbar')"
+                 >
                 Log In
               </a>
             </li>
           </ul>
           <!-- Button -->
           <div class="text-center pb-md-0 pb-8">
-            <a class="navbar-btn btn btn-sm btn-primary lift" href="https://web.cooby.co/en/sign-up?utm_source=website&utm_content=navbar" data-toggle="smooth-scroll"  target="_blank">
+            <a class="navbar-btn btn btn-sm btn-primary lift"
+               href="https://web.cooby.co/en/sign-up?utm_source=website&utm_content=navbar"
+               data-toggle="smooth-scroll"
+               target="_blank"
+               onclick="gaTracking('sign_up', 'Sign Up', 'Navbar')">
               Sign Up
             </a>
           </div>
@@ -823,7 +831,7 @@
           <div class="col-12 col-md-3">
 
             <!-- Button -->
-            <a href="https://web.cooby.co/en/sign-up?utm_source=website&utm_content=startForFree" class="btn btn-primary lift" target="_blank">
+            <a href="https://web.cooby.co/en/sign-up?utm_source=website&utm_content=startForFree" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'Try Now', 'StartForFree')">
               Try Now
             </a>
 
@@ -832,97 +840,6 @@
       </div> <!-- / .container -->
     </section>
 
-    <!-- REGISTRATION
-    ================================================== -->
-    <section class="d-none py-11">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8">
-
-            <!-- Card -->
-            <div class="card card-border border-primary shadow-light-lg" data-jarallax-element="-40">
-              <div class="card-body">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-xl-11">
-
-                    <!-- Image -->
-                    <div class="text-center">
-                      <img src="assets/img/illustrations/illustration-6.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
-                    </div>
-
-                    <!-- Heading -->
-                    <h1 class="font-weight-bold text-center mb-1">
-                      搶先報名，免費試用
-                    </h1>
-
-                    <!-- Text -->
-                    <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
-                    </p>
-
-                    <!-- Form -->
-                    <form action="http://api.cooby.co/leads/" method="POST">
-                    <!-- <form action="https://formspree.io/mpzyrgoq/" method="POST"> -->
-                      <div class="row">
-                        <div class="col-12 col-md-6">
-
-                          <!-- Name -->
-                          <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" name="name" placeholder="姓名" required>
-                            <label for="registrationName">姓名</label>
-                          </div>
-
-                        </div>
-                        <div class="col-12 col-md-6">
-
-                          <!-- Telephone -->
-                          <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" name="phone" placeholder="電話" required>
-                            <label for="registrationPhone">電話</label>
-                          </div>
-
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-md-6">
-
-                          <!-- Email -->
-                          <div class="form-label-group">
-                            <input type="email" class="form-control form-control-flush" name="email" placeholder="Email" required>
-                            <label for="registrationEmail">Email</label>
-                          </div>
-
-                        </div>
-                        <div class="col-12 col-md-6">
-
-                          <!-- Company -->
-                          <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" name="company" placeholder="服務公司">
-                            <label for="registrationCompany">服務公司</label>
-                          </div>
-
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-
-                          <!-- Submit -->
-                          <button class="btn btn-block btn-primary mt-3 lift" onclick="signUpTracking('Submit Form', 'Buy Section')">
-                            報名
-                          </button>
-
-                        </div>
-                      </div>
-                    </form>
-
-                  </div>
-                </div> <!-- / .row -->
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
     <!-- CURVE
     ================================================== -->
     <div class="d-none position-relative mt-n16">
