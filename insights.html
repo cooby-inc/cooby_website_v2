@@ -143,6 +143,14 @@
     <!-- End Facebook Pixel Code -->
 
   </head>
+  <style>
+
+    @media screen and (max-width: 320px){
+      #insight_bz_0 {
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
   <body class="font-eng">
 
 
@@ -242,288 +250,79 @@
     </nav>
 
 
-    <!-- WELCOME
+
+<!-- INSIGHT
     ================================================== -->
-    <section class="pt-10 pt-md-11 pb-6 pb-md-8 bg-cooby-indigo" id="welcome">
-
-      <!-- Shape -->
-      <div class="shape shape-blur-3 svg-shim text-white">
-        <svg viewBox="0 0 1738 487" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1420.92s713.43 457.505 0 485.868C707.502 514.231 0 0 0 0z" fill="url(#paint0_linear)"/><defs><linearGradient id="paint0_linear" x1="0" y1="0" x2="1049.98" y2="912.68" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor" stop-opacity=".075"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs></svg>
+    <div id="block-background"
+    style="display:none; top:0; left: 0; bottom: 0; right: 0; position: fixed; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); z-index: 5000; justify-content: center; align-items: center;">
+      <div id='iframe-holder' style="background-color: white;">
+        <iframe src="http://localhost:3000/en/app/report" width="800" height="600"></iframe>
       </div>
-
-      <!-- Content -->
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-7 pt-10 text-center">
-
-            <!-- Heading -->
-            <h1 class="display-3 font-weight-bold text-white">
-              Build Stronger Customer Relationships
-            </h1>
-
-            <!-- Text -->
-            <p class="font-size-lg text-white mb-6 mb-md-8" style="width:90%; margin:auto;">
-               Focus on building relationships via messaging apps. Leave the rest to Cooby.
-            </p>
-
+    </div>
+    <div id='cooby_insight'>
+    <section class="pb-2 pt-12 bg-cooby-light-gray">
+      <div class="container border-bottom-cooby pt-md-4 pb-6">
+        <div id='insight_bz_0' class="row justify-content-center">
+          <div class="col-12 col-md-6 pt-6" data-aos="fade-right">
+            <div id='insight_bz0_slogan'>
+              <h1 class="font-weight-bold">
+                Get your Client Relationship Report for WhatsApp
+              </h1>
+            </div>
+            <div id="try-btn-and-aux-text" class="table-container">
+              <p class="font-size-lg text-muted mb-7">
+                Take a glance of your client conversations on WhatsApp. Understand where and who you spend the most time for. Optimize your efforts to focus on the most important things. </span>
+              </p>
+              <section id='cooby-insight-btn-and-ps'
+                class="d-flex flex-column justify-content-center">
+                <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
+                  <span
+                    class="btn btn-primary lift mb-3"
+                  >Get Your Free Report Now</span>
+                </div>
+                <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
+                  *No signup required
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="assets/img/illustrations/cooby_insight_trailer.png"
+              alt="..." class="img-fluid mw-100 mw-md-130 mb-6 mb-md-0"
+              data-aos="fade-left">
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
-
+      <div id='BZ0_popup_if_mobile'>
+        <div id='BZ0_popup_main_content'>
+          <div class='title'>Prepare another device to continue</div>
+          <div class='explain'>If you are currently using the phone with your primary WhatsApp account, please open <span class='url-green'>cooby.co</span> on another device.</div>
+          <div class='explain-img'><img src="./assets/img/illustrations/BZ0IfMobileTutorial.svg"/></div>
+          <div class='got-it-button btn btn-primary lift mb-3' onClick="closeBZ0Popup()">Got it</div>
+        </div>
+      </div>
+      <a id='insight_flow_a' href='https://web.cooby.co/en/insight'></a>
     </section>
+    </div>
+
+
+    <!-- CURVE
+    ================================================== -->
+    <div class="d-none position-relative mt-n16">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        <svg viewBox="0 0 2880 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M720 28H0v28h2880V28h-720S1874 0 1440 0 720 28 720 28z" fill="currentColor"/></svg>
+      </div>
+    </div>
+
 
     <!-- SHAPE
     ================================================== -->
-    <div class="position-relative">
+    <div class="d-none position-relative">
       <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
         <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>
       </div>
     </div>
-
-    <!-- ABOUT
-    ================================================== -->
-    <section class="pt-8 pt-md-10" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
-
-            <!-- Heading -->
-            <h1 class="font-weight-bold">
-              Cooby makes your work easier.
-            </h1>
-
-            <!-- Text -->
-            <p class="font-size-lg text-muted mb-9">
-              Stop doing the busywork. Focus on the relationships.
-            </p>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12 col-lg-6">
-
-            <!-- Item -->
-            <div class="row align-items-center mb-8"data-aos="fade-up">
-              <div class="col-4 col-lg-5">
-
-                <!-- Image -->
-                <img src="assets/img/illustrations/illustration-4.png" alt="..." class="img-fluid">
-
-              </div>
-              <div class="col-8 col-lg-7">
-
-                <!-- Heading -->
-                <h3 class="font-weight-bold mb-2">
-                  Contact
-                </h3>
-
-                <!-- Text -->
-                <p class="text-muted mb-0">
-                  Track your contacts with customers on messaging apps.
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-
-            <!-- Item -->
-            <div class="row align-items-center mb-8" data-aos="fade-up">
-              <div class="col-4 col-lg-5">
-
-                <!-- Image -->
-                <img src="assets/img/illustrations/illustration-8.png" alt="..." class="img-fluid">
-
-              </div>
-              <div class="col-8 col-lg-7">
-
-                <!-- Heading -->
-                <h3 class="font-weight-bold mb-2">
-                  Unified
-                </h3>
-
-                <!-- Text -->
-                <p class="text-muted mb-0">
-                  Keep both your emails and messages in one place and feel organized rather than scattered.
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-
-
-          </div>
-          <div class="col-12 col-lg-6">
-            <!-- Item -->
-            <div class="row align-items-center mb-8" data-aos="fade-up">
-              <div class="col-4 col-lg-5">
-
-                <!-- Image -->
-                <img src="assets/img/illustrations/illustration-7.png" alt="..." class="img-fluid">
-
-              </div>
-              <div class="col-8 col-lg-7">
-
-                <!-- Heading -->
-                <h3 class="font-weight-bold mb-2">
-                  Engage
-                </h3>
-
-                <!-- Text -->
-                <p class="text-muted mb-0">
-                  Organize tasks, save customer files, and set customer reminders
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-
-            <!-- Item -->
-            <div class="row align-items-center mb-8" data-aos="fade-up">
-              <div class="col-4 col-lg-5">
-
-                <!-- Image -->
-                <img src="assets/img/illustrations/illustration-6.png" alt="..." class="img-fluid">
-
-              </div>
-              <div class="col-8 col-lg-7">
-
-                <!-- Heading -->
-                <h3 class="font-weight-bold mb-2">
-                  Nurture
-                </h3>
-
-                <!-- Text -->
-                <p class="text-muted mb-0">
-                  Suggest customers to reconnect based on AI-powered recommendations
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-
-        <!-- Cooby Assistant
-        ================================================== -->
-        <section class="d-none py-8 py-md-8">
-          <div class="container">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-12 col-md-6 col-lg-7 order-md-2">
-
-                <!-- Image -->
-                <img src="assets/img/screenshots/ui/mobile-chat.png" alt="..." class="img-fluid mb-6 mb-md-4" data-aos="fade-left">
-
-              </div>
-              <div class="col-12 col-md-6 col-lg-5 order-md-1" data-aos="fade-right">
-
-                <!-- Heading -->
-                <h2 class="font-weight-bold">
-                  Hire an Assistant for Free
-                </h2>
-
-                <!-- Text -->
-                <p class="font-size-lg text-muted mb-0">
-                  Cooby Assistant is just like your real assistant.<br> It schedules meetings, takes notes, tracks tasks, answers common customer questions, etc for you.
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .container -->
-        </section>
-
-        <!-- Line Import
-        ================================================== -->
-        <section class="py-8 py-md-8">
-          <div class="container">
-            <div class="row align-items-center justify-content-between">
-
-              <div class="col-12 col-md-6 col-lg-7 order-md-1">
-
-                <!-- Image -->
-                <img src="assets/img/screenshots/ui/line_import_eng.png" alt="..." class="img-fluid mb-6 mb-md-4" data-aos="fade-right">
-
-              </div>
-              <div class="col-12 col-md-6 col-lg-5 order-md-2" data-aos="fade-left">
-
-                <!-- Heading -->
-                <h2 class="font-weight-bold">
-                  Smartly Import All Your Contacts
-                </h2>
-
-                <!-- Text -->
-                <p class="font-size-lg text-muted mb-0">
-                  Import your Line contacts including names, profile photos, etc. No more manual data entry. <br><br>
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .container -->
-        </section>
-
-        <!-- Unified View
-        ================================================== -->
-        <section class="py-8 py-md-0">
-          <div class="container">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-12 col-md-6 col-lg-7 order-md-2">
-
-                <!-- Image -->
-                <img src="assets/img/screenshots/ui/activities.png" alt="..." class="img-fluid mb-6 mb-md-0" data-aos="fade-left">
-
-              </div>
-              <div class="col-12 col-md-6 col-lg-5 order-md-1" data-aos="fade-right">
-
-                <!-- Heading -->
-                <h2 class="font-weight-bold">
-                  Unified View
-                </h2>
-
-                <!-- Text -->
-                <p class="font-size-lg text-muted mb-0">
-                  Use both emails and messaging apps? See all your activities with a customer across emails and messaging apps in one place.
-                </p>
-
-              </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .container -->
-        </section>
-
-            <!-- CTA
-    ================================================== -->
-    <section class="pt-6 pt-md-8 bg-cooby-light-gray" id="try">
-      <div class="container pb-6 pb-md-8 border-bottom-cooby">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-8">
-
-            <!-- Heading -->
-            <h2 class="font-weight-bold mb-1">
-              Start For Free
-            </h2>
-
-            <!-- Text -->
-            <p style="padding-top:15px;" class="font-size-lg text-muted mb-5 mb-md-0">
-              Cooby is the only CRM you'll ever need. <br>
-              Join companies like Nanshan, Fubon, Cathay Life and hundreds of other salespeople using Cooby.
-            </p>
-
-          </div>
-          <div class="col-12 col-md-1"></div>
-          <div class="col-12 col-md-3">
-
-            <!-- Button -->
-            <a href="http://cooby.app.link/LwlQVmaL6db?utm_content=startForFree" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
-              Try Now
-            </a>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
 
     <!-- FOOTER
     ================================================== -->
@@ -631,6 +430,7 @@
       </div> <!-- / .container -->
     </footer>
 
+    
 
     <!-- JAVASCRIPT
     ================================================== -->
@@ -678,7 +478,6 @@
         }
     </script>
     <!-- End of ChatBot code -->
-
 
 
   </body>
