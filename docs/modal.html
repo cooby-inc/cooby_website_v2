@@ -71,7 +71,6 @@
     }
     currentURL = window.location.href || "";
     if (currentURL != ""){
-      console.log("Logging URL! " + currentURL);
       AmplitudeLog("marketing_website_impression", {"Link": currentURL})
     }
     const BZ0FullscreenId = 'BZ0_popup_if_mobile';
@@ -1073,20 +1072,20 @@
                 Support
               </a>
             </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Language
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item active" href="..">English</a>
-              <a class="dropdown-item" href="../zh-tw">繁體中文</a>
-            </div>
             <li class="nav-item">
               <a class="nav-link" id="navbarContact" href="../insights.html">
                 WhatsApp Insights
               </a>
             </li>
-          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item active" href="..">English</a>
+                <a class="dropdown-item" href="../zh-tw">繁體中文</a>
+              </div>
+             </li>
           </ul>
           <ul class="navbar-nav ml-auto" style="margin-right: 1rem;">
             <li class="nav-item">
