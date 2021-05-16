@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Cooby | WhatsApp Insights" />
+    <meta property="og:title" content="Cooby | Customer Platform Built for Messaging" />
     <meta property="og:image" content="https://cooby.co/assets/img/preview-images/meta_tags_eng.jpg" />
     <meta property="og:url" content="https://cooby.co" />
     <meta property="og:description" content="Find inner peace in your messaging apps. Put your customers at ease." />
-
+    <meta name="facebook-domain-verification" content="7kq09yr5tns7v7k49aff2vde03ab9j" />
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -58,20 +58,17 @@
       e=(!e||e.length===0?"$default_instance":e).toLowerCase()
       ;if(!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])
       }return n._iq[e]};e.amplitude=n})(window,document);
-  
+
       amplitude.getInstance().init("85c9f2a0bcfc48c68813a2883825a47d");
       </script>
 
     <!-- BZ0 JS -->
     <script>
-
+    const getInstance = () => {
+    	return (window.amplitude && window.amplitude.getInstance()) || {};
+    };
     const AmplitudeLog = (label, option) => {
-      let entity = (window.amplitude && window.amplitude.getInstance()) || {}; 
-    	entity.logEvent(label, option);
-    }
-    currentURL = window.location.href || "";
-    if (currentURL != ""){
-      AmplitudeLog("marketing_website_impression", {"Link": currentURL})
+    	getInstance().logEvent(label, option);
     }
     const BZ0FullscreenId = 'BZ0_popup_if_mobile';
     const onBZ0EntryButtonClick = () => {
@@ -125,7 +122,7 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="./assets/css/theme.min.css">
 
-    <title>Cooby | WhatsApp Insights</title>
+    <title>Cooby | Customer Platform Built for Messaging</title>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -209,20 +206,20 @@
                 Support
               </a>
             </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item active" href=".">English</a>
+              <a class="dropdown-item" href="./zh-tw">繁體中文</a>
+            </div>
             <li class="nav-item">
               <a class="nav-link" id="navbarContact" href="./insights.html">
                 WhatsApp Insights
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Language
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item active" href=".">English</a>
-                <a class="dropdown-item" href="./zh-tw">繁體中文</a>
-              </div>
-             </li>
+          </li>
           </ul>
           <ul class="navbar-nav ml-auto" style="margin-right: 1rem;">
             <li class="nav-item">
@@ -278,16 +275,14 @@
                 Take a glance of your client conversations on WhatsApp. Understand where and who you spend the most time for. Optimize your efforts to focus on the most important things. </span>
               </p>
               <section id='cooby-insight-btn-and-ps'
-              class="d-flex flex-column align-items-start">
-                <div>
-                  <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
-                    <span
-                      class="btn btn-primary lift mb-3"
-                    >Get Your Free Report Now</span>
-                  </div>
-                  <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
-                    *No signup required
-                  </div>
+                class="d-flex flex-column justify-content-center">
+                <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
+                  <span
+                    class="btn btn-primary lift mb-3"
+                  >Get Your Free Report Now</span>
+                </div>
+                <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
+                  *No signup required
                 </div>
               </section>
             </div>
