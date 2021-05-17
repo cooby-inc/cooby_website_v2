@@ -6,13 +6,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="facebook-domain-verification" content="7kq09yr5tns7v7k49aff2vde03ab9j" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Cooby | Customer Platform Built for Messaging" />
     <meta property="og:image" content="https://cooby.co/assets/img/preview-images/meta_tags_eng.jpg" />
     <meta property="og:url" content="https://cooby.co" />
     <meta property="og:description" content="Find inner peace in your messaging apps. Put your customers at ease." />
-    <meta name="facebook-domain-verification" content="7kq09yr5tns7v7k49aff2vde03ab9j" />
+
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -60,16 +61,20 @@
       }return n._iq[e]};e.amplitude=n})(window,document);
 
       amplitude.getInstance().init("85c9f2a0bcfc48c68813a2883825a47d");
-      </script>
+    </script>
 
     <!-- BZ0 JS -->
     <script>
-    const getInstance = () => {
-    	return (window.amplitude && window.amplitude.getInstance()) || {};
-    };
+
     const AmplitudeLog = (label, option) => {
-    	getInstance().logEvent(label, option);
+      let entity = (window.amplitude && window.amplitude.getInstance()) || {}; 
+    	entity.logEvent(label, option);
     }
+    const currentURL = window.location.href || "";
+    const mainUrl = currentURL.split('?')[0]
+    const urlAttribute = currentURL.split('?')[1]
+    AmplitudeLog("marketing_website_impression", {"Link": mainUrl, "Link Attribute": urlAttribute})
+
     const BZ0FullscreenId = 'BZ0_popup_if_mobile';
     const onBZ0EntryButtonClick = () => {
         AmplitudeLog('click_visit_insight');
@@ -633,20 +638,20 @@
                 Support
               </a>
             </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Language
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item active" href=".">English</a>
-              <a class="dropdown-item" href="./zh-tw">繁體中文</a>
-            </div>
             <li class="nav-item">
               <a class="nav-link" id="navbarContact" href="./insights.html">
                 WhatsApp Insights
               </a>
             </li>
-          </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item active" href=".">English</a>
+                <a class="dropdown-item" href="./zh-tw">繁體中文</a>
+              </div>
+             </li>
           </ul>
           <ul class="navbar-nav ml-auto" style="margin-right: 1rem;">
             <li class="nav-item">
