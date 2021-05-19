@@ -3,3 +3,4 @@ dist/
 src/.tmp/
 .DS_Store
 assets/
+.publish/
