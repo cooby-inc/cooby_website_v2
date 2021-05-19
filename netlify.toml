@@ -1,4 +1,4 @@
 [build]
-    base="."
-    publish="dist"
+    base="./"
+    publish="dist/"
     command="gulp build"
