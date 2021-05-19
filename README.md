@@ -48,7 +48,6 @@ Development documentation is available at `src/docs/index.html` (or `dist/docs/i
 ### Deployment | [Netlify](https://netlify.com/) 
 
 We use Netlify to manage your development and accelerate the development process.
-Checkout `./netlify.toml` for more settings.
 
 ### Site Generator | [Gulp](https://gulpjs.com/) 
 
