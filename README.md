@@ -38,7 +38,9 @@ git push --set-upstream origin your-branch-name // or just git push if you have 
 *Open a Pull Request on GitHub*.  _Once PR's opened, Netlify will get you a Netlify preview link, so you can test it before merge to the master branch_
 
 After the preview is verified, merge to PR to `master` branch. Netlify will deploy the site.  
+## Video Walkthought 
 
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/c414fd5a0ec0492a9234104df7d9c40d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 ## About ###
 
 ### Template | [Landkit theme](https://landkit.goodthemes.co/)
