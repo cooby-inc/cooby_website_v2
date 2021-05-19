@@ -1,8 +1,24 @@
-# LANDKIT #
+# Cooby Marketing Site
 
-Landkit Theme by Good Themes.
 
-### HOW TO USE ###
+
+### Install 
+
+1. Clone this repo `git clone [the repo url]`
+2. Run `npm install` to get your packages 
+
+### Development 
+1. Open a new branch 
+2. Run `gulp` to develop the site locally. 
+3. `git commit` to the branch  
+
+### Ship 
+
+1. Push to the remote repo: `git push origin [branch-name]`
+2. Open a Pull Request _Once PR's opened, Netlify will get you a preview link, so you can test it before merge to the master branch
+3. Check if the preview link has any problem, if not, merge to PR to `master` branch. Netlify will deploy the site. 
+
+## About ###
 
 To run locally,
 `gulp`

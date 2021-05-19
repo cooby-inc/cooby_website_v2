@@ -17,6 +17,8 @@ const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref');
 const ghPages = require('gulp-gh-pages');
+const imagemin = require('gulp-imagemin');
+
 
 
 // Define paths
@@ -140,6 +142,7 @@ gulp.task('copy:all', function() {
     .src([
       paths.src.base.files,
       '!' + paths.src.partials.dir, '!' + paths.src.partials.files,
+      '!' + paths.src.img.dir, '!' + paths.src.img.files,
       '!' + paths.src.scss.dir, '!' + paths.src.scss.files,
       '!' + paths.src.tmp.dir, '!' + paths.src.tmp.files,
       '!' + paths.src.js.dir, '!' + paths.src.js.files,
@@ -200,10 +203,13 @@ gulp.task('html:preview', function() {
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
-gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html'));
+gulp.task('image-optimization', () => (gulp.src(['src/assets/img/**/*']).pipe(imagemin()).pipe(gulp.dest('dist/assets/img'))));
+
+gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs', 'image-optimization'), 'scss', 'html'));
 gulp.task('build:preview', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html:preview'));
 gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));
 
 gulp.task('deploy', () => gulp.src('./dist/**/*').pipe(ghPages()));
 
 gulp.task('deploy-test', () => gulp.src('./dist/**/*').pipe(ghPages({remoteUrl: "git@github.com:cooby-inc/test-website.git", origin: "test", branch: "master", force: true})));
+
