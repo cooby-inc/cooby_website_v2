@@ -118,7 +118,7 @@ gulp.task('sitemap', function () {
       .pipe(sitemap({
           siteUrl: 'http://cooby.co'
       }))
-      .pipe(gulp.dest(paths.dist.base));
+      .pipe(gulp.dest(paths.dist.base.dir));
 });
 
 gulp.task('fileinclude', function(callback) {
