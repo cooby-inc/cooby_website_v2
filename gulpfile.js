@@ -203,7 +203,7 @@ gulp.task('html:preview', function() {
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
-gulp.task('image-optimization', () => (gulp.src(['src/assets/img/**/*.jpg', 'src/assets/img/**/*.png']).pipe(imagemin()).pipe(gulp.dest('dist/assets/img'))));
+gulp.task('image-optimization', () => (gulp.src(['src/assets/img/**/*']).pipe(imagemin()).pipe(gulp.dest('dist/assets/img'))));
 
 gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs', 'image-optimization'), 'scss', 'html'));
 gulp.task('build:preview', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html:preview'));

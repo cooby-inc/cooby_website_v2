@@ -1,5 +1,5 @@
 <svg version="1.1"
-	 id="svg8" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 id="svg8" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 135.5 194.2"
 	 style="enable-background:new 0 0 135.5 194.2;" xml:space="preserve">
 <style type="text/css">
@@ -17,7 +17,7 @@
 			<dc:title></dc:title>
 		</cc:Work>
 	</rdf:RDF>
-	<sfw  xmlns="&ns_sfw;">
+	<sfw>
 		<slices></slices>
 		<sliceSourceBounds  bottomLeftOrigin="true" height="194.2" width="135.5" x="55.3" y="24.8"></sliceSourceBounds>
 	</sfw>
