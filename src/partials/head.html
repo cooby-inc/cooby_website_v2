@@ -80,6 +80,7 @@ const onBZ0EntryButtonClick = () => {
       deviceId = amplitude.getInstance().options.deviceId;
     }
     if (window.mobileAndTabletCheck()) {
+        AmplitudeLog('mobile_device_popup_impression')
         document.getElementById(BZ0FullscreenId).style.display = 'flex';
     } else {
         const baseUrl = 'https://web.cooby.co/en/insight'
@@ -90,6 +91,7 @@ const onBZ0EntryButtonClick = () => {
     }
 };
 const closeBZ0Popup = () => {
+    AmplitudeLog('click_mobile_device_popup_close')
     document.getElementById(BZ0FullscreenId).style.display = 'none';
     document.getElementById('insight_flow_a').click();
 }
