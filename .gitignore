@@ -1,1 +1,6 @@
+.publish/
 node_modules/
+dist/
+src/.tmp/
+.DS_Store
+assets/
