@@ -1,3 +1,9 @@
+# Cooby Marketing Website 
+
+- Deploy on Netlify 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b96fc415-05e1-4a19-bb8f-17435f0dc533/deploy-status)](https://app.netlify.com/sites/cooby-test/deploys)
+
 # LANDKIT #
 
 Landkit Theme by Good Themes.
