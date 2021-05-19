@@ -152,7 +152,7 @@ gulp.task('copy:all', function() {
     .src([
       paths.src.base.files,
       '!' + paths.src.partials.dir, '!' + paths.src.partials.files,
-      '!' + paths.src.img.dir, '!' + paths.src.img.files,
+      //'!' + paths.src.img.dir, '!' + paths.src.img.files,
       '!' + paths.src.scss.dir, '!' + paths.src.scss.files,
       '!' + paths.src.tmp.dir, '!' + paths.src.tmp.files,
       '!' + paths.src.js.dir, '!' + paths.src.js.files,
