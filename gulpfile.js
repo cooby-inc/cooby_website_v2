@@ -215,7 +215,7 @@ gulp.task('html:preview', function() {
 
 gulp.task('image-optimization', () => (gulp.src(['src/assets/img/**/*']).pipe(imagemin()).pipe(gulp.dest('dist/assets/img'))));
 
-gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html', 'sitemap'));
+gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs','image-optimization'), 'scss', 'html', 'sitemap'));
 gulp.task('build:preview', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html:preview'));
 gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));
 
