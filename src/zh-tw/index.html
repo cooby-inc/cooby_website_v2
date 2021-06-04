@@ -36,19 +36,19 @@
 
             <!-- Heading -->
             <h1 style="font-weight:500;">
-              <div data-aos="fade-left">第一次使用就上手的</div>
-              <div data-aos="fade-left" data-aos-delay="100">客戶管理工具</div>
+              <div data-aos="fade-left">幫助做業務的你</div>
+              <div data-aos="fade-left" data-aos-delay="100">建立更強韌的客戶關係</div>
             </h1>
 
             <!-- Text -->
             <p class="font-size-lg text-muted mb-6 w-90" data-aos="fade-left" data-aos-delay="200">
-              再也不用懊惱漏接客戶訊息！一起跟 Cooby 用簡單上手的 Gmail / Line 訊息整合工具，連結每一段美好的客戶關係！
+              設定定期提醒、將客戶分群、制定不同的自動追蹤
             </p>
 
             <!-- Buttons -->
             <div data-aos="fade-left">
               <a href="https://cooby.app.link/veJdQ60f8db?utm_content=HeroBtn" class="btn btn-primary mr-1 lift" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
-                免費開始你專屬的客管工具 <i class="fe fe-arrow-right ml-3"></i>
+                開始你專屬的客管工具 <i class="fe fe-arrow-right ml-3"></i>
               </a>
               <a href="@@webRoot/zh-tw/features" class="btn btn-primary-soft lift mt-3 mt-md-0">
                 探索更多
@@ -60,6 +60,130 @@
       </div> <!-- / .container -->
 
     </section>
+
+    <!-- ABOUT
+    ================================================== -->
+    <section class="pt-md-8 pb-8 pt-12 ">
+      <div class="container">
+        <div class="row justify-content-center">
+           <div class="col-12 col-md-10 col-lg-8 text-center">
+            <!-- Preheading -->
+            <h6 class="text-uppercase text-primary font-weight-bold">
+              客戶關係
+            </h6>
+
+            <!-- Heading -->
+            <h1 class="font-weight-bold">
+              客戶分群設定追蹤
+            </h1>
+            <div class="row">
+              <div class="col-12 order-md-2">
+                <!-- Image -->
+                <img src="../assets/img/screenshots/desktop/actionable_views.png" alt="..." class="img-fluid mw-80 mw-md-80 float-right mb-6 mb-md-0" data-aos="fade-right">
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+          <div class="col-12 col-md-10 col-lg-7 text-center pt-md-8">
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-7">
+              100 位客戶，就有 100 種分類！<br><br>Cooby 讓你將客戶分群，採取不同動作，像是建立提醒、分眾群發訊息、設定自動追蹤。
+
+            </p>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+
+    <!-- INSIGHT
+        ================================================== -->
+        <div id='cooby_insight'>
+        <section class="pt-md-8 pb-8 bg-cooby-light-gray">
+          <div class="container">
+            <div id='insight_bz_0' class="row justify-content-center">
+              <div class="col-12 col-md-6 pt-12" data-aos="fade-right">
+                <div id='insight_bz0_slogan'>
+                  <h6 class="text-uppercase text-primary font-weight-bold">
+                    Cooby 洞察
+                  </h6>
+                  <h1 class="font-weight-bold">
+                    花時間在對的客戶身上
+                  </h1>
+                </div>
+                <div id="try-btn-and-aux-text" class="table-container">
+                  <p class="font-size-lg text-muted mb-7">
+                    跟很多客戶常常傳訊息，但你的時間有花在刀口上嗎？ <br><br>
+                    Get your free report to understand who and how you spend time on WhatsApp. Learn who you keep in touch and lose touch with.
+                  </p>
+                  <section id='cooby-insight-btn-and-ps'
+                    class="d-flex flex-column justify-content-center">
+                    <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
+                      <span
+                        class="btn btn-primary lift mb-3"
+                      >Get Your Free Report Now</span>
+                    </div>
+                    <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
+                      *No signup required
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <img src="../assets/img/illustrations/cooby_insight_trailer.png"
+                  alt="..." class="img-fluid mw-100 mw-md-130 mb-6 mb-md-0"
+                  data-aos="fade-left">
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .container -->
+          <div id='BZ0_popup_if_mobile'>
+            <div id='BZ0_popup_main_content'>
+              <div class='title'>Find another device to display QR Code</div>
+              <div class='explain'>You need to scan QR Code with your phone, so please
+                <a class='url-green' target="_blank" href='https://wa.me/17075631611?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendUsLink()">send the link to either us</a>
+                  or <a class='url-green' target="_blank" href='https://wa.me/?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendFriendLink()">your friend nearby</a> via WhatsApp and open the link on another device.</div>
+                <div class='explain'>Tap "Got it" below to proceed to QR Code.
+                </div>
+              <div class='explain-img'><img src="@@webRoot/assets/img/illustrations/BZ0IfMobileTutorial.svg"/></div>
+              <div class='got-it-button btn btn-primary lift mb-3' onClick="closeBZ0Popup()">Got it</div>
+            </div>
+          </div>
+          <a id='insight_flow_a' href='https://web.cooby.co/en/insight'></a>
+        </section>
+        </div>
+
+        <!-- Line Import
+        ================================================== -->
+        <section class="py-8 py-md-8">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+              <div class="col-12 col-md-6 col-lg-7 order-md-1">
+
+                <!-- Image -->
+                <img src="../assets/img/screenshots/mobile/suggestions.png" alt="..." style="height: 600px" class="img-fluid mb-6 mb-md-4" data-aos="fade-right">
+
+              </div>
+              <div class="col-12 col-md-6 col-lg-5 order-md-2" data-aos="fade-left">
+                <!-- Preheading -->
+                <h6 class="text-uppercase text-primary font-weight-bold">
+                  Suggestions
+                </h6>
+                <!-- Heading -->
+                <h2 class="font-weight-bold">
+                  Never Lose Touch Again
+                </h2>
+
+                <!-- Text -->
+                <p class="font-size-lg text-muted mb-0">
+                  Stronger relationships mean keeping in touch with your clients and staying top of mind. <br><br>
+                  Cooby provides you daily suggestions on contacts that you should reconnect.
+                </p>
+
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .container -->
+        </section>
 
     <!-- ABOUT
     ================================================== -->
@@ -632,22 +756,22 @@
 
           <!-- Brand -->
           <div class="col-4 col-md-2 pt-3">
-            
+
             <a href="https://meet.bnext.com.tw/articles/view/47425" target="_blank"><div class="img-fluid">
               <img src="assets/img/brands/meetuptw-logo-01.png">
             </div></a>
           </div>
           <!-- Brand -->
           <div class="col-4 col-md-2 pt-2">
-            
-           <a href="https://www.inside.com.tw/article/22819-Cooby-Line-WhatsApp-CRM" target="_blank"> 
+
+           <a href="https://www.inside.com.tw/article/22819-Cooby-Line-WhatsApp-CRM" target="_blank">
             <div class="img-fluid">
               <img src="assets/img/brands/inside-logo.png">
             </div></a>
           </div>
           <!-- Brand -->
-          <div class="col-4 col-md-3 pt-3">            
-           <a href="https://www.techinasia.com/exfacebook-execs-startup-raises-preseed-sequoias-surge" target="_blank"> 
+          <div class="col-4 col-md-3 pt-3">
+           <a href="https://www.techinasia.com/exfacebook-execs-startup-raises-preseed-sequoias-surge" target="_blank">
             <div class="img-fluid">
               <img src="assets/img/brands/tech-in-asia-logo-vector.png">
             </div></a>
@@ -668,14 +792,14 @@
 
           <!-- Brand -->
           <div class="col-4 col-md-3 col-lg-2">
-            
+
             <a href="https://www.surgeahead.com/" target="_blank"><div class="img-fluid">
               <img src="assets/img/brands/logotype/surge_logo.png">
             </div></a>
           </div>
           <!-- Brand -->
           <div class="col-4 col-md-3 col-lg-2">
-            <a href="https://www.pear.vc/" target="_blank"> 
+            <a href="https://www.pear.vc/" target="_blank">
             <div class="img-fluid">
               <img src="assets/img/brands/logotype/pear_logo.png">
             </div></a>
