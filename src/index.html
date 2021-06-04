@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-    "pageTitle": "Cooby | Build Stronger Sales Relationships"
+      "pageTitle": "Cooby | Build Stronger Sales Relationships"
     })
   </head>
   <style>
@@ -14,7 +14,6 @@
     }
   </style>
   <body class="font-eng">
-
 
     <!-- NAVBAR
     ================================================== -->
@@ -68,7 +67,7 @@
 
             <!-- Buttons -->
             <div data-aos="fade-left">
-              <a href="http://cooby.app.link/LwlQVmaL6db?utm_content=clickHeroBtn" class="btn btn-primary mr-1 lift mb-6" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
+              <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary mr-1 lift mb-6" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
                 Start for free <i class="fe fe-arrow-right ml-3"></i>
               </a>
               <a href="@@webRoot/features" class="btn btn-primary-soft lift mb-6">
@@ -88,7 +87,7 @@
            <div class="col-12 col-md-10 col-lg-8 text-center">
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold">
-              Actionable Views
+              Supercharge your Rolodex
             </h6>
 
             <!-- Heading -->
@@ -106,7 +105,8 @@
           <div class="col-12 col-md-10 col-lg-7 text-center pt-md-8">
             <!-- Text -->
             <p class="font-size-lg text-muted mb-7">
-              Cooby helps you organize your clients, create tasks, send messages and set auto follow-ups. <br><br>Focus on building <span class="text-primary">enduring customer relationships. </span>
+              You need a <span class="text-primary">sales process</span>, but all the other tools are too hard to use? <br><br>
+              Cooby helps you organize your clients, set auto follow-ups create tasks, and send messages.
             </p>
           </div>
         </div> <!-- / .row -->
@@ -123,10 +123,10 @@
           <div class="col-12 col-md-6 pt-12" data-aos="fade-right">
             <div id='insight_bz0_slogan'>
               <h6 class="text-uppercase text-primary font-weight-bold">
-                Cooby Insights
+                better use of your time
               </h6>
               <h1 class="font-weight-bold">
-                Optimize Your Time for Important Clients
+                Optimize Your Time for the Right Clients
               </h1>
             </div>
             <div id="try-btn-and-aux-text" class="table-container">
@@ -185,7 +185,7 @@
           <div class="col-12 col-md-6 col-lg-5 order-md-2" data-aos="fade-left">
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold">
-              Suggestions
+              Keep your leads warm
             </h6>
             <!-- Heading -->
             <h2 class="font-weight-bold">
@@ -682,7 +682,6 @@
       </div> <!-- / .container -->
     </section>
 
-
         <!-- REGISTRATION
         ================================================== -->
         <section class="py-11">
@@ -703,12 +702,12 @@
 
                         <!-- Heading -->
                         <h2 class="font-weight-bold text-center mb-1">
-                          Schedule a demo with us
+                          Improve Your Sales Today
                         </h2>
 
                         <!-- Text -->
                         <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
-                          We can help you solve company communication.
+                          We are devoted to help you succeed.
                         </p>
 
                         <!-- Form -->
@@ -718,7 +717,7 @@
 
                               <!-- First name -->
                               <div class="form-label-group">
-                                <input type="text" class="form-control form-control-flush" id="registrationFirstName" placeholder="First name">
+                                <input type="text" class="form-control form-control-flush" id="name" placeholder="First name">
                                 <label for="registrationFirstName">Name</label>
                               </div>
 
@@ -727,8 +726,8 @@
 
                               <!-- Last name -->
                               <div class="form-label-group">
-                                <input type="text" class="form-control form-control-flush" id="registrationLastName" placeholder="Last name">
-                                <label for="registrationLastName">Last name</label>
+                                <input type="text" class="form-control form-control-flush" id="role" placeholder="Last name">
+                                <label for="registrationRole">Role</label>
                               </div>
 
                             </div>
@@ -736,9 +735,27 @@
                           <div class="row">
                             <div class="col-12 col-md-6">
 
+                              <!-- First name -->
+                              <div class="form-label-group">
+                                <input type="text" class="form-control form-control-flush" id="company" placeholder="First name">
+                                <label for="registrationCompany">Company</label>
+                              </div>
+
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <!-- Last name -->
+                              <div class="form-label-group">
+                                <input type="text" class="form-control form-control-flush" id="reason" placeholder="Last name">
+                                <label for="registrationReason">Why do you want to use Cooby?</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-md-6">
+
                               <!-- Email -->
                               <div class="form-label-group">
-                                <input type="email" class="form-control form-control-flush" id="registrationEmail" placeholder="Email">
+                                <input type="email" class="form-control form-control-flush" id="email" placeholder="Email">
                                 <label for="registrationEmail">Email</label>
                               </div>
 
@@ -747,8 +764,8 @@
 
                               <!-- Password -->
                               <div class="form-label-group">
-                                <input type="phone" class="form-control form-control-flush" id="registrationPhone" placeholder="Password">
-                                <label for="registrationPassword">Phone</label>
+                                <input type="phone" class="form-control form-control-flush" id="phone" placeholder="Password">
+                                <label for="registrationPhone">WhatsApp number</label>
                               </div>
 
                             </div>
@@ -757,13 +774,14 @@
                             <div class="col-12">
 
                               <!-- Submit -->
-                              <button class="btn btn-block btn-primary mt-3 lift">
-                                Request a demo
+                              <button class="btn btn-block btn-primary mt-3 lift" data-toggle="modal" href="#modalSignupHorizontal">
+                                Request Trial Access
                               </button>
 
                             </div>
                           </div>
                         </form>
+
 
                       </div>
                     </div> <!-- / .row -->
@@ -776,22 +794,30 @@
         </section>
 
 
+            <!-- SHAPE
+            ================================================== -->
+            <div class="position-relative">
+              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                @@include("assets/img/shapes/curves/curve-1.svg")
+              </div>
+            </div>
+
     <!-- CTA
     ================================================== -->
-    <section class="pt-6 pt-md-8 bg-cooby-light-gray d-none" id="try">
+    <section class="pt-6 pt-md-8 bg-cooby-light-gray" id="try">
       <div class="container pb-6 pb-md-8 border-bottom-cooby">
         <div class="row align-items-center">
           <div class="col-12 col-md-8">
 
             <!-- Heading -->
             <h2 class="font-weight-bold mb-1">
-              Start For Free
+              Improve Your Sales Today
             </h2>
 
             <!-- Text -->
             <p style="padding-top:15px;" class="font-size-lg text-muted mb-5 mb-md-0">
-              Cooby is the only CRM you'll ever need. <br>
-              Join companies like Nanshan, Fubon, Cathay Life and hundreds of other salespeople using Cooby.
+              We've been trusted by sales from great companies around the world: <br><br>
+              Nanshan, Cathay Life Insurance, Alibaba, Taiwan Life Insurance, etc.
             </p>
 
           </div>
@@ -799,8 +825,8 @@
           <div class="col-12 col-md-3">
 
             <!-- Button -->
-            <a href="http://cooby.app.link/LwlQVmaL6db?utm_content=startForFree" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
-              Try Now
+            <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
+              Request Access
             </a>
 
           </div>
@@ -809,14 +835,6 @@
     </section>
 
 
-
-    <!-- SHAPE
-    ================================================== -->
-    <div class="position-relative">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-        @@include("assets/img/shapes/curves/curve-1.svg")
-      </div>
-    </div>
 
     <!-- FOOTER
     ================================================== -->
