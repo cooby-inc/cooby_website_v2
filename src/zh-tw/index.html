@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-    "pageTitle": "Cooby 酷比 | 第一次使用就上手的客戶管理工具"
+    "pageTitle": "Cooby 酷比 | 建立更強韌的客戶關係"
     })
   </head>
   <body class="font-tw">
@@ -28,8 +28,23 @@
         <div class="row align-items-center text-center text-md-left">
           <div class="col-12 col-md-6">
 
-            <!-- Image -->
-            <img src="assets/img/illustrations/home_banner.png" alt="..." class="img-fluid mw-100 mw-md-130 float-right mb-6 mb-md-0" data-aos="fade-right">
+            <!-- Macbook + iPhone -->
+            <div class="device-combo device-combo-macbook-iphonex mb-6 mb-md-0 img-fluid mw-130">
+
+              <!-- Macbook -->
+              <div class="device device-macbook">
+                <img src="../assets/img/screenshots/desktop/web_app.svg" class="device-screen">
+                <img src="assets/img/devices/macbook.svg" class="img-fluid">
+              </div>
+
+              <!-- iPhone -->
+              <div class="device device-iphonex">
+                <img src="../assets/img/screenshots/mobile/ios_app.svg" class="device-screen">
+                <img src="assets/img/devices/iphonex.svg" class="img-fluid">
+              </div>
+
+            </div>
+
 
           </div>
           <div class="col-12 col-md-6">
@@ -63,7 +78,7 @@
 
     <!-- ABOUT
     ================================================== -->
-    <section class="pt-md-8 pb-8 pt-12 ">
+    <section class="pt-md-8 pb-8 pt-12 bg-cooby-light-gray">
       <div class="container">
         <div class="row justify-content-center">
            <div class="col-12 col-md-10 col-lg-8 text-center">
@@ -74,7 +89,7 @@
 
             <!-- Heading -->
             <h1 class="font-weight-bold">
-              客戶分群設定追蹤
+              客戶分群，設定追蹤
             </h1>
             <div class="row">
               <div class="col-12 order-md-2">
@@ -87,7 +102,8 @@
           <div class="col-12 col-md-10 col-lg-7 text-center pt-md-8">
             <!-- Text -->
             <p class="font-size-lg text-muted mb-7">
-              100 位客戶，就有 100 種分類！<br><br>Cooby 讓你將客戶分群，採取不同動作，像是建立提醒、分眾群發訊息、設定自動追蹤。
+              你需要制定一個銷售流程，但常被難用的工具激怒嗎？<br><br>
+              Cooby 是最容易上手的<span class="text-primary">業務流程工具</span>，讓你將客戶分群，採取不同動作，像是建立提醒、分眾群發訊息、設定自動追蹤。
 
             </p>
           </div>
@@ -99,13 +115,13 @@
     <!-- INSIGHT
         ================================================== -->
         <div id='cooby_insight'>
-        <section class="pt-md-8 pb-8 bg-cooby-light-gray">
+        <section class="pt-md-8 pb-8">
           <div class="container">
             <div id='insight_bz_0' class="row justify-content-center">
               <div class="col-12 col-md-6 pt-12" data-aos="fade-right">
                 <div id='insight_bz0_slogan'>
                   <h6 class="text-uppercase text-primary font-weight-bold">
-                    Cooby 洞察
+                    讓業務工作更有效率
                   </h6>
                   <h1 class="font-weight-bold">
                     花時間在對的客戶身上
@@ -113,39 +129,40 @@
                 </div>
                 <div id="try-btn-and-aux-text" class="table-container">
                   <p class="font-size-lg text-muted mb-7">
-                    跟很多客戶常常傳訊息，但你的時間有花在刀口上嗎？ <br><br>
-                    Get your free report to understand who and how you spend time on WhatsApp. Learn who you keep in touch and lose touch with.
+                    常常跟很多客戶傳訊息，但你的時間有花在刀口上嗎？ <br><br>
+                    Cooby 免費提供的分析報告讓你知道你如何花時間在 WhatsApp 上，報告資訊包含客戶的興趣程度、回覆客戶的速度、你與客戶保持聯繫的程度等。
                   </p>
                   <section id='cooby-insight-btn-and-ps'
                     class="d-flex flex-column justify-content-center">
                     <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
                       <span
                         class="btn btn-primary lift mb-3"
-                      >Get Your Free Report Now</span>
+                      >立刻你的領取分析報告</span>
                     </div>
                     <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
-                      *No signup required
+                      *無須註冊
                     </div>
                   </section>
                 </div>
               </div>
               <div class="col-12 col-md-6">
-                <img src="../assets/img/illustrations/cooby_insight_trailer.png"
-                  alt="..." class="img-fluid mw-100 mw-md-130 mb-6 mb-md-0"
-                  data-aos="fade-left">
+                <video playsinline autoplay muted loop
+                  src="../assets/img/screenshots/ui/Insights.mp4"
+                  class="img-fluid mw-100 mb-6 mb-md-0"
+                  data-aos="fade-left"></video>
               </div>
             </div> <!-- / .row -->
           </div> <!-- / .container -->
           <div id='BZ0_popup_if_mobile'>
             <div id='BZ0_popup_main_content'>
-              <div class='title'>Find another device to display QR Code</div>
-              <div class='explain'>You need to scan QR Code with your phone, so please
-                <a class='url-green' target="_blank" href='https://wa.me/17075631611?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendUsLink()">send the link to either us</a>
-                  or <a class='url-green' target="_blank" href='https://wa.me/?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendFriendLink()">your friend nearby</a> via WhatsApp and open the link on another device.</div>
-                <div class='explain'>Tap "Got it" below to proceed to QR Code.
+              <div class='title'>使用另外一個裝置顯示 QR Code</div>
+              <div class='explain'>你需要使用你的手機掃描 QR Code 。請透過 WhatsApp
+                <a class='url-green' target="_blank" href='https://wa.me/17075631611?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendUsLink()">送連結給我們</a>
+                  或<a class='url-green' target="_blank" href='https://wa.me/?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendFriendLink()">給你旁邊的朋友</a>，然後在另外一個裝置上打開連結。</div>
+                <div class='explain'>按「繼續」進到 QR Code 頁面。
                 </div>
               <div class='explain-img'><img src="@@webRoot/assets/img/illustrations/BZ0IfMobileTutorial.svg"/></div>
-              <div class='got-it-button btn btn-primary lift mb-3' onClick="closeBZ0Popup()">Got it</div>
+              <div class='got-it-button btn btn-primary lift mb-3' onClick="closeBZ0Popup()">繼續</div>
             </div>
           </div>
           <a id='insight_flow_a' href='https://web.cooby.co/en/insight'></a>
