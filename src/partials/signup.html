@@ -4,10 +4,36 @@
     <div class="modal-content">
       <div class="card card-row">
         <div class="row no-gutters">
-          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(@@webRoot/assets/img/photos/photo-8.jpg);">
-
-            <!-- Image (placeholder) -->
-            <img src="@@webRoot/assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
+          <div class="col-12 col-md-5 bg-cover card-body bg-cooby-light-gray">
+            <h6 class="text-uppercase text-primary font-weight-bold">
+              Try this yourself
+            </h6>
+            <h1 class="font-weight-bold">
+              See the full picture in our 7-day free trial
+            </h1>
+            <!-- Text -->
+            <p class="font-weight-bold mb-6 mb-md-0">
+              Trusted by over <span data-toggle="countup" data-from="0" data-to="2000" data-aos data-aos-id="countup:in">0</span> salespeople worldwide.
+            </p>
+            <div>
+              <img src="assets/img/brands/customers/cars-24-b-w.webp">
+              <img src="assets/img/brands/customers/glooko-b-w.webp">
+              <img src="assets/img/brands/customers/tatahealth-b-w.webp">
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item compressed-list bg-cooby-light-gray">
+                <img src="assets/img/icons/checkmark.svg" class="checkmark">
+                  No credit required</li>
+              <li class="list-group-item compressed-list bg-cooby-light-gray">
+                <img src="assets/img/icons/checkmark.svg" class="checkmark">
+                  Best Personal CRM</li>
+              <li class="list-group-item compressed-list bg-cooby-light-gray">
+                <img src="assets/img/icons/checkmark.svg" class="checkmark">
+                  Smooth UX</li>
+            </ul>
+            <p class="mt-6 mb-6 mb-md-0">
+              Questions? Submit the form and we'll be in touch.
+            </p>
 
             <!-- Shape -->
             <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
@@ -15,7 +41,7 @@
             </div>
 
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-7">
             <div class="card-body">
 
               <!-- Close -->
@@ -48,8 +74,8 @@
 
                     <!-- Last name -->
                     <div class="form-label-group">
-                      <input type="text" class="form-control form-control-flush" id="role" placeholder="Role">
-                      <label for="registrationRole">Role</label>
+                      <input type="text" class="form-control form-control-flush" id="title" placeholder="Title">
+                      <label for="registrationRole">Title</label>
                     </div>
 
                   </div>
@@ -67,8 +93,15 @@
                   <div class="col-12 col-md-6">
                     <!-- Last name -->
                     <div class="form-label-group">
-                      <input type="text" class="form-control form-control-flush" id="reason" placeholder="Why">
-                      <label for="registrationReason">Why Cooby?</label>
+                      <select class="form-control form-select custom-select" aria-label="Select Why Cooby" id="Motivation">
+                        <option selected>Why Cooby?</option>
+                        <option value="Organize and tag clients">Organize and tag clients</option>
+                        <option value="Import information from WhatsApp">Import information from WhatsApp</option>
+                        <option value="Connect with clients periodically">Connect with clients periodically</option>
+                        <option value="Track client-related tasks">Track client-related tasks</option>
+                        <option value="Take client notes">Take client notes</option>
+                        <option value="Others">Others</option>
+                      </select>
                     </div>
                   </div>
                 </div>

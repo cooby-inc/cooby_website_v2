@@ -14001,6 +14001,14 @@ body {
   font-size: 16px;
   color: black; }
 
+.compressed-list {
+  padding: 0.5rem 0rem;
+}
+
+.checkmark {
+  padding-right: 0.2rem;
+}
+
 .font-eng {
   font-family: 'Rubik', sans-serif; }
 
