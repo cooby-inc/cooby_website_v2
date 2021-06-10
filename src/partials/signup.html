@@ -3,10 +3,10 @@
   <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="card card-row">
-        <div class="row no-gutters">
+        <div class="row">
           <div class="col-12 col-md-5 bg-cover card-body bg-cooby-light-gray">
             <h6 class="text-uppercase text-primary font-weight-bold">
-              Try this yourself
+              Try It Yourself
             </h6>
             <h1 class="font-weight-bold">
               See the full picture in our 7-day free trial
@@ -16,9 +16,9 @@
               Trusted by over <span data-toggle="countup" data-from="0" data-to="2000" data-aos data-aos-id="countup:in">0</span> salespeople worldwide.
             </p>
             <div style="margin-top:5px;">
-              <img src="assets/img/brands/customers/taiwan_insurance.png" style="height:25px;margin-right:15px;">
-              <img src="assets/img/brands/customers/cathy.png" style="height:30px;margin-right:15px;">
-              <img src="assets/img/brands/customers/nan-shan.png"style="height:30px;">
+              <img src="assets/img/brands/customers/taiwan_insurance.png" class="brand-logo">
+              <img src="assets/img/brands/customers/cathy.png" class="brand-logo">
+              <img src="assets/img/brands/customers/nan-shan.png" class="brand-logo">
             </div>
             <ul class="list-group">
               <li class="compressed-list bg-cooby-light-gray" style="list-style: none; margin:30px auto 10px 0;">
@@ -30,12 +30,12 @@
                 <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
                   <i class="fe fe-check"></i>
                   </div>
-                  Best Personal CRM</li>
+                  Automate your workflows</li>
               <li class="compressed-list bg-cooby-light-gray" style="list-style: none;">
                 <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
                   <i class="fe fe-check"></i>
                   </div>
-                  Smooth UX</li>
+                  Build stronger sales relationships</li>
             </ul>
             <p class="mt-6 mb-6 mb-md-0">
               Questions? Submit the form and we'll be in touch.
@@ -65,13 +65,13 @@
                 We are devoted to help you succeed.
               </p>
 
-              <form>
+              <form id="signup_form">
                 <div class="row">
                   <div class="col-12 col-md-6">
 
                     <!-- First name -->
                     <div class="form-label-group">
-                      <input type="text" class="form-control form-control-flush" id="name" placeholder="Name">
+                      <input type="text" class="form-control form-control-flush" name="name" placeholder="Name">
                       <label for="registrationFirstName">Name</label>
                     </div>
 
@@ -80,7 +80,7 @@
 
                     <!-- Last name -->
                     <div class="form-label-group">
-                      <input type="text" class="form-control form-control-flush" id="title" placeholder="Title">
+                      <input type="text" class="form-control form-control-flush" name="title" placeholder="Title">
                       <label for="registrationRole">Title</label>
                     </div>
 
@@ -91,7 +91,7 @@
 
                     <!-- First name -->
                     <div class="form-label-group">
-                      <input type="text" class="form-control form-control-flush" id="company" placeholder="Company">
+                      <input type="text" class="form-control form-control-flush" name="company" placeholder="Company">
                       <label for="registrationCompany">Company</label>
                     </div>
 
@@ -99,7 +99,7 @@
                   <div class="col-12 col-md-6">
                     <!-- Last name -->
                     <div class="form-label-group">
-                      <select class="form-control form-select custom-select" aria-label="Select Why Cooby" id="Motivation">
+                      <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation">
                         <option selected>Why Cooby?</option>
                         <option value="Organize and tag clients">Organize and tag clients</option>
                         <option value="Import information from WhatsApp">Import information from WhatsApp</option>
@@ -116,7 +116,7 @@
 
                     <!-- Email -->
                     <div class="form-label-group">
-                      <input type="email" class="form-control form-control-flush" id="email" placeholder="Email">
+                      <input type="email" class="form-control form-control-flush" name="email" placeholder="Email">
                       <label for="registrationEmail">Email</label>
                     </div>
 
@@ -125,7 +125,7 @@
 
                     <!-- Password -->
                     <div class="form-label-group">
-                      <input type="phone" class="form-control form-control-flush" id="phone" placeholder="WhatsApp number">
+                      <input type="phone" class="form-control form-control-flush" name="phone" placeholder="WhatsApp number">
                       <label for="registrationPhone">WhatsApp number</label>
                     </div>
 
@@ -135,7 +135,7 @@
                   <div class="col-12">
 
                     <!-- Submit -->
-                    <button class="btn btn-primary mt-3 lift" data-toggle="modal" href="#modalSignupHorizontal">
+                    <button class="btn btn-primary mt-3 lift">
                       Submit
                     </button>
 
