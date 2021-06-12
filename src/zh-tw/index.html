@@ -5,6 +5,14 @@
     "pageTitle": "Cooby 酷比 | 建立更強韌的客戶關係"
     })
   </head>
+  <style>
+
+    @media screen and (max-width: 320px){
+      #insight_bz_0 {
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
   <body class="font-tw">
 
 
@@ -17,19 +25,19 @@
 
     <!-- WELCOME
     ================================================== -->
-    <section class="position-relative pt-14 pt-md-15 mt-n6 mb-6 pb-10">
+    <section class="position-relative pt-13 pt-md-13 pb-md-12 pb-6">
 
       <!-- Shape -->
       <div class="d-none shape shape-fluid-x shape-blur-2 svg-shim text-light">
         @@include("assets/img/shapes/blurs/blur-2.svg")
       </div>
       <!-- Content -->
-      <div class="container">
+      <div class="container-xl">
         <div class="row align-items-center text-center text-md-left">
           <div class="col-12 col-md-6">
 
             <!-- Macbook + iPhone -->
-            <div class="device-combo device-combo-macbook-iphonex mb-6 mb-md-0 img-fluid mw-130">
+            <div class="device-combo device-combo-macbook-iphonex mb-6 mb-md-0 w-100 w-md-130 w-lg-150" style="float: right!important">
 
               <!-- Macbook -->
               <div class="device device-macbook">
@@ -62,12 +70,10 @@
 
             <!-- Buttons -->
             <div data-aos="fade-left">
-              <a href="https://cooby.app.link/veJdQ60f8db?utm_content=HeroBtn" class="btn btn-primary mr-1 lift" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
+              <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary mr-1 lift" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
                 開始你專屬的客管工具 <i class="fe fe-arrow-right ml-3"></i>
               </a>
-              <a href="@@webRoot/zh-tw/features" class="btn btn-primary-soft lift mt-3 mt-md-0">
-                探索更多
-              </a>
+
             </div>
 
           </div>
@@ -78,7 +84,7 @@
 
     <!-- ABOUT
     ================================================== -->
-    <section class="pt-md-8 pb-8 pt-12 bg-cooby-light-gray">
+    <section class="py-8 py-md-11 bg-cooby-light-gray">
       <div class="container">
         <div class="row justify-content-center">
            <div class="col-12 col-md-10 col-lg-8 text-center">
@@ -91,15 +97,6 @@
             <h1 class="font-weight-bold">
               客戶分群，設定追蹤
             </h1>
-            <div class="row">
-              <div class="col-12 order-md-2">
-                <!-- Image -->
-                <img src="../assets/img/screenshots/desktop/actionable_views.png" alt="..." class="img-fluid mw-80 mw-md-80 float-right mb-6 mb-md-0" data-aos="fade-right">
-
-              </div>
-            </div> <!-- / .row -->
-          </div>
-          <div class="col-12 col-md-10 col-lg-7 text-center pt-md-8">
             <!-- Text -->
             <p class="font-size-lg text-muted mb-7">
               你需要制定一個銷售流程，但常被難用的工具激怒嗎？<br><br>
@@ -108,7 +105,159 @@
             </p>
           </div>
         </div> <!-- / .row -->
-      </div> <!-- / .container -->
+        <div class="row align-items-center" style="margin:0;">
+          <div class="col-12 col-md-6 col-lg-6 order-md-2">
+            <!-- Video -->
+            <div class="w-md-150 w-lg-150 mb-6 mb-md-0">
+              <div class="tab-content">
+                <div class="tab-pane active video-tab" id="keep-in-touch-video">
+                  <video playsinline autoplay muted loop
+                    src="@@webRoot/assets/video/features/keep_in_touch_view.mov"
+                    class="img-fluid mw-100 mb-6 mb-md-0"
+                    data-aos="fade-left"></video>
+                </div>
+                <div class="tab-pane  video-tab" id="client-score-video">
+                  <video playsinline autoplay muted loop id="view-video"
+                    src="@@webRoot/assets/video/features/client_score_view.mov"
+                    class="img-fluid mw-100 mb-6 mb-md-0"
+                    data-aos="fade-left"></video>
+                </div>
+                <div class="tab-pane video-tab" id="custom-video">
+                  <video playsinline autoplay muted loop
+                    src="@@webRoot/assets/video/features/custom_view.mov"
+                    class="img-fluid mw-100 mb-6 mb-md-0"
+                    data-aos="fade-left"></video>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-12 col-md-5 col-lg-6 order-md-1">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#keep-in-touch">定期聯繫</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#client-score">重要客戶</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#custom">自訂客戶分群</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="keep-in-touch">
+                <!-- List -->
+                <div class="d-flex pt-6">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    @@include("assets/img/icons/duotone-icons/Home/Home-heart.svg")
+                  </div>
+
+                  <div class="ml-5">
+
+                    <!-- Heading -->
+                    <h4 class="mb-1">適合族群</h4>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-5">
+                      保險業務、房屋仲介等
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    @@include("assets/img/icons/duotone-icons/General/Clipboard.svg")
+                  </div>
+                  <div class="ml-5">
+                    <!-- Heading -->
+                    <h4 class="mb-1">使用場景</h4>
+                    <!-- Text -->
+                    <p class="text-muted mb-0">
+                      與客戶保持聯絡，設定自動化定期提醒
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="client-score">
+                <!-- List -->
+                <div class="d-flex pt-6">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    @@include("assets/img/icons/duotone-icons/Home/Home-heart.svg")
+                  </div>
+
+                  <div class="ml-5">
+
+                    <!-- Heading -->
+                    <h4 class="mb-1">適合族群</h4>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-5">
+                      直銷、藝術品經紀人等
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    @@include("assets/img/icons/duotone-icons/General/Clipboard.svg")
+                  </div>
+                  <div class="ml-5">
+                    <!-- Heading -->
+                    <h4 class="mb-1">使用場景</h4>
+                    <!-- Text -->
+                    <p class="text-muted mb-0">
+                      依據客戶的營收潛能與成交機率分群，設定自動化追蹤
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane" id="custom">
+                <!-- List -->
+                <div class="d-flex pt-6">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    @@include("assets/img/icons/duotone-icons/Home/Home-heart.svg")
+                  </div>
+
+                  <div class="ml-5">
+
+                    <!-- Heading -->
+                    <h4 class="mb-1">適合族群</h4>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-5">
+                      任何業務型態的你
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    @@include("assets/img/icons/duotone-icons/General/Clipboard.svg")
+                  </div>
+                  <div class="ml-5">
+                    <!-- Heading -->
+                    <h4 class="mb-1">使用場景</h4>
+                    <!-- Text -->
+                    <p class="text-muted mb-0">
+                      自訂分群客戶方式，建立待辦、群發訊息、設定提醒
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- / .row -->
+      </div>
     </section>
 
 
@@ -137,7 +286,7 @@
                     <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
                       <span
                         class="btn btn-primary lift mb-3"
-                      >立刻你的領取分析報告</span>
+                      >立刻領取你的分析報告</span>
                     </div>
                     <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
                       *無須註冊
@@ -147,7 +296,7 @@
               </div>
               <div class="col-12 col-md-6">
                 <video playsinline autoplay muted loop
-                  src="../assets/img/screenshots/ui/Insights.mp4"
+                  src="@@webRoot/assets/video/features/Insights.mp4"
                   class="img-fluid mw-100 mb-6 mb-md-0"
                   data-aos="fade-left"></video>
               </div>
@@ -177,7 +326,7 @@
 
               <div class="col-12 col-md-6 col-lg-7 order-md-1">
                 <div class="w-100 w-md-75">
-                  <video playsinline autoplay muted loop src="../assets/img/screenshots/ui/Suggestions.mp4" class="img-fluid mb-6 mb-md-4" data-aos="fade-right"></video>
+                  <video playsinline autoplay muted loop src="@@webRoot/assets/video/features/suggestions.mp4" class="img-fluid mb-6 mb-md-4" data-aos="fade-right"></video>
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-5 order-md-2" data-aos="fade-left">
@@ -204,20 +353,19 @@
         <!-- Remember What Client Said
         ================================================== -->
         <section id="product" class='px-2 pb-8 pb-md-6'>
-          <div class="container border-bottom-cooby pb-8">
+          <div class="container  pb-8">
             <div class="row justify-content-between align-items-center">
               <div class="col-12 col-md-6 col-lg-5 order-md-2">
 
                 <!-- Image grid -->
                 <div class="d-flex flex-column w-md-130 mb-6 mb-md-0">
 
-                  <!-- Image -->
-                  <img class="img-fluid align-self-start" data-jarallax-element="-20" src="../assets/img/screenshots/ui/gmail.svg" style="min-height: 1px; max-width: 70%; margin-left: 45%;">
+                  <img class="img-fluid align-self-start" data-jarallax-element="-20" src="@@webRoot/assets/img/screenshots/ui/gmail.svg" style="min-height: 1px; max-width: 70%; margin-left: 45%;">
 
-                  <video playsinline autoplay muted loop src="../assets/img/screenshots/ui/Tasks.mp4" class="img-fluid align-self-start shadow-light" data-jarallax-element="-50" width="320" height="240" style="min-height: 1px; max-width: 70%; margin-top: -25%;" ></video>
+                  <video playsinline autoplay muted loop src="@@webRoot/assets/video/features/Tasks.mp4" class="img-fluid align-self-start shadow-light" data-jarallax-element="-50" width="320" height="240" style="min-height: 1px; max-width: 70%; margin-top: -25%;" ></video>
 
                   <!-- Image -->
-                  <img class=" img-fluid  align-self-center" data-jarallax-element="-80" src="../assets/img/screenshots/ui/activities.svg" style="min-height: 1px; max-width: 70%; margin-top: -23%; margin-left: 40%;">
+                  <img class=" img-fluid  align-self-center" data-jarallax-element="-80" src="@@webRoot/assets/img/screenshots/ui/activities.svg" style="min-height: 1px; max-width: 70%; margin-top: -24%; margin-left: 40%;">
 
                 </div>
 
@@ -479,7 +627,7 @@
 
 <!-- NEWS
     ================================================== -->
-    <section class="pb-8">
+    <section class="pb-10 pt-md-8">
       <div class="container">
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold text-center pb-3">
@@ -559,7 +707,7 @@
 
             <!-- Heading -->
             <h1 class="mb-1" style="font-weight:500;">
-              免費開始你專屬的客管工具
+              開始專屬你的業務工具
             </h1>
 
             <!-- Text -->
@@ -573,8 +721,8 @@
           <div class="col-12 col-md-2">
 
             <!-- Button -->
-            <a href="https://cooby.app.link/veJdQ60f8db?utm_content=startForFree" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
-              搶先試用
+            <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
+              申請使用
             </a>
 
           </div>
