@@ -136,8 +136,8 @@
 
 (function() {
   $('a[data-toggle="tab"]').on('show', function (e) {
-    selector = e.target.href
-    selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+    var selector = e.target.href;
+    selector = selector && selector.replace(/.*(?=#[^\s]*$)/, ''); //strip for ie7
     console.log(selector);
     switch (selector) {
       case "#client-score":
