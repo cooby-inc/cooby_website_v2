@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "pageTitle": "Cooby | Tabbed WhatsApp Web"
+    })
+  </head>
+  <style>
+
+    @media screen and (max-width: 320px){
+      #insight_bz_0 {
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
+  <body class="font-eng">
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    @@include("partials/navbar.html", {
+    "classList": "navbar-light bg-white",
+    "container": "container"
+    })
+
+
+<!-- INSIGHT
+    ================================================== -->
+    </div>
+    <div id='cooby_insight'>
+    <section class="pb-2 pt-12 bg-cooby-light-gray">
+      <div class="container pt-md-4 pb-6">
+        <div id='insight_bz_0' class="row justify-content-center">
+          <div class="col-12 col-md-6 pt-6" data-aos="fade-right">
+            <div id='insight_bz0_slogan'>
+              <!-- Preheading -->
+              <h6 class="text-uppercase text-primary font-weight-bold">
+                Tabbed WhatsApp Web
+              </h6>
+              <h1 class="font-weight-bold">
+                Organize Your Chats Into Tabs on WhatsApp
+              </h1>
+            </div>
+            <div id="try-btn-and-aux-text" class="table-container">
+              <p class="font-size-lg text-muted mb-7">
+                Too many chats create noise in your WhatsApp inbox? We all feel it. Cooby brings the <b>"Inbox Zero"</b> workflow in emails to WhatsApp Web.<br><br>
+
+                 Organize your chats into tabs however you like. Use <b>Inbox, Awaiting Reply, Needs Reply</b> tabs and <b>Mark as Done</b> action to clear your inbox easily.
+              </p>
+              <section class="d-flex flex-column align-items-start">
+                <div>
+                  <div>
+                    <a class="btn btn-outline btn-secondary-soft mb-6 disabled">Coming Soon &nbsp;<span class="font-weight-light">just a little more time </span></a>
+                    <!-- <a class="btn btn-primary-soft lift mb-6">Add to Chrome &nbsp;<span class="font-weight-light">It's free</span></a> -->
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <video playsinline autoplay muted
+              src="assets/video/features/wa_extension.mp4"
+              class="img-fluid float-end mw-150 mb-6 mb-md-0"
+              data-aos="fade-left"></video>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+      <div id='BZ0_popup_if_mobile'>
+        <div id='BZ0_popup_main_content'>
+          <div class='title'>Find another device to display QR Code</div>
+          <div class='explain'>You need to scan QR Code with your phone, so please
+            <a class='url-green' target="_blank" href='https://wa.me/17075631611?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code'>send the link to either us</a> or <a class='url-green' target="_blank" href='https://wa.me/?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code'>your friend nearby</a> via WhatsApp and open the link on another device.</div>
+            <div class='explain'>Tap "Got it" below to proceed to QR Code.
+            </div>
+          <div class='explain-img'><img src="@@webRoot/assets/img/illustrations/BZ0IfMobileTutorial.svg"/></div>
+          <div class='got-it-button btn btn-primary lift mb-3' onClick="closeBZ0Popup()">Got it</div>
+        </div>
+      </div>
+      <a id='insight_flow_a' href='https://web.cooby.co/en/insight'></a>
+    </section>
+    </div>
+
+    <!-- LOOM WALKTHROUGH
+        ================================================== -->
+    <section class="bg-cooby-light-gray d-none">
+      <div class="container py-8 border-bottom-cooby">
+        <div class="row justify-content-center">
+          <div class="col-12 order-md-2"><!--col-md-6 col-lg-7 -->
+            <div style="position: relative; padding-bottom: 56.782334384858046%; height: 0;"><iframe src="https://www.loom.com/embed/eac131d700794f07a774a48cbfef9933" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- CURVE
+    ================================================== -->
+    <div class="d-none position-relative mt-n16">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        @@include("assets/img/shapes/curves/curve-2.svg")
+      </div>
+    </div>
+
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="d-none position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+        @@include("assets/img/shapes/curves/curve-1.svg")
+      </div>
+    </div>
+
+    <!-- FOOTER
+    ================================================== -->
+    @@include("partials/footer.html", {
+    "classList": ""
+    })
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+  </body>
+</html>

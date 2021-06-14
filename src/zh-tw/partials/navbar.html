@@ -1,3 +1,5 @@
+@@include("signup.html")
+
 <nav class="navbar navbar-expand-lg @@classList cooby-shadow fixed-top">
   <div class="@@container">
 
@@ -26,7 +28,14 @@
             探索
           </a>
         </li>
-
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            案例
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item active" href="@@webRoot/zh-tw/use-cases/insurance.html">保險業務</a>
+          </div>
+        </li>
         <li class="nav-item">
           <a class="nav-link" id="navbarTeam" href="@@webRoot/zh-tw/pricing.html">
             訂閱
@@ -71,11 +80,10 @@
       <div class="text-center pb-md-0 pb-8">
 
         <a class="navbar-btn btn btn-sm btn-primary lift"
-           href="https://cooby.app.link/veJdQ60f8db?utm_content=navbar"
-           data-toggle="smooth-scroll"
-           target="_blank"
+          data-toggle="modal"
+          href="#modalSignupHorizontal"
            onclick="gaTracking('sign_up', 'click', 'Navbar')">
-          免費試用
+          申請試用
         </a>
       </div>
 

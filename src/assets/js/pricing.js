@@ -62,7 +62,7 @@
       }
     });
 
-    updateHref(checked);
+    // updateHref(checked); // Commented out for human onboarding
     updateDesc(checked);
   }
 
@@ -70,7 +70,7 @@
   // Events
   //
   if (toggle) {
-    updateHref(toggle.checked);
+    // updateHref(toggle.checked); // Commented out for human onboarding
     updateDesc(toggle.checked);
   }
 

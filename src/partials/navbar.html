@@ -1,3 +1,7 @@
+<!-- SIGNUP MODAL
+================================================== -->
+@@include("signup.html")
+
 <nav class="navbar navbar-expand-lg @@classList cooby-shadow fixed-top">
   <div class="@@container">
 
@@ -22,30 +26,23 @@
 
       <!-- Navigation -->
       <ul class="navbar-nav ml-auto" style="margin:auto;">
-        <li class="nav-item">
+        <li class="nav-item dropdown d-none">
+          <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Use Cases
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="@@webRoot/use-cases/insurance.html">Insurance</a>
+            <a class="dropdown-item" href="@@webRoot/use-cases/direct-sales.html">Direct Sales</a>
+          </div>
+        </li>
+        <li class="nav-item d-none">
           <a class="nav-link" id="navbarProduct" href="@@webRoot/features.html">
             Features
           </a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" id="navbarTeam" href="@@webRoot/pricing.html">
-            Pricing
-          </a>
-        </li>
-        <!--<li class="nav-item">
-          <a class="nav-link" id="navbarService" href="@@webRoot/blog.html">
-            Blog
-          </a>
-        </li>-->
-        <li class="nav-item">
-          <a class="nav-link" id="navbarTeam" href="@@webRoot/careers.html">
-            Careers
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="navbarContact" href="@@webRoot/support.html">
-            Support
+          <a class="nav-link" id="navbarService" href="@@webRoot/extension.html">
+            Extension
           </a>
         </li>
         <li class="nav-item">
@@ -53,6 +50,17 @@
             WhatsApp Insights
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" id="navbarTeam" href="@@webRoot/pricing.html">
+            Pricing
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="navbarContact" href="@@webRoot/support.html">
+            Support
+          </a>
+        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Language
@@ -77,11 +85,10 @@
       <!-- Button -->
       <div class="text-center pb-md-0 pb-8">
         <a class="navbar-btn btn btn-sm btn-primary lift"
-           href="https://cooby.app.link/LwlQVmaL6db?utm_content=navbar"
-           data-toggle="smooth-scroll"
-           target="_blank"
+           data-toggle="modal"
+           href="#modalSignupHorizontal"
            onclick="gaTracking('sign_up', 'click', 'Navbar')">
-          Sign Up
+          Try Now
         </a>
       </div>
 
