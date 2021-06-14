@@ -8,9 +8,15 @@ $('#signup_form').submit(function(e){
     {
       console.log("success");
       $('#modalSignupHorizontal').modal('hide');
+      $('#scheduleModal').modal('show');
     }
   });
 });
+
+$('#scheduleModalBtn').click(function(e) {
+  $('#scheduleModal').modal('hide');
+});
+
 // (function(){
 //   $('#modalSignupHorizontal').modal('show');
 // })();
