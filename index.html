@@ -9,33 +9,19 @@
     <meta name="facebook-domain-verification" content="7kq09yr5tns7v7k49aff2vde03ab9j" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Cooby | Customer Platform Built for Messaging" />
-    <meta property="og:image" content="https://cooby.co/assets/img/preview-images/meta_tags_eng.jpg" />
+    <meta property="og:title" content="Cooby | Build Stronger Sales Relationships" />
+    
+    
+      <meta property="og:image" content="https://cooby.co/assets/img/preview-images/meta_tags_eng.jpg" />
+    
+
     <meta property="og:url" content="https://cooby.co" />
     <meta property="og:description" content="Find inner peace in your messaging apps. Put your customers at ease." />
     <meta name="description" content="Find inner peace in your messaging apps. Put your customers at ease." />
 
 
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58041205-5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-58041205-5');
-
-      function gaTracking(event_name, category, label, numeric_value) {
-        gtag('event', event_name, {
-        'event_category': category,
-        'event_label': label,
-        'value': numeric_value
-        });
-      }
-    </script>
-
-    <!-- Applitude Logging SDK -->
+    
+    <!-- Amplitude Logging SDK -->
     <script type="text/javascript">
       (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
       ;r.type="text/javascript"
@@ -64,56 +50,74 @@
       amplitude.getInstance().init("85c9f2a0bcfc48c68813a2883825a47d");
     </script>
 
-    <!-- BZ0 JS -->
-    <script>
+    <script type="text/javascript">
+      const AmplitudeLog = (label, option) => {
+        let entity = (window.amplitude && window.amplitude.getInstance()) || {};
+      	entity.logEvent(label, option);
+      }
+      const currentURL = window.location.href || "";
+      const mainUrl = currentURL.split('?')[0]
+      const urlAttribute = currentURL.split('?')[1]
+      AmplitudeLog("marketing_website_impression", {"Link": mainUrl, "Link Attribute": urlAttribute})
 
-    const AmplitudeLog = (label, option) => {
-      let entity = (window.amplitude && window.amplitude.getInstance()) || {}; 
-    	entity.logEvent(label, option);
-    }
-    const currentURL = window.location.href || "";
-    const mainUrl = currentURL.split('?')[0]
-    const urlAttribute = currentURL.split('?')[1]
-    AmplitudeLog("marketing_website_impression", {"Link": mainUrl, "Link Attribute": urlAttribute})
+      const BZ0FullscreenId = 'BZ0_popup_if_mobile';
+      const onBZ0EntryButtonClick = () => {
+          AmplitudeLog('click_visit_insight');
+          let deviceId;
+          if (amplitude.getInstance().options) {
+            deviceId = amplitude.getInstance().options.deviceId;
+          }
+          if (window.mobileAndTabletCheck()) {
+              AmplitudeLog('mobile_device_popup_impression')
+              document.getElementById(BZ0FullscreenId).style.display = 'flex';
+          } else {
+              const baseUrl = 'https://web.cooby.co/en/insight'
+              const urlParams = deviceId ? '?deviceId=' + deviceId : '';
+              document.getElementById('insight_flow_a').setAttribute('href', baseUrl+urlParams);
+              console.log(document.getElementById('insight_flow_a'))
+              document.getElementById('insight_flow_a').click();
+          }
+      };
+      const closeBZ0Popup = () => {
+          AmplitudeLog('click_mobile_device_popup_close')
+          document.getElementById(BZ0FullscreenId).style.display = 'none';
+          document.getElementById('insight_flow_a').click();
+      }
 
-    const BZ0FullscreenId = 'BZ0_popup_if_mobile';
-    const onBZ0EntryButtonClick = () => {
-        AmplitudeLog('click_visit_insight');
-        let deviceId;
-        if (amplitude.getInstance().options) {
-          deviceId = amplitude.getInstance().options.deviceId;
-        }
-        if (window.mobileAndTabletCheck()) {
-            AmplitudeLog('mobile_device_popup_impression')
-            document.getElementById(BZ0FullscreenId).style.display = 'flex';
-        } else {
-            const baseUrl = 'https://web.cooby.co/en/insight'
-            const urlParams = deviceId ? '?deviceId=' + deviceId : '';
-            document.getElementById('insight_flow_a').setAttribute('href', baseUrl+urlParams);
-            console.log(document.getElementById('insight_flow_a'))
-            document.getElementById('insight_flow_a').click();
-        }
-    };
-    const closeBZ0Popup = () => {
-        AmplitudeLog('click_mobile_device_popup_close')
-        document.getElementById(BZ0FullscreenId).style.display = 'none';
-        document.getElementById('insight_flow_a').click();
-    }
+      const logSendUsLink = () => {
+        AmplitudeLog('click_send_us_wa_message_link')
+      }
 
-    const logSendUsLink = () => {
-      AmplitudeLog('click_send_us_wa_message_link')
-    }
+      const logSendFriendLink = () => {
+        AmplitudeLog('click_send_friend_wa_message_link')
+      }
 
-    const logSendFriendLink = () => { 
-      AmplitudeLog('click_send_friend_wa_message_link')
-    }
-
-    window.mobileAndTabletCheck = () => {
-        let check = false;
-        (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-        return check;
-    };
+      window.mobileAndTabletCheck = () => {
+          let check = false;
+          (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+          return check;
+      };
     </script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58041205-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-58041205-5');
+
+      function gaTracking(event_name, category, label, numeric_value) {
+        gtag('event', event_name, {
+        'event_category': category,
+        'event_label': label,
+        'value': numeric_value
+        });
+      }
+    </script>
+
 
     <script>(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');</script>
     <script async src='https://r.wdfl.co/rw.js' data-rewardful='90ef38'></script>
@@ -140,7 +144,7 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="./assets/css/theme.min.css">
 
-    <title>Cooby | Customer Platform Built for Messaging</title>
+    <title>Cooby | Build Stronger Sales Relationships</title>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -171,9 +175,211 @@
   </style>
   <body class="font-eng">
 
-
     <!-- NAVBAR
     ================================================== -->
+    <!-- SIGNUP MODAL
+    ================================================== -->
+    <!-- Signup: Horizontal  ================================================== -->
+    <div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="card card-row">
+            <div class="row">
+              <div class="col-12 col-md-5">
+               <div class="bg-cover card-body bg-cooby-light-gray">
+                  <h6 class="text-uppercase text-primary font-weight-bold">
+                    Try It Yourself
+                  </h6>
+                  <h1 class="font-weight-bold">
+                    See the full picture in our 7-day free trial
+                  </h1>
+                  <!-- Text -->
+                  <p class="font-weight-bold mb-6 mb-md-0">
+                    Trusted by over <span data-toggle="countup" data-from="0" data-to="2000" data-aos data-aos-id="countup:in">0</span> salespeople worldwide.
+                  </p>
+                  <div class="pt-1">
+                    <img src="assets/img/brands/customers/taiwan_insurance.png" class="brand-logo" style="height:30px">
+                    <img src="assets/img/brands/customers/cathy.png" class="brand-logo" style="height:30px">
+                    <img src="assets/img/brands/customers/nan-shan.png" class="brand-logo" style="height:30px">
+                  </div>
+                  <ul class="list-group">
+                    <li class="compressed-list bg-cooby-light-gray" style="list-style: none; margin:30px auto 10px 0;">
+                        <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                        <i class="fe fe-check"></i>
+                        </div>
+                        No credit required</li>
+                    <li class="compressed-list bg-cooby-light-gray" style="list-style: none; margin:0 auto 10px 0;">
+                      <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                        <i class="fe fe-check"></i>
+                        </div>
+                        Free consultation</li>
+                    <li class="compressed-list bg-cooby-light-gray" style="list-style: none;">
+                      <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                        <i class="fe fe-check"></i>
+                        </div>
+                        Start building stronger sales relationships</li>
+                  </ul>
+                  <p class="mt-6 mb-6 mb-md-0">
+                    Questions? Submit the form and we'll be in touch.
+                  </p>
+
+                  <!-- Shape -->
+                  <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
+                    <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="card-body" style="text-align:center;">
+
+                  <!-- Close -->
+                  <button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+
+                  <!-- Heading -->
+                  <h2 class="mb-0 font-weight-bold text-center" id="modalSignupHorizontalTitle">
+                    Request Trial Access
+                  </h2>
+
+                  <!-- Text -->
+                  <p class="mb-6 text-center text-muted">
+                    We are devoted to help you succeed.
+                  </p>
+
+                  <form id="signup_form">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+
+                        <!-- First name -->
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="text" class="form-control form-control-flush" name="name" placeholder="Name">
+                          <label for="registrationFirstName">Name</label>
+                        </div>
+
+                      </div>
+                      <div class="col-12 col-md-6">
+
+                        <!-- Last name -->
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="text" class="form-control form-control-flush" name="title" placeholder="Title">
+                          <label for="registrationRole">Title</label>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+
+                        <!-- First name -->
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="text" class="form-control form-control-flush" name="company" placeholder="Company">
+                          <label for="registrationCompany">Company</label>
+                        </div>
+
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <!-- Last name -->
+                        <div class="form-label-group">
+                          <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation">
+                            <option selected>Why Cooby?</option>
+                            <option value="Organize and tag clients">Organize and tag clients</option>
+                            <option value="Import information from WhatsApp">Import information from WhatsApp</option>
+                            <option value="Connect with clients periodically">Connect with clients periodically</option>
+                            <option value="Track client-related tasks">Track client-related tasks</option>
+                            <option value="Take client notes">Take client notes</option>
+                            <option value="Others">Others</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+
+                        <!-- Email -->
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="email" class="form-control form-control-flush" name="email" placeholder="Email">
+                          <label for="registrationEmail">Email</label>
+                        </div>
+
+                      </div>
+                      <div class="col-12 col-md-6">
+
+                        <!-- Password -->
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="phone" class="form-control form-control-flush" name="phone" placeholder="WhatsApp number">
+                          <label for="registrationPhone">WhatsApp number</label>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+
+                        <!-- Submit -->
+                        <button class="btn btn-primary mt-3 lift w-100">
+                          Submit
+                        </button>
+
+                      </div>
+                    </div>
+                  </form>
+
+
+                  <!-- Text -->
+                  <p class="mb-0 font-size-sm text-center text-muted" style="margin-top:10px;">
+                    Already have an account? <a href="https://cooby.app.link/SqNxlEma8db?utm_content=signup_modal">Log in</a>.
+                  </p>
+
+                </div>
+              </div>
+
+            </div> <!-- / .row -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="scheduleModal" tabindex="-1" role="dialog" aria-labelledby="Schedule Demo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <!-- Close -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+
+            <!-- Image -->
+            <div class="text-center">
+              <img src="./assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
+            </div>
+
+            <!-- Heading -->
+            <h2 class="font-weight-bold text-center mb-1" id="modalExampleTitle">
+              Schedule a demo with us
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
+              Our product expert will show you the product demo via video chat at a time of your convience.
+            </p>
+
+            <!-- Form -->
+            <!-- Submit -->
+            <a class="btn btn-block btn-primary mt-3 lift"
+               id='scheduleModalBtn'
+               href='https://calendly.com/cooby-wen/demo-calls'
+               target="_blank">
+              Let's schedule!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white cooby-shadow fixed-top">
       <div class="container">
 
@@ -198,30 +404,23 @@
 
           <!-- Navigation -->
           <ul class="navbar-nav ml-auto" style="margin:auto;">
-            <li class="nav-item">
+            <li class="nav-item dropdown d-none">
+              <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Use Cases
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="./use-cases/insurance.html">Insurance</a>
+                <a class="dropdown-item" href="./use-cases/direct-sales.html">Direct Sales</a>
+              </div>
+            </li>
+            <li class="nav-item d-none">
               <a class="nav-link" id="navbarProduct" href="./features.html">
                 Features
               </a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" id="navbarTeam" href="./pricing.html">
-                Pricing
-              </a>
-            </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" id="navbarService" href="./blog.html">
-                Blog
-              </a>
-            </li>-->
-            <li class="nav-item">
-              <a class="nav-link" id="navbarTeam" href="./careers.html">
-                Careers
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbarContact" href="./support.html">
-                Support
+              <a class="nav-link" id="navbarService" href="./extension.html">
+                Extension
               </a>
             </li>
             <li class="nav-item">
@@ -229,6 +428,17 @@
                 WhatsApp Insights
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbarTeam" href="./pricing.html">
+                Pricing
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="navbarContact" href="./support.html">
+                Support
+              </a>
+            </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-muted" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Language
@@ -253,11 +463,10 @@
           <!-- Button -->
           <div class="text-center pb-md-0 pb-8">
             <a class="navbar-btn btn btn-sm btn-primary lift"
-               href="https://cooby.app.link/LwlQVmaL6db?utm_content=navbar"
-               data-toggle="smooth-scroll"
-               target="_blank"
+               data-toggle="modal"
+               href="#modalSignupHorizontal"
                onclick="gaTracking('sign_up', 'click', 'Navbar')">
-              Sign Up
+              Try Now
             </a>
           </div>
 
@@ -270,85 +479,275 @@
 
     <!-- WELCOME
     ================================================== -->
-    <section class="position-relative pt-14 pt-md-14 mt-n10" id='welcome'>
+    <section class="position-relative pt-13 pt-md-13 pb-md-12 pb-6" id='welcome'>
 
       <!-- Shape -->
       <div class="d-none shape shape-fluid-x shape-blur-2 svg-shim text-light">
         <svg viewBox="0 0 1313 768" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M442.794 768c163.088 0 305.568-88.227 382.317-219.556l.183.556s.249-.749.762-2.181a440.362 440.362 0 0033.192-71.389C901.996 397.81 989.306 277.09 1144.29 206l-.92-.693C1230.34 171.296 1295.63 94.049 1312.83 0H1.294v295.514c-.663 9.909-1 19.908-1 29.986 0 244.386 198.114 442.5 442.5 442.5z" fill="currentColor"/></svg>
       </div>
       <!-- Content -->
-      <div class="container">
+      <div class="container-xl">
         <div class="row align-items-center text-center text-md-left">
-          <div class="col-12 col-md-6">
 
-            <!-- Image -->
-            <img src="assets/img/illustrations/home_banner.png" alt="..." class="img-fluid mw-100 mw-md-130 float-right mb-6 mb-md-0" data-aos="fade-right">
+          <div class="col-12 col-md-6">
+            <!-- Macbook + iPhone -->
+            <div class="device-combo device-combo-macbook-iphonex mb-6 mb-md-0 w-100 w-md-100 w-lg-130" style="float: right!important">
+
+              <!-- Macbook -->
+              <div class="device device-macbook">
+                <img src="assets/img/screenshots/desktop/web_app.svg" class="device-screen">
+                <img src="assets/img/devices/macbook.svg" class="img-fluid">
+              </div>
+
+              <!-- iPhone -->
+              <div class="device device-iphonex">
+                <img src="assets/img/screenshots/mobile/ios_app.svg" class="device-screen">
+                <img src="assets/img/devices/iphonex.svg" class="img-fluid">
+              </div>
+
+            </div>
 
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 pt-md-10">
 
             <!-- Heading -->
             <h1 class="display-3 font-weight-bold">
-              <div data-aos="fade-left">Customer Platform</div>
-              <div data-aos="fade-left" data-aos-delay="100">Built for Messaging</div>
+              <div data-aos="fade-left">Build Stronger</div>
+              <div data-aos="fade-left" data-aos-delay="100">Sales Relationships </div>
             </h1>
 
             <!-- Text -->
             <p class="font-size-lg text-muted mb-6" data-aos="fade-left" data-aos-delay="200">
-              Find inner peace in your messaging apps. Put your customers at ease. Use Cooby with Line and Gmail.
+              Keep in touch, organize clients however you like, and set recurring reminders.
             </p>
 
             <!-- Buttons -->
             <div data-aos="fade-left">
-              <a href="http://cooby.app.link/LwlQVmaL6db?utm_content=clickHeroBtn" class="btn btn-primary mr-1 lift mb-6" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
+              <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary mr-1 lift mb-6" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
                 Start for free <i class="fe fe-arrow-right ml-3"></i>
-              </a>
-              <a href="./features" class="btn btn-primary-soft lift mb-6">
-                Learn more
               </a>
             </div>
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
+    </section>
 
+    <!-- Actionable Views
+    ================================================== -->
+    <section class="py-8 py-md-11 bg-cooby-light-gray">
+      <div class="container">
+        <div class="row justify-content-center">
+           <div class="col-12 col-md-10 col-lg-8 text-center">
+            <!-- Preheading -->
+            <h6 class="text-uppercase text-primary font-weight-bold">
+              Supercharge your Rolodex
+            </h6>
+
+            <!-- Heading -->
+            <h1 class="font-weight-bold">
+              Organize Clients and Set Actions
+            </h1>
+            <p class="font-size-lg text-muted mb-7">
+              You need a <span class="text-primary">sales process</span>, but all the other tools are too hard to use? <br><br>
+              Cooby helps you segment your clients into groups, set auto follow-ups create tasks, and send messages.
+            </p>
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center" style="margin:0;">
+          <div class="col-12 col-md-6 col-lg-6 order-md-2">
+            <!-- Video -->
+            <div class="w-md-150 w-lg-150 mb-6 mb-md-0">
+              <div class="tab-content">
+                <div class="tab-pane active video-tab" id="keep-in-touch-video">
+                  <video playsinline autoplay muted loop
+                    src="assets/video/features/keep_in_touch_view.mov"
+                    class="img-fluid mw-100 mb-6 mb-md-0"
+                    data-aos="fade-left"></video>
+                </div>
+                <div class="tab-pane  video-tab" id="client-score-video">
+                  <video playsinline autoplay muted loop id="view-video"
+                    src="assets/video/features/client_score_view.mov"
+                    class="img-fluid mw-100 mb-6 mb-md-0"
+                    data-aos="fade-left"></video>
+                </div>
+                <div class="tab-pane video-tab" id="custom-video">
+                  <video playsinline autoplay muted loop
+                    src="assets/video/features/custom_view.mov"
+                    class="img-fluid mw-100 mb-6 mb-md-0"
+                    data-aos="fade-left"></video>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-12 col-md-5 col-lg-6 order-md-1">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#keep-in-touch">Keep-In-Touch View</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#client-score">Client Score View</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#custom">Custom View</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="keep-in-touch">
+                <!-- List -->
+                <div class="d-flex pt-6">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M3.957 8.415L11.48 3.82a1 1 0 011.042 0l7.522 4.596A2 2 0 0121 10.122V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-8.878a2 2 0 01.957-1.707z" fill="#335EEA" opacity=".3"/><path d="M13.8 12c-.644 0-1.397.73-1.8 1.2-.403-.47-1.156-1.2-1.8-1.2-1.14 0-1.8.889-1.8 2.02 0 1.253 1.2 2.58 3.6 3.98 2.4-1.4 3.6-2.7 3.6-3.9 0-1.131-.66-2.1-1.8-2.1z" fill="#335EEA" opacity=".3"/></g></svg>
+                  </div>
+
+                  <div class="ml-5">
+
+                    <!-- Heading -->
+                    <h4 class="mb-1">Loved By</h4>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-5">
+                      Insurance Agents, Real Estate Agents, etc
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"/><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"/><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"/><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"/></g></svg>
+                  </div>
+                  <div class="ml-5">
+                    <!-- Heading -->
+                    <h4 class="mb-1">Use Cases</h4>
+                    <!-- Text -->
+                    <p class="text-muted mb-0">
+                      Keep in touch with clients and leads. Set recurring reminders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="client-score">
+                <!-- List -->
+                <div class="d-flex pt-6">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M3.957 8.415L11.48 3.82a1 1 0 011.042 0l7.522 4.596A2 2 0 0121 10.122V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-8.878a2 2 0 01.957-1.707z" fill="#335EEA" opacity=".3"/><path d="M13.8 12c-.644 0-1.397.73-1.8 1.2-.403-.47-1.156-1.2-1.8-1.2-1.14 0-1.8.889-1.8 2.02 0 1.253 1.2 2.58 3.6 3.98 2.4-1.4 3.6-2.7 3.6-3.9 0-1.131-.66-2.1-1.8-2.1z" fill="#335EEA" opacity=".3"/></g></svg>
+                  </div>
+
+                  <div class="ml-5">
+
+                    <!-- Heading -->
+                    <h4 class="mb-1">Loved By</h4>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-5">
+                      Direct Sales, Art Brokers, etc
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"/><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"/><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"/><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"/></g></svg>
+                  </div>
+                  <div class="ml-5">
+                    <!-- Heading -->
+                    <h4 class="mb-1">Use Cases</h4>
+                    <!-- Text -->
+                    <p class="text-muted mb-0">
+                      Organize clients based on their revenue potentials and deal probability. Set automated trackers.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane" id="custom">
+                <!-- List -->
+                <div class="d-flex pt-6">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M3.957 8.415L11.48 3.82a1 1 0 011.042 0l7.522 4.596A2 2 0 0121 10.122V19a2 2 0 01-2 2H5a2 2 0 01-2-2v-8.878a2 2 0 01.957-1.707z" fill="#335EEA" opacity=".3"/><path d="M13.8 12c-.644 0-1.397.73-1.8 1.2-.403-.47-1.156-1.2-1.8-1.2-1.14 0-1.8.889-1.8 2.02 0 1.253 1.2 2.58 3.6 3.98 2.4-1.4 3.6-2.7 3.6-3.9 0-1.131-.66-2.1-1.8-2.1z" fill="#335EEA" opacity=".3"/></g></svg>
+                  </div>
+
+                  <div class="ml-5">
+
+                    <!-- Heading -->
+                    <h4 class="mb-1">Loved By</h4>
+
+                    <!-- Text -->
+                    <p class="text-muted mb-5">
+                      You and other sales professionals
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="d-flex">
+                  <!-- Icon -->
+                  <div class="icon text-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"/><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"/><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"/><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"/></g></svg>
+                  </div>
+                  <div class="ml-5">
+                    <!-- Heading -->
+                    <h4 class="mb-1">Use Cases</h4>
+                    <!-- Text -->
+                    <p class="text-muted mb-0">
+                      Organize clients into groups however you like. Create tasks in bulk, send mesasges or set reminders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
     </section>
 
 <!-- INSIGHT
     ================================================== -->
     <div id='cooby_insight'>
-    <section class="pt-md-8 pb-8 bg-cooby-light-gray">
+    <section class="pt-md-8 pb-10">
       <div class="container">
         <div id='insight_bz_0' class="row justify-content-center">
           <div class="col-12 col-md-6 pt-12" data-aos="fade-right">
             <div id='insight_bz0_slogan'>
               <h6 class="text-uppercase text-primary font-weight-bold">
-                Cooby Insights
+                better use of your time
               </h6>
               <h1 class="font-weight-bold">
-                Optimize Your Time Spent with Clients on WhatsApp
+                Optimize Your Time for the Right Clients
               </h1>
             </div>
             <div id="try-btn-and-aux-text" class="table-container">
               <p class="font-size-lg text-muted mb-7">
-                Get your free analytical report to understand who and how you spend time on WhatsApp. Use it to optimize your time spent for the most important clients. </span>
+                Messaging with clients is a great way to build relationships, but do you know how well your time is spent? <br><br>
+                Get your free report to understand who and how you spend time on WhatsApp. Learn who you keep in touch and lose touch with.
               </p>
               <section id='cooby-insight-btn-and-ps'
-                class="d-flex flex-column justify-content-center">
+                class="d-flex flex-column">
                 <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
                   <span
                     class="btn btn-primary lift mb-3"
                   >Get Your Free Report Now</span>
                 </div>
-                <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
+                <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px;">
                   *No signup required
                 </div>
               </section>
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <img src="assets/img/illustrations/cooby_insight_trailer.png"
-              alt="..." class="img-fluid mw-100 mw-md-130 mb-6 mb-md-0"
-              data-aos="fade-left">
+            <video playsinline autoplay muted
+              src="assets/video/features/Insights.mp4"
+              class="img-fluid mw-100 mb-6 mb-md-0"
+              data-aos="fade-left"></video>
+
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
@@ -356,7 +755,7 @@
         <div id='BZ0_popup_main_content'>
           <div class='title'>Find another device to display QR Code</div>
           <div class='explain'>You need to scan QR Code with your phone, so please
-            <a class='url-green' target="_blank" href='https://wa.me/17075631611?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendUsLink()">send the link to either us</a> 
+            <a class='url-green' target="_blank" href='https://wa.me/17075631611?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendUsLink()">send the link to either us</a>
               or <a class='url-green' target="_blank" href='https://wa.me/?text=Click%20through%20the%20%22Get%20Your%20Free%20Report%20Now%22%20button%20on%20cooby.co%2Finsights%20to%20scan%20the%20QR%20Code' onClick="logSendFriendLink()">your friend nearby</a> via WhatsApp and open the link on another device.</div>
             <div class='explain'>Tap "Got it" below to proceed to QR Code.
             </div>
@@ -367,85 +766,33 @@
       <a id='insight_flow_a' href='https://web.cooby.co/en/insight'></a>
     </section>
     </div>
-    <!-- ABOUT
-    ================================================== -->
-    <section class="pt-md-8 pb-8 pt-12">
-      <div class="container">
-        <div class="row justify-content-center">
-           <div class="col-12 col-md-10 col-lg-8 text-center">
 
+    <!-- Suggestions
+    ================================================== -->
+    <section class="py-8 py-md-8 bg-cooby-light-gray">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+
+          <div class="col-12 col-md-6 col-lg-7 order-md-1">
+            <div class="w-100 w-md-75">
+              <!-- Video -->
+              <video playsinline autoplay muted loop src="assets/video/features/suggestions.mp4" class="img-fluid mb-6 mb-md-4" data-aos="fade-right"></video>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 order-md-2" data-aos="fade-left">
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold">
-              Sell with ease
+              Keep your leads warm
             </h6>
-
-
             <!-- Heading -->
-            <h1 class="font-weight-bold">
-              Contact, Engage<br>and Nurture Customers
-            </h1>
-            <div class="row">
-          <div class="col-12 order-md-2">
-
-            <!-- Macbook + iPhone -->
-            <div class="device-combo device-combo-macbook-iphonex mb-6 mb-md-0">
-
-              <!-- Macbook -->
-              <div class="device device-macbook">
-                <img src="assets/img/screenshots/desktop/profile_eng.jpg" class="device-screen" alt="...">
-                <img src="assets/img/devices/macbook.svg" class="img-fluid" alt="...">
-              </div>
-
-              <!-- iPhone -->
-              <div class="device device-iphonex">
-                <img src="assets/img/screenshots/mobile/tasks_eng.jpg" class="device-screen" alt="...">
-                <img src="assets/img/devices/iphonex.svg" class="img-fluid" alt="...">
-              </div>
-
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-          </div>
-
-            <!-- Card -->
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body shadow-light-lg">
-
-                  <!-- Text -->
-                  <p class="text-center text-muted mb-0">
-                    100+ red badge number waiting for you every morning?
-                  </p>
-
-                </div>
-              </div>
-              <div class="card border-left">
-                <div class="card-body shadow-light-lg">
-
-                  <!-- Text -->
-                  <p class="text-center text-muted mb-0">
-                    Missed a client request or a file lost in messaging threads?
-                  </p>
-
-                </div>
-              </div>
-              <div class="card border-left">
-                <div class="card-body shadow-light-lg">
-
-                  <!-- Text -->
-                  <p class="text-center text-muted mb-0">
-                    Forgot whether an important piece of info was in emails or messages?
-                  </p>
-
-                </div>
-              </div>
-            </div>
-          <div class="col-12 col-md-10 col-lg-7 text-center pt-md-8">
+            <h2 class="font-weight-bold">
+              Never Lose Touch Again
+            </h2>
 
             <!-- Text -->
-            <p class="font-size-lg text-muted mb-7">
-              Focus on what matters the most: build enduring customer relationships. Win clients for life with Cooby.<br> <span class="text-primary">Cooby is right for you &hearts;. It’s simple, useful, and efficient. </span>
+            <p class="font-size-lg text-muted mb-0">
+              Stronger relationships mean keeping in touch with your clients and staying top of mind. <br><br>
+              Cooby provides you daily suggestions on contacts that you should reconnect.
             </p>
 
           </div>
@@ -453,6 +800,124 @@
       </div> <!-- / .container -->
     </section>
 
+    <!-- Remember What Client Said
+    ================================================== -->
+    <section id="product" class='px-2 pb-8 pb-md-6'>
+      <div class="container pb-8">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-12 col-md-6 col-lg-5 order-md-2">
+
+            <!-- Image grid -->
+            <div class="d-flex flex-column w-md-130 mb-6 mb-md-0">
+
+              <!-- Image -->
+              <img class="img-fluid align-self-start" data-jarallax-element="-20" src="assets/img/screenshots/ui/gmail.svg" style="min-height: 1px; max-width: 70%; margin-left: 45%;">
+
+              <video playsinline autoplay muted loop src="assets/video/features/Tasks.mp4" class="img-fluid align-self-start shadow-light" data-jarallax-element="-50" width="320" height="240" style="min-height: 1px; max-width: 70%; margin-top: -25%;" ></video>
+
+              <!-- Image -->
+              <img class=" img-fluid  align-self-center" data-jarallax-element="-80" src="assets/img/screenshots/ui/activities.svg" style="min-height: 1px; max-width: 70%; margin-top: -24%; margin-left: 40%;">
+
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 order-md-1 pt-md-8">
+
+
+            <!-- Heading -->
+            <h1 class="font-weight-bold">
+              Remember <br>What Clients Said
+            </h1>
+
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-6">
+              Show your clients that you care by remembering the details. However, you can't possibly remember everything. <br><br>
+              Use Cooby to take notes, create tasks, sync emails, etc
+            </p>
+
+            <!-- List -->
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+
+                  <p>
+                    Sync Client Emails
+                  </p>
+
+                </div>
+
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+
+                  <p>
+                    Quick Notes
+                  </p>
+
+                </div>
+                <!-- Item -->
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+
+                  <!-- Text -->
+                  <p>
+                    Trackable Tasks
+                  </p>
+
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-6">
+
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+
+                  <!-- Text -->
+                  <p>
+                    Lightning Fast Search
+                  </p>
+
+                </div>
+
+                <div class="d-flex">
+
+                  <!-- Check -->
+                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
+                    <i class="fe fe-check"></i>
+                  </div>
+
+                  <!-- Text -->
+                  <p>
+                    File Attachments
+                  </p>
+
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
 
    <!-- TARGET AUDIENCE
     ================================================== -->
@@ -463,12 +928,12 @@
 
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold">
-              FOCUS ON CUSTOMERS
+              Personal Sales CRM
             </h6>
 
             <!-- Heading -->
             <h1 class="font-weight-bold">
-              Built to Empower Customer-Centric Businesses
+              Built to Empower Modern-Day Sales Professionals
             </h1>
 
             <!-- Text -->
@@ -487,7 +952,7 @@
                 <div class="col-md-4 position-relative">
 
                   <!-- Image -->
-                  <img src="assets/img/illustrations/profeesional_services.jpg" class="h-75 position-absolute right-0 mt-7 mr-n4" alt="...">
+                  <img src="assets/img/illustrations/profeesional_services.jpg" class="h-75 position-absolute right-0 mt-7 mr-n4">
 
                 </div>
                 <div class="col-md-8">
@@ -497,12 +962,12 @@
 
                     <!-- Heading -->
                     <h3 class="font-weight-bold">
-                      Professional Services
+                      High-Ticket Sales
                     </h3>
 
                     <!-- Text -->
                     <p class="text-muted mb-0">
-                      Lawyers, accountants, architects, etc use Cooby to view all contact histories across all channels in one place.
+                      Real estate agents, luxury goods brokers, and art brokers rely on Cooby to impress customers.
                     </p>
 
                   </div>
@@ -524,12 +989,12 @@
 
                     <!-- Heading -->
                     <h3 class="font-weight-bold">
-                      Agencies and Consultancies
+                      Direct Sales
                     </h3>
 
                     <!-- Text -->
                     <p class="text-muted mb-0">
-                      Marketing agencies, headhunters, etc use Cooby to track everything in messaging apps.
+                      Direct sales use Cooby to build stronger relationships with customers.
                     </p>
 
                   </div>
@@ -538,7 +1003,7 @@
                 <div class="col-md-4">
 
                   <!-- Image -->
-                  <img src="assets/img/illustrations/agencies_and_consultancies.jpg" class="h-75 position-absolute left-0 mt-7" alt="...">
+                  <img src="assets/img/illustrations/agencies_and_consultancies.jpg" class="h-75 position-absolute left-0 mt-7">
 
                 </div>
               </div> <!-- / .row -->
@@ -555,7 +1020,7 @@
                 <div class="col-md-4 position-relative">
 
                   <!-- Image -->
-                  <img src="assets/img/illustrations/relationship_focused_sales.jpg" class="h-75 position-absolute right-0 mt-6" alt="...">
+                  <img src="assets/img/illustrations/relationship_focused_sales.jpg" class="h-75 position-absolute right-0 mt-6">
 
                 </div>
                 <div class="col-md-8">
@@ -565,12 +1030,12 @@
 
                     <!-- Heading -->
                     <h3 class="font-weight-bold">
-                      Relationship-Focused Sales
+                      Insurance Sales
                     </h3>
 
                     <!-- Text -->
                     <p class="text-muted mb-0">
-                      Insurance agents and real estate agents use Cooby to build lifelong relationships with clients.
+                      Insurance agents use Cooby to strengthen their relationships with clients.
                     </p>
 
                   </div>
@@ -609,177 +1074,7 @@
       </div> <!-- / .container
     </section>-->
 
-    <!-- ABOUT
-    ================================================== -->
-    <section id="product" class='px-2 pb-8 pb-md-6'>
-      <div class="container border-bottom-cooby pb-8">
-        <div class="row justify-content-between align-items-center">
-          <div class="col-12 col-md-6 col-lg-5 order-md-2">
 
-            <!-- Image grid -->
-            <div class="d-flex flex-column w-md-130 mb-6 mb-md-0">
-
-              <!-- Image -->
-              <img class="img-fluid rounded shadow align-self-start" data-jarallax-element="-20" src="assets/img/screenshots/ui/product_1.png" alt="..." style="min-height: 1px; max-width: 50%; margin-left: 40%;">
-
-              <!-- Image -->
-              <img class="img-fluid rounded shadow align-self-start" data-jarallax-element="-50" src="assets/img/screenshots/ui/product_2.jpg" alt="..." style="min-height: 1px; max-width: 50%; margin-top: -35%;">
-
-              <!-- Image -->
-              <img class="d-none img-fluid rounded shadow align-self-center" data-jarallax-element="-80" src="assets/img/screenshots/ui/product_3.png" alt="..." style="min-height: 1px; max-width: 50%; margin-top: -20%;">
-
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6 order-md-1 pt-md-8">
-
-            <!-- Heading -->
-            <h1 class="font-weight-bold">
-              Manage Your Customer Relationships in a Breeze
-            </h1>
-
-            <!-- Text -->
-            <p class="font-size-lg text-muted mb-6">
-              Cooby provides a simple, easy-to-use CRM platform that greatly simplifies the sales process and accelerates customer development.
-            </p>
-
-            <!-- List -->
-            <div class="row">
-              <div class="col-12 col-lg-6">
-
-                <!-- Item -->
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Client Database
-                  </p>
-
-                </div>
-
-                <!-- Item -->
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <p>
-                    All Sales Activities
-                  </p>
-
-                </div>
-
-                <!-- Item -->
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <p>
-                    Quick Notes
-                  </p>
-
-                </div>
-                <!-- Item -->
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Trackable Tasks
-                  </p>
-
-                </div>
-                <!-- Item -->
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Sales Suggestions
-                  </p>
-
-                </div>
-
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Client Reminders
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Lightning Fast Search
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    Smart Import from Line
-                  </p>
-
-                </div>
-                <div class="d-flex">
-
-                  <!-- Check -->
-                  <div class="badge badge-rounded-circle badge-success-soft mr-1 mr-4">
-                    <i class="fe fe-check"></i>
-                  </div>
-
-                  <!-- Text -->
-                  <p>
-                    File Attachments
-                  </p>
-
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
 
     <!-- INTEGRATIONS
     ================================================== -->
@@ -959,7 +1254,7 @@
 
 <!-- NEWS
     ================================================== -->
-    <section class="pb-8">
+    <section class="pb-10 pt-md-8">
       <div class="container">
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold text-center pb-3">
@@ -989,7 +1284,7 @@
 
 <!-- BRANDS
     ================================================== -->
-    <section class="pb-6">
+    <section class="pb-8">
       <div class="container">
             <!-- Preheading -->
             <h6 class="text-uppercase text-primary font-weight-bold text-center pb-3">
@@ -1025,6 +1320,16 @@
     </section>
 
 
+
+
+            <!-- SHAPE
+            ================================================== -->
+            <div class="position-relative">
+              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>
+              </div>
+            </div>
+
     <!-- CTA
     ================================================== -->
     <section class="pt-6 pt-md-8 bg-cooby-light-gray" id="try">
@@ -1034,22 +1339,25 @@
 
             <!-- Heading -->
             <h2 class="font-weight-bold mb-1">
-              Start For Free
+              Hear What Our Customers Say
             </h2>
 
             <!-- Text -->
-            <p style="padding-top:15px;" class="font-size-lg text-muted mb-5 mb-md-0">
-              Cooby is the only CRM you'll ever need. <br>
-              Join companies like Nanshan, Fubon, Cathay Life and hundreds of other salespeople using Cooby.
+            <p class="font-size-lg text-muted mb-5 mb-md-0 pt-6">
+              "With Cooby, I can segment clients into simple classes such as A, B, C and D. Each class has different designated contact frequencies. I won't lose touch with a client any more!
+              <br>Simply put, Cooby saved me a lot of time and effort and increased clients' trust that led to more deals done!" <br><br>
+              - Chia-Wei, insurance agent, Taiwan Life Insurance Co.
             </p>
 
           </div>
-          <div class="col-12 col-md-1"></div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-4 text-center">
 
             <!-- Button -->
-            <a href="http://cooby.app.link/LwlQVmaL6db?utm_content=startForFree" class="btn btn-primary lift" target="_blank" onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
-              Try Now
+            <a data-toggle="modal"
+               href="#modalSignupHorizontal"
+               class="btn btn-primary lift w-75"
+               onclick="gaTracking('sign_up', 'click', 'clickStartForFreeBtn')">
+              Request Access
             </a>
 
           </div>
@@ -1057,22 +1365,7 @@
       </div> <!-- / .container -->
     </section>
 
-    <!-- CURVE
-    ================================================== -->
-    <div class="d-none position-relative mt-n16">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
-        <svg viewBox="0 0 2880 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M720 28H0v28h2880V28h-720S1874 0 1440 0 720 28 720 28z" fill="currentColor"/></svg>
-      </div>
-    </div>
 
-
-    <!-- SHAPE
-    ================================================== -->
-    <div class="d-none position-relative">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>
-      </div>
-    </div>
 
     <!-- FOOTER
     ================================================== -->
@@ -1086,7 +1379,7 @@
 
             <!-- Text -->
             <p class="text-primary mb-2">
-              Best Customer Platform <br>Built for Messaging
+              Build Stronger <br>Sales Relationships
             </p>
 
             <!-- Social -->
@@ -1111,7 +1404,7 @@
             <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
                 <a href="./" class="text-reset">
-                  Platform
+                  Overview
                 </a>
               </li>
               <li class="mb-3">
@@ -1123,7 +1416,6 @@
           </div>
 
           <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0 d-none">
-
             <!-- Heading -->
             <h6 class="font-weight-bold text-uppercase text-primary">
               Legal
@@ -1142,18 +1434,22 @@
                 </a>
               </li>
             </ul>
-
           </div>
 
           <div class="col-6 col-md-4 col-lg-2">
 
             <!-- Heading -->
             <h6 class="font-weight-bold text-uppercase text-primary">
-              Contact
+              Company
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="./careers.html" class="text-reset">
+                  Careers
+                </a>
+              </li>
               <li class="mb-3">
                 <a href="mailto:support@cooby.co" class="text-reset">
                   Email Us
@@ -1166,14 +1462,14 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-4 col-lg-2 d-none">
                 <a href="https://apps.apple.com/app/id1546272572" class="text-reset d-inline-block mr-1" target="_blank" onclick="gaTracking('visit_app_store', 'click', 'clickAppStoreBtn')">
                   <img src="./assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
                 </a>
 
-                <!--<a href="#!" class="text-reset d-inline-block" style="margin-top:10px;">
+                <a href="#!" class="text-reset d-inline-block" style="margin-top:10px;">
                   <img src="assets/img/buttons/button-play.png" class="img-fluid" alt="..." style="max-width: 155px;">
-                </a>-->
+                </a>
 
           </div>
         </div> <!-- / .row -->
@@ -1209,6 +1505,7 @@
 
     <!-- Theme JS -->
     <script src="./assets/js/theme.min.js"></script>
+
 
     <!-- External Lib -->
     <!-- Start of ChatBot (www.chatbot.com) code -->
