@@ -618,14 +618,6 @@
     </url>
     <url>
         
-        <loc>http://cooby.co/zh-tw/use-cases/insurance.html</loc>
-    
-        
-        <lastmod>2021-06-15T03:19:09.963Z</lastmod>
-    
-    </url>
-    <url>
-        
         <loc>http://cooby.co/zh-tw/partials/BZ0.html</loc>
     
         
@@ -698,6 +690,14 @@
     </url>
     <url>
         
+        <loc>http://cooby.co/zh-tw/use-cases/insurance.html</loc>
+    
+        
+        <lastmod>2021-06-15T03:19:09.963Z</lastmod>
+    
+    </url>
+    <url>
+        
         <loc>http://cooby.co/assets/libs/typed.js/</loc>
     
         
@@ -714,7 +714,7 @@
     </url>
     <url>
         
-        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/background/</loc>
+        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/progress/</loc>
     
         
         <lastmod>2016-01-15T14:57:16.000Z</lastmod>
@@ -722,7 +722,7 @@
     </url>
     <url>
         
-        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/progress/</loc>
+        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/background/</loc>
     
         
         <lastmod>2016-01-15T14:57:16.000Z</lastmod>
