@@ -17,6 +17,15 @@ $('#scheduleModalBtn').click(function(e) {
   $('#scheduleModal').modal('hide');
 });
 
+$(document).ready(function() {
+
+  if(window.location.href.indexOf('#signupModal') != -1) {
+    $('#modalSignupHorizontal').modal('show');
+  }
+
+});
+
+
 // (function(){
 //   $('#modalSignupHorizontal').modal('show');
 // })();
