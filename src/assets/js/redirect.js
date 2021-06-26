@@ -1,5 +1,4 @@
-$(() => {
-  console.log(window.location.pathname)
+$(function() {
   if (window.location.pathname === '/pricing.html' ||
       window.location.pathname === '/pricing' ||
       window.location.pathname === '/zh-tw/pricing.html' ||
