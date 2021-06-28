@@ -252,7 +252,7 @@
 
                     <!-- First name -->
                     <div class="form-label-group" style="text-align:left">
-                      <input type="text" class="form-control form-control-flush" name="name" placeholder="Name">
+                      <input type="text" class="form-control form-control-flush" name="name" placeholder="Name" required>
                       <label for="registrationFirstName">姓名</label>
                     </div>
 
@@ -280,7 +280,7 @@
                   <div class="col-12 col-md-6">
                     <!-- Last name -->
                     <div class="form-label-group">
-                      <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation">
+                      <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation" required>
                         <option selected>使用動機</option>
                         <option value="Organize and tag clients">想整理客戶</option>
                         <option value="Import information from WhatsApp">從Line匯入資訊</option>
@@ -297,7 +297,7 @@
 
                     <!-- Email -->
                     <div class="form-label-group" style="text-align:left">
-                      <input type="email" class="form-control form-control-flush" name="email" placeholder="Email">
+                      <input type="email" class="form-control form-control-flush" name="email" placeholder="Email" required>
                       <label for="registrationEmail">Email</label>
                     </div>
 
@@ -370,6 +370,52 @@
         <a class="btn btn-block btn-primary mt-3 lift"
            id='scheduleModalBtn'
            href='https://calendly.com/cooby-wen/demo-calls'
+           target="_blank">
+          立即預約
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="downloadAndScheduleModal" tabindex="-1" role="dialog" aria-labelledby="Schedule Demo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <!-- Close -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <!-- Image -->
+        <div class="text-center">
+          <img src="../assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
+        </div>
+
+        <!-- Heading -->
+        <h2 class="font-weight-bold text-center mb-6" id="modalExampleTitle">
+          立即下載 Cooby
+        </h2>
+        <div class="text-center">
+          <a href="https://apps.apple.com/app/id1546272572" class="text-reset d-inline-block mr-1 mb-4" target="_blank" onclick="gaTracking('visit_app_store', 'click', 'clickAppStoreBtn')">
+            <img src="../assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+          </a>
+          <!-- Text -->
+          <p class="font-size-lg text-center text-muted">
+            歡迎立即與我們預約時間，透過視訊了解 Cooby 產品，回答任何你的問題。請自由選擇適合的時間！
+          </p>
+          <p class="font-size-sm text-center text-muted mb-6 mb-md-8">
+            Android 用戶嗎？別擔心，與我們預約展示網頁版👇
+          </p>
+        </div>
+
+
+        <!-- Form -->
+        <!-- Submit -->
+        <a class="btn btn-block btn-primary mt-3 lift"
+           id='downloadAndScheduleModalBtn'
+           href='https://calendly.com/cooby-wen/cooby-webinars'
            target="_blank">
           立即預約
         </a>
@@ -517,13 +563,13 @@
               導入 Line 個人帳號資料，設定定期提醒、將客戶分群、制定不同的自動追蹤
             </p>
 
-            <!-- Buttons -->
-            <div data-aos="fade-left">
-              <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary mr-1 lift" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
-                開始你專屬的客管工具 <i class="fe fe-arrow-right ml-3"></i>
+            <div data-aos="fade-left" class="text-center text-md-start">
+              <a data-toggle="modal" href="#modalSignupHorizontal" class="btn btn-primary mr-1 lift mb-0 mb-md-3 mb-lg-0" data-toggle="smooth-scroll" onclick="gaTracking('sign_up', 'click', 'clickHeroBtn')">
+                安排產品示範 <i class="fe fe-arrow-right ml-3"></i>
               </a>
-
+              <a href="https://www.producthunt.com/posts/sales-crm-by-cooby?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sales-crm-by-cooby" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=301307&theme=light" alt="Sales CRM by Cooby - Build mobile sales engines for WhatsApp without spreadsheets | Product Hunt" style="max-width: 250px; height: 54px;" width="250" height="54" /></a>
             </div>
+
 
           </div>
         </div> <!-- / .row -->

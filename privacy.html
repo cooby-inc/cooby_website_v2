@@ -667,7 +667,7 @@
 
                   <!-- Heading -->
                   <h2 class="mb-0 font-weight-bold text-center" id="modalSignupHorizontalTitle">
-                    Request Trial Access
+                    Schedule a Demo
                   </h2>
 
                   <!-- Text -->
@@ -681,7 +681,7 @@
 
                         <!-- First name -->
                         <div class="form-label-group" style="text-align:left">
-                          <input type="text" class="form-control form-control-flush" name="name" placeholder="Name">
+                          <input type="text" class="form-control form-control-flush" name="name" placeholder="Name" required>
                           <label for="registrationFirstName">Name</label>
                         </div>
 
@@ -709,8 +709,8 @@
                       <div class="col-12 col-md-6">
                         <!-- Last name -->
                         <div class="form-label-group">
-                          <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation">
-                            <option selected>Why Cooby?</option>
+                          <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation" required>
+                            <option value="Why Cooby?" selected>Why Cooby?</option>
                             <option value="Organize and tag clients">Organize and tag clients</option>
                             <option value="Import information from WhatsApp">Import information from WhatsApp</option>
                             <option value="Connect with clients periodically">Connect with clients periodically</option>
@@ -726,7 +726,7 @@
 
                         <!-- Email -->
                         <div class="form-label-group" style="text-align:left">
-                          <input type="email" class="form-control form-control-flush" name="email" placeholder="Email">
+                          <input type="email" class="form-control form-control-flush" name="email" placeholder="Email" required>
                           <label for="registrationEmail">Email</label>
                         </div>
 
@@ -799,6 +799,51 @@
             <a class="btn btn-block btn-primary mt-3 lift"
                id='scheduleModalBtn'
                href='https://calendly.com/cooby-wen/demo-calls'
+               target="_blank">
+              Let's schedule!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="downloadAndScheduleModal" tabindex="-1" role="dialog" aria-labelledby="Schedule Demo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <!-- Close -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+
+            <!-- Image -->
+            <div class="text-center">
+              <img src="./assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
+            </div>
+
+            <!-- Heading -->
+            <h2 class="font-weight-bold text-center mb-4" id="modalExampleTitle">
+              Download Cooby App
+            </h2>
+            <div class="text-center">
+              <a href="https://apps.apple.com/app/id1546272572" class="text-reset d-inline-block mr-1 mb-4" target="_blank" onclick="gaTracking('visit_app_store', 'click', 'clickAppStoreBtn')">
+                <img src="./assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+              </a>
+              <!-- Text -->
+              <p class="font-size-lg text-center text-muted">
+                Then schedule a time with us. We'll show you the product demo via video chat at a time of your convience.
+              </p>
+              <p class="font-size-sm text-center text-muted mb-6 mb-md-8">
+                Do you use Android? No worries. Schedule a demo for Cooby Web app 👇
+              </p>
+            </div>
+            <!-- Form -->
+            <!-- Submit -->
+            <a class="btn btn-block btn-primary mt-3 lift"
+               id='downloadAndScheduleModalBtn'
+               href='https://calendly.com/cooby-wen/cooby-webinars'
                target="_blank">
               Let's schedule!
             </a>
