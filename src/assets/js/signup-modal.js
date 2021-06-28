@@ -8,14 +8,22 @@ $('#signup_form').submit(function(e){
     {
       console.log("success");
       $('#modalSignupHorizontal').modal('hide');
-      $('#scheduleModal').modal('show');
+      // $('#scheduleModal').modal('show');
+      $('#downloadAndScheduleModal').modal('show');
     }
   });
 });
 
 $('#scheduleModalBtn').click(function(e) {
   $('#scheduleModal').modal('hide');
+
 });
+
+
+$('#downloadAndScheduleModalBtn').click(function(e) {
+  $('#downloadAndScheduleModal').modal('hide');
+});
+
 
 $(document).ready(function() {
 
