@@ -29,7 +29,7 @@
 
           <!-- Heading -->
           <h1 class="display-3 font-weight-bold text-white">
-            Cooby x AppSumo
+            Cooby &#10084 AppSumo
           </h1>
 
           <!-- Text -->
@@ -65,7 +65,7 @@
         <!-- Full Name -->
         <div class="col-12 order-1 col-lg-6 order-lg-1 px-4">
           <div class="form-label-group" style="text-align:left">
-            <input type="text" class="form-control form-control-flush" name="fullName" placeholder="Full Name" required>
+            <input type="text" class="form-control form-control-flush" name="name" placeholder="Full Name" required>
             <label for="registrationFullName">Full Name</label>
           </div>
         </div>
@@ -113,7 +113,7 @@
         <!-- AppSumo Code -->
         <div class="col-12 order-7 order-lg-7 px-4">
           <div class="form-label-group" style="text-align:left">
-            <input type="password" class="form-control form-control-flush" name="appsumoCode" placeholder="AppSumo Code" required>
+            <input type="password" class="form-control form-control-flush" name="redemption_code" placeholder="AppSumo Code" required>
             <label for="registrationPassword">AppSumo Code</label>
           </div>
         </div>
@@ -129,8 +129,9 @@
         </div>
 
         <div class="col-12 order-9 order-lg-9 px-7 mt-4">
-          <button class="btn btn-primary lift w-100">
-            Activate Account
+          <button class="btn btn-primary lift w-100" id="redeem_button">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+            <p class="my-0">Activate Account</p>
           </button>
         </div>
 

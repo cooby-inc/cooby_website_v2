@@ -34,7 +34,7 @@
 
           <!-- Text -->
           <p class="font-size-lg text-white mb-6 mb-md-8" style="width:90%; margin:auto;">
-            Focus on building relationships via messaging apps. Leave the rest to Cooby.
+            &#127881 &nbsp Your account: <strong id="redeemed_email_text"></strong> has been activated.
           </p>
 
         </div>
@@ -100,5 +100,17 @@
   @@include("partials/scripts.html")
 
 </body>
+<script>
+  $(function() {
+    var urlParams = new URLSearchParams(window.location.search)
+    var email = urlParams.get('email')
+    // if there is no email param, redirect to cooby.co
+    if (email === null) {
+      window.location.pathname = '/'
+    } else {
+      $('#redeemed_email_text').text(email)
+    }
+  })
+</script>
 
 </html>
