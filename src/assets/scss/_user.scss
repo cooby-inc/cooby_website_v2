@@ -28,7 +28,7 @@ body{
 
 .brand-logo {
 	height:30px;
-	margin-right:15px;
+	margin:10px 10px 0 0;
 }
 
 .bg-cooby-light-gray{
@@ -132,10 +132,16 @@ h3{
 	.hero-responsive{
 		background-size: 100% auto;
 	}
+	.w-custom{
+	width:100%;
+	}
 }
 @media (min-width: 992px){
 	.navbar-expand-lg .navbar-nav .nav-link {
 		padding-right: 1rem;
 		padding-left: 1rem;
+	}
+	.w-custom{
+	width:60%;
 	}
 }
