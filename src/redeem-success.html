@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  @@include("partials/head.html", {
+  "pageTitle": "Cooby | AppSumo"
+  })
+</head>
+
+<body class="font-eng">
+
+  <!-- NAVBAR
+    ================================================== -->
+  @@include("partials/navbar.html", {
+  "classList": "navbar-light bg-white",
+  "container": "container"
+  })
+
+  <section class="pt-10 pt-md-11 pb-6 pb-md-8 bg-cooby-indigo" id="welcome">
+    <!-- Shape -->
+    <div class="shape shape-blur-3 svg-shim text-white">
+      @@include("assets/img/shapes/blurs/blur-3.svg")
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-7 pt-10 text-center">
+
+          <!-- Heading -->
+          <h1 class="display-3 font-weight-bold text-white">
+            Successfully Redeemed!
+          </h1>
+
+          <!-- Text -->
+          <p class="font-size-lg text-white mb-6 mb-md-8" style="width:90%; margin:auto;">
+            Focus on building relationships via messaging apps. Leave the rest to Cooby.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+      @@include("assets/img/shapes/curves/curve-1.svg")
+    </div>
+  </div>
+
+  <!-- Product View
+  ================================================== -->
+  <section class="mt-10 py-8 py-md-0">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-6 col-lg-7 order-md-2">
+
+          <!-- Image -->
+          <img src="assets/img/screenshots/ui/activities.png" alt="..." class="img-fluid mb-6 mb-md-0" data-aos="fade-left">
+
+        </div>
+        <div class="d-flex flex-column justify-content-around col-12 col-md-6 col-lg-5 order-md-1" data-aos="fade-right">
+
+          <div>
+            <h2 class="font-weight-bold mt-4">
+              Schedule a demo with us
+            </h2>
+            <p class="font-size-lg text-muted mb-4">
+              Our product expert will show you the product demo via video chat at a time of your convience.
+            </p>
+            <div class="d-flex justify-content-center d-md-block mb-4">
+              <a href="https://apps.apple.com/app/id1546272572" class="text-reset d-inline-block mr-1 mb-4" target="_blank" onclick="gaTracking('visit_app_store', 'click', 'clickAppStoreBtn')">
+                <img src="@@webRoot/assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <a class="btn btn-primary lift col-12 col-lg-6"
+              id='downloadAndScheduleModalBtn'
+              href='https://calendly.com/cooby-wen/cooby-webinars'
+              target="_blank">
+              Let's schedule!
+            </a>
+          </div>
+          
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- FOOTER
+        ================================================== -->
+  @@include("partials/footer.html")
+
+  <!-- JAVASCRIPT
+        ================================================== -->
+  @@include("partials/scripts.html")
+
+</body>
+
+</html>
