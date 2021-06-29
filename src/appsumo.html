@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  @@include("partials/head.html", {
+  "pageTitle": "Cooby | AppSumo"
+  })
+</head>
+
+<body class="font-eng">
+
+  <!-- NAVBAR
+    ================================================== -->
+  @@include("partials/navbar.html", {
+  "classList": "navbar-light bg-white",
+  "container": "container"
+  })
+
+  <section class="pt-10 pt-md-11 pb-6 pb-md-8 bg-cooby-indigo" id="welcome">
+    <!-- Shape -->
+    <div class="shape shape-blur-3 svg-shim text-white">
+      @@include("assets/img/shapes/blurs/blur-3.svg")
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-7 pt-10 text-center">
+
+          <!-- Heading -->
+          <h1 class="display-3 font-weight-bold text-white">
+            Cooby x AppSumo
+          </h1>
+
+          <!-- Text -->
+          <p class="font-size-lg text-white mb-6 mb-md-8" style="width:90%; margin:auto;">
+            Focus on building relationships via messaging apps. Leave the rest to Cooby.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+      @@include("assets/img/shapes/curves/curve-1.svg")
+    </div>
+  </div>
+
+  <section class="container mt-8 mb-10">
+    <div class="container">
+
+      <!-- <div class="row justify-content-center mb-4">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            <h1 class="font-weight-bold">
+              Fill the information
+            </h1>
+          </div>
+        </div> -->
+
+      <form class="row">
+        <!-- Full Name -->
+        <div class="col-12 order-1 col-lg-6 order-lg-1 px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="text" class="form-control form-control-flush" name="fullName" placeholder="Full Name">
+            <label for="registrationFullName">Full Name</label>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-12 order-4 col-lg-6 order-lg-4  px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="text" class="form-control form-control-flush" name="fullName" placeholder="Full Name">
+            <label for="registrationEmail">Email</label>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="col-12 order-2 col-lg-6 order-lg-2 px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="text" class="form-control form-control-flush" name="company" placeholder="Company">
+            <label for="registrationCompany">Company</label>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="col-12 order-5 col-lg-6 order-lg-5 px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="password" class="form-control form-control-flush" name="password" placeholder="Password">
+            <label for="registrationPassword">Password</label>
+          </div>
+        </div>
+
+        <!-- Title -->
+        <div class="col-12 order-3 col-lg-6 order-lg-3 px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="text" class="form-control form-control-flush" name="title" placeholder="Title">
+            <label for="registrationTitle">Title</label>
+          </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="col-12 order-6 col-lg-6 order-lg-6 px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="password" class="form-control form-control-flush" name="confirmPassword"
+              placeholder="confirm Password">
+            <label for="registrationPassword">Confrim Password</label>
+          </div>
+        </div>
+
+        <!-- AppSumo Code -->
+        <div class="col-12 order-7 order-lg-7 px-4">
+          <div class="form-label-group" style="text-align:left">
+            <input type="password" class="form-control form-control-flush" name="appsumoCode"
+              placeholder="AppSumo Code">
+            <label for="registrationPassword">AppSumo Code</label>
+          </div>
+        </div>
+
+        <!-- Terms of use -->
+        <div class="col-12 order-8 order-lg-8 px-7">
+          <div class="form-group" style="text-align:left">
+            <input type="checkbox" class="form-check-input" name="termsOfUse">
+            <label class="form-check-label text-gray-800" for="registrationTermsOfUse">
+              I agree the <a href="@@webRoot/terms.html">Terms of use</a>
+            </label>
+          </div>
+        </div>
+
+        <div class="col-12 order-9 order-lg-9 px-7 mt-4">
+          <button class="btn btn-primary lift w-100">
+            Activate Account
+          </button>
+        </div>
+
+      </form> <!-- / .form -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER
+        ================================================== -->
+  @@include("partials/footer.html")
+
+  <!-- JAVASCRIPT
+        ================================================== -->
+  @@include("partials/scripts.html")
+
+</body>
+
+</html>
