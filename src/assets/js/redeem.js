@@ -30,7 +30,7 @@ $('#redemption_form').on('submit', function(e) {
   // sign up user
   // production: 'https://cooby-taroko.herokuapp.com'
   // staging: 'https://api-staging.cooby.co'
-  var apiURL = 'https://api-staging.cooby.co'
+  var apiURL = 'https://cooby-taroko.herokuapp.com'
 
   $.ajax({
     type: 'POST',
