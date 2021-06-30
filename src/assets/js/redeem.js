@@ -8,7 +8,13 @@ $('#redemption_form').on('submit', function(e) {
   inputs.each(function() {
     data[this.name] = $(this).val().trim()
   })
-
+  
+  // check redeem code
+  if (data['redemption_code'].length === 0) {
+    showErrorModalWithMsg('Redemption code should not be empty')
+    setActivateAccountLoading(false)
+    return
+  }
   // check password
   if (data.password.length < 8 || data.confirmPassword.length < 8) {
     showErrorModalWithMsg('Password should be minimum 8 characters')
@@ -24,19 +30,20 @@ $('#redemption_form').on('submit', function(e) {
   // sign up user
   // production: 'https://cooby-taroko.herokuapp.com'
   // staging: 'https://api-staging.cooby.co'
-  var apiURL = 'https://api-staging.cooby.co'
+  var apiURL = 'https://cooby-taroko.herokuapp.com'
 
   $.ajax({
     type: 'POST',
     url: apiURL + '/users',
     contentType: 'application/json',
-    dataType: 'json',
+    crossDomain: true,
     data: JSON.stringify(data),
     success: function(res) {
       var authToken = 'Bearer ' + res.token
       $.ajax({
         type: 'PUT',
         url: apiURL + '/info',
+        crossDomain: true,
         contentType: 'application/json',
         data: JSON.stringify({
           lang: 'en',
@@ -49,16 +56,16 @@ $('#redemption_form').on('submit', function(e) {
         },
         success: function(res) {
           setActivateAccountLoading(false)
-          window.location.pathname = '/redeem-success.html'
-          window.location.search = '?email=' + data.email
+          window.location = window.location.protocol + '/redeem-success.html?email=' + data.email
         },
         error: function(res) {
           setActivateAccountLoading(false)
-          showErrorModalWithMsg(res)    
+          showErrorModalWithMsg(res)
         }
       })
     },
     error: function(res) {
+      console.log(res)
       setActivateAccountLoading(false)
       showErrorModalWithMsg(res.responseJSON.error_message)
     }
@@ -73,9 +80,11 @@ function showErrorModalWithMsg(msg) {
 
 function setActivateAccountLoading(bool) {
   if (bool) {
+    $('#redemption_form #redeem_button').prop('disabled', true)
     $('#redemption_form #redeem_button span').show()
     $('#redemption_form #redeem_button p').hide()
   } else {
+    $('#redemption_form #redeem_button').prop('disabled', false)
     $('#redemption_form #redeem_button span').hide()
     $('#redemption_form #redeem_button p').show()
   }
