@@ -8,8 +8,8 @@ $('#signup_form').submit(function(e){
     {
       console.log("success");
       $('#modalSignupHorizontal').modal('hide');
-      // $('#scheduleModal').modal('show');
-      $('#downloadAndScheduleModal').modal('show');
+      $('#scheduleModal').modal('show');
+      // $('#downloadAndScheduleModal').modal('show');
     }
   });
 });
