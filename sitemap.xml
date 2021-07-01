@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         
+        <loc>http://cooby.co/appsumo.html</loc>
+    
+        
+        <lastmod>2021-07-01T07:52:27.523Z</lastmod>
+    
+    </url>
+    <url>
+        
         <loc>http://cooby.co/blog-search.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.023Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.246Z</lastmod>
     
     </url>
     <url>
@@ -13,7 +21,7 @@
         <loc>http://cooby.co/blog-showcase.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.023Z</lastmod>
+        <lastmod>2021-06-24T01:24:08.105Z</lastmod>
     
     </url>
     <url>
@@ -21,7 +29,7 @@
         <loc>http://cooby.co/careers.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.471Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.247Z</lastmod>
     
     </url>
     <url>
@@ -29,7 +37,7 @@
         <loc>http://cooby.co/extension.html</loc>
     
         
-        <lastmod>2021-06-27T13:03:42.369Z</lastmod>
+        <lastmod>2021-06-30T12:34:53.805Z</lastmod>
     
     </url>
     <url>
@@ -37,7 +45,7 @@
         <loc>http://cooby.co/features.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.471Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.251Z</lastmod>
     
     </url>
     <url>
@@ -45,7 +53,7 @@
         <loc>http://cooby.co/</loc>
     
         
-        <lastmod>2021-06-28T12:25:59.007Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.954Z</lastmod>
     
     </url>
     <url>
@@ -53,7 +61,7 @@
         <loc>http://cooby.co/insights.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.472Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.252Z</lastmod>
     
     </url>
     <url>
@@ -61,7 +69,7 @@
         <loc>http://cooby.co/pricing.html</loc>
     
         
-        <lastmod>2021-06-18T17:15:39.400Z</lastmod>
+        <lastmod>2021-06-26T05:12:57.384Z</lastmod>
     
     </url>
     <url>
@@ -69,7 +77,15 @@
         <loc>http://cooby.co/privacy.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.474Z</lastmod>
+        <lastmod>2021-06-24T03:26:56.300Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/redeem-success.html</loc>
+    
+        
+        <lastmod>2021-07-01T08:02:21.360Z</lastmod>
     
     </url>
     <url>
@@ -77,7 +93,7 @@
         <loc>http://cooby.co/support.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.474Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.254Z</lastmod>
     
     </url>
     <url>
@@ -85,7 +101,7 @@
         <loc>http://cooby.co/terms.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.475Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.254Z</lastmod>
     
     </url>
     <url>
@@ -93,7 +109,7 @@
         <loc>http://cooby.co/blog/5-tips-to-building-a-strong-customer-relationship-in-the-messaging-era.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.471Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.247Z</lastmod>
     
     </url>
     <url>
@@ -101,7 +117,7 @@
         <loc>http://cooby.co/blog/blog-post.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.247Z</lastmod>
     
     </url>
     <url>
@@ -109,7 +125,7 @@
         <loc>http://cooby.co/use-cases/insurance.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.475Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.254Z</lastmod>
     
     </url>
     <url>
@@ -117,7 +133,7 @@
         <loc>http://cooby.co/docs/alerts.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -125,7 +141,7 @@
         <loc>http://cooby.co/docs/aos.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -133,7 +149,7 @@
         <loc>http://cooby.co/docs/avatars.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -141,7 +157,7 @@
         <loc>http://cooby.co/docs/background.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -149,7 +165,7 @@
         <loc>http://cooby.co/docs/badges.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -157,7 +173,7 @@
         <loc>http://cooby.co/docs/borders.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -165,7 +181,7 @@
         <loc>http://cooby.co/docs/breadcrumb.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.024Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.947Z</lastmod>
     
     </url>
     <url>
@@ -173,7 +189,7 @@
         <loc>http://cooby.co/docs/buttons.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -181,7 +197,7 @@
         <loc>http://cooby.co/docs/cards.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -189,7 +205,7 @@
         <loc>http://cooby.co/docs/changelog.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -197,7 +213,7 @@
         <loc>http://cooby.co/docs/choices.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -205,7 +221,7 @@
         <loc>http://cooby.co/docs/countup.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -213,7 +229,7 @@
         <loc>http://cooby.co/docs/devices.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -221,7 +237,7 @@
         <loc>http://cooby.co/docs/dropdowns.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -229,7 +245,7 @@
         <loc>http://cooby.co/docs/dropzone.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.948Z</lastmod>
     
     </url>
     <url>
@@ -237,7 +253,7 @@
         <loc>http://cooby.co/docs/dummy.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -245,7 +261,7 @@
         <loc>http://cooby.co/docs/fancybox.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -253,7 +269,7 @@
         <loc>http://cooby.co/docs/figma.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -261,7 +277,7 @@
         <loc>http://cooby.co/docs/flickity.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -269,7 +285,7 @@
         <loc>http://cooby.co/docs/forms.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.025Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -277,7 +293,7 @@
         <loc>http://cooby.co/docs/illustrations.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -285,7 +301,7 @@
         <loc>http://cooby.co/docs/images.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -293,7 +309,7 @@
         <loc>http://cooby.co/docs/</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.949Z</lastmod>
     
     </url>
     <url>
@@ -301,7 +317,7 @@
         <loc>http://cooby.co/docs/isotope.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.950Z</lastmod>
     
     </url>
     <url>
@@ -309,7 +325,7 @@
         <loc>http://cooby.co/docs/jarallax.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.950Z</lastmod>
     
     </url>
     <url>
@@ -317,7 +333,7 @@
         <loc>http://cooby.co/docs/lift.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.950Z</lastmod>
     
     </url>
     <url>
@@ -325,7 +341,7 @@
         <loc>http://cooby.co/docs/lists.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.950Z</lastmod>
     
     </url>
     <url>
@@ -333,7 +349,7 @@
         <loc>http://cooby.co/docs/map.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.950Z</lastmod>
     
     </url>
     <url>
@@ -341,7 +357,7 @@
         <loc>http://cooby.co/docs/modal.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.950Z</lastmod>
     
     </url>
     <url>
@@ -349,7 +365,7 @@
         <loc>http://cooby.co/docs/navbar.html</loc>
     
         
-        <lastmod>2021-06-27T07:15:24.874Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -357,7 +373,7 @@
         <loc>http://cooby.co/docs/navs.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -365,7 +381,7 @@
         <loc>http://cooby.co/docs/overlay.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.026Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -373,7 +389,7 @@
         <loc>http://cooby.co/docs/pagination.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -381,7 +397,7 @@
         <loc>http://cooby.co/docs/popovers.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -389,7 +405,7 @@
         <loc>http://cooby.co/docs/position.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -397,7 +413,7 @@
         <loc>http://cooby.co/docs/progress.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.951Z</lastmod>
     
     </url>
     <url>
@@ -405,7 +421,7 @@
         <loc>http://cooby.co/docs/quill.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -413,7 +429,7 @@
         <loc>http://cooby.co/docs/screenshot.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -421,7 +437,7 @@
         <loc>http://cooby.co/docs/shadows.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -429,7 +445,7 @@
         <loc>http://cooby.co/docs/shapes.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -437,7 +453,7 @@
         <loc>http://cooby.co/docs/sizing.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -445,7 +461,7 @@
         <loc>http://cooby.co/docs/smooth-scroll.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -453,7 +469,7 @@
         <loc>http://cooby.co/docs/spinners.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -461,7 +477,7 @@
         <loc>http://cooby.co/docs/switches.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -469,7 +485,7 @@
         <loc>http://cooby.co/docs/tables.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.952Z</lastmod>
     
     </url>
     <url>
@@ -477,7 +493,7 @@
         <loc>http://cooby.co/docs/toasts.html</loc>
     
         
-        <lastmod>2021-05-31T12:54:31.345Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.953Z</lastmod>
     
     </url>
     <url>
@@ -485,7 +501,7 @@
         <loc>http://cooby.co/docs/tooltips.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.953Z</lastmod>
     
     </url>
     <url>
@@ -493,7 +509,7 @@
         <loc>http://cooby.co/docs/type.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.027Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.953Z</lastmod>
     
     </url>
     <url>
@@ -501,7 +517,7 @@
         <loc>http://cooby.co/docs/typed.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.028Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.953Z</lastmod>
     
     </url>
     <url>
@@ -509,7 +525,7 @@
         <loc>http://cooby.co/docs/typography.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.028Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.953Z</lastmod>
     
     </url>
     <url>
@@ -517,7 +533,7 @@
         <loc>http://cooby.co/docs/visibility.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.028Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.953Z</lastmod>
     
     </url>
     <url>
@@ -525,7 +541,7 @@
         <loc>http://cooby.co/zh-tw/1coffee.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.030Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.954Z</lastmod>
     
     </url>
     <url>
@@ -533,7 +549,7 @@
         <loc>http://cooby.co/zh-tw/careers.html</loc>
     
         
-        <lastmod>2021-05-31T12:54:31.366Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
     
     </url>
     <url>
@@ -541,7 +557,7 @@
         <loc>http://cooby.co/zh-tw/email-verification.html</loc>
     
         
-        <lastmod>2021-06-14T05:14:18.477Z</lastmod>
+        <lastmod>2021-06-27T11:49:59.459Z</lastmod>
     
     </url>
     <url>
@@ -549,7 +565,7 @@
         <loc>http://cooby.co/zh-tw/fbcoffee.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.187Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.955Z</lastmod>
     
     </url>
     <url>
@@ -557,7 +573,7 @@
         <loc>http://cooby.co/zh-tw/features.html</loc>
     
         
-        <lastmod>2021-06-29T06:29:31.655Z</lastmod>
+        <lastmod>2021-06-30T12:34:53.809Z</lastmod>
     
     </url>
     <url>
@@ -565,7 +581,7 @@
         <loc>http://cooby.co/zh-tw/</loc>
     
         
-        <lastmod>2021-06-28T12:25:06.462Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.955Z</lastmod>
     
     </url>
     <url>
@@ -573,7 +589,7 @@
         <loc>http://cooby.co/zh-tw/kingfong.html</loc>
     
         
-        <lastmod>2021-01-27T08:05:26.188Z</lastmod>
+        <lastmod>2021-07-01T07:56:48.955Z</lastmod>
     
     </url>
     <url>
@@ -581,7 +597,7 @@
         <loc>http://cooby.co/zh-tw/pricing.html</loc>
     
         
-        <lastmod>2021-06-18T17:14:39.103Z</lastmod>
+        <lastmod>2021-06-26T05:13:20.388Z</lastmod>
     
     </url>
     <url>
@@ -589,7 +605,7 @@
         <loc>http://cooby.co/zh-tw/privacy.html</loc>
     
         
-        <lastmod>2021-02-03T11:44:30.899Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.464Z</lastmod>
     
     </url>
     <url>
@@ -597,7 +613,7 @@
         <loc>http://cooby.co/zh-tw/support.html</loc>
     
         
-        <lastmod>2021-04-13T03:38:54.289Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.464Z</lastmod>
     
     </url>
     <url>
@@ -605,79 +621,7 @@
         <loc>http://cooby.co/zh-tw/terms.html</loc>
     
         
-        <lastmod>2021-02-03T11:44:39.241Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/BZ0.html</loc>
-    
-        
-        <lastmod>2021-06-14T05:14:18.477Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/chatbot.html</loc>
-    
-        
-        <lastmod>2021-05-31T12:54:31.371Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/footer.html</loc>
-    
-        
-        <lastmod>2021-06-14T05:14:18.477Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/head.html</loc>
-    
-        
-        <lastmod>2021-06-14T05:14:18.478Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/modals.html</loc>
-    
-        
-        <lastmod>2021-01-27T08:05:26.188Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/navbar.html</loc>
-    
-        
-        <lastmod>2021-06-14T05:14:18.478Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/scripts.html</loc>
-    
-        
-        <lastmod>2021-06-27T07:15:24.875Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/sidenav.html</loc>
-    
-        
-        <lastmod>2021-01-27T08:05:26.188Z</lastmod>
-    
-    </url>
-    <url>
-        
-        <loc>http://cooby.co/zh-tw/partials/signup.html</loc>
-    
-        
-        <lastmod>2021-06-29T06:29:31.655Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.464Z</lastmod>
     
     </url>
     <url>
@@ -685,7 +629,79 @@
         <loc>http://cooby.co/zh-tw/blog/brand-story.html</loc>
     
         
-        <lastmod>2021-03-01T12:10:03.218Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/BZ0.html</loc>
+    
+        
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/chatbot.html</loc>
+    
+        
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/footer.html</loc>
+    
+        
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/head.html</loc>
+    
+        
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/modals.html</loc>
+    
+        
+        <lastmod>2021-06-23T10:01:14.463Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/navbar.html</loc>
+    
+        
+        <lastmod>2021-06-27T03:04:32.940Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/scripts.html</loc>
+    
+        
+        <lastmod>2021-06-27T02:52:25.700Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/sidenav.html</loc>
+    
+        
+        <lastmod>2021-06-23T10:01:14.464Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>http://cooby.co/zh-tw/partials/signup.html</loc>
+    
+        
+        <lastmod>2021-07-01T08:02:21.360Z</lastmod>
     
     </url>
     <url>
@@ -693,7 +709,7 @@
         <loc>http://cooby.co/zh-tw/use-cases/insurance.html</loc>
     
         
-        <lastmod>2021-06-15T03:19:09.963Z</lastmod>
+        <lastmod>2021-06-23T10:01:14.464Z</lastmod>
     
     </url>
     <url>
@@ -714,7 +730,7 @@
     </url>
     <url>
         
-        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/progress/</loc>
+        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/background/</loc>
     
         
         <lastmod>2016-01-15T14:57:16.000Z</lastmod>
@@ -722,7 +738,7 @@
     </url>
     <url>
         
-        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/background/</loc>
+        <loc>http://cooby.co/assets/libs/imagesloaded/sandbox/progress/</loc>
     
         
         <lastmod>2016-01-15T14:57:16.000Z</lastmod>
@@ -733,7 +749,7 @@
         <loc>http://cooby.co/assets/libs/npm/node_modules/jsbn/example.html</loc>
     
         
-        <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+        <lastmod>2017-02-12T07:42:38.000Z</lastmod>
     
     </url>
     <url>
@@ -741,7 +757,7 @@
         <loc>http://cooby.co/assets/libs/npm/node_modules/through2/LICENSE.html</loc>
     
         
-        <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+        <lastmod>2016-11-28T22:51:24.000Z</lastmod>
     
     </url>
     <url>
@@ -757,7 +773,7 @@
         <loc>http://cooby.co/assets/libs/npm/node_modules/mute-stream/coverage/lcov-report/</loc>
     
         
-        <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+        <lastmod>2016-02-13T06:19:00.000Z</lastmod>
     
     </url>
     <url>
@@ -781,7 +797,7 @@
         <loc>http://cooby.co/assets/libs/npm/node_modules/mute-stream/coverage/lcov-report/__root__/</loc>
     
         
-        <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+        <lastmod>2016-02-13T06:19:00.000Z</lastmod>
     
     </url>
     <url>
@@ -789,7 +805,7 @@
         <loc>http://cooby.co/assets/libs/npm/node_modules/mute-stream/coverage/lcov-report/__root__/mute.js.html</loc>
     
         
-        <lastmod>1985-10-26T08:15:00.000Z</lastmod>
+        <lastmod>2016-02-13T06:19:00.000Z</lastmod>
     
     </url>
 </urlset>
