@@ -112,11 +112,16 @@ gulp.task('scss', function() {
 });
 
 gulp.task('sitemap', function () {
-  return gulp.src('dist/**/*.html', {
-          read: false
+  return gulp.src([
+        'dist/**/*.html',
+        '!dist/assets/**',
+        '!dist/zh-tw/partials/**'
+      ], {
+          read: true
       })
       .pipe(sitemap({
-          siteUrl: 'http://cooby.co'
+          siteUrl: 'http://cooby.co',
+          noindex: true
       }))
       .pipe(gulp.dest(paths.dist.base.dir));
 });
