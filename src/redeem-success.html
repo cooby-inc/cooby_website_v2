@@ -3,7 +3,7 @@
 
 <head>
   @@include("partials/head.html", {
-  "pageTitle": "Cooby | Build Stronger Sales Relationships"
+  "pageTitle": "Cooby | Build Your Sales Engine Without a Spreadsheet"
   })
   <meta name="robots" content="noindex" />
 </head>
@@ -35,8 +35,14 @@
 
           <!-- Text -->
           <p class="font-size-lg text-white mb-6 mb-md-8" style="width:90%; margin:auto;">
-            &#127881 &nbsp Your account: <strong id="redeemed_email_text"></strong> has been activated.
+            &#127881 &nbsp Your account: <strong id="redeemed_email_text"></strong> has been activated.<br><br>
+            Now just download Cooby app from <a href="https://apps.apple.com/app/id1546272572">App Store</a>. Log in with your email and password. You're good to go!
           </p>
+          <div class="d-flex justify-content-center d-md-block mb-4">
+            <a href="https://apps.apple.com/app/id1546272572" class="text-reset d-inline-block mr-1 mb-4" target="_blank" onclick="gaTracking('visit_app_store', 'click', 'clickAppStoreBtn')">
+              <img src="@@webRoot/assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
+            </a>
+          </div>
 
         </div>
       </div> <!-- / .row -->
@@ -66,16 +72,12 @@
 
           <div>
             <h2 class="font-weight-bold mt-4">
-              Schedule a demo with us
+              Schedule an onboarding session with us
             </h2>
-            <p class="font-size-lg text-muted mb-4">
+            <p class="font-size-lg text-muted mb-1">
               Our product expert will show you the product demo via video chat at a time of your convience.
             </p>
-            <div class="d-flex justify-content-center d-md-block mb-4">
-              <a href="https://apps.apple.com/app/id1546272572" class="text-reset d-inline-block mr-1 mb-4" target="_blank" onclick="gaTracking('visit_app_store', 'click', 'clickAppStoreBtn')">
-                <img src="@@webRoot/assets/img/buttons/button-app.png" class="img-fluid" alt="..." style="max-width: 155px;">
-              </a>
-            </div>
+
           </div>
 
           <div>
@@ -86,7 +88,7 @@
               Let's schedule!
             </a>
           </div>
-          
+
         </div>
       </div> <!-- / .row -->
     </div> <!-- / .container -->
