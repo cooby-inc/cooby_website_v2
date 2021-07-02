@@ -43,7 +43,7 @@ for review in reviewBlocks:
 
     result.append(data)
 
-with open('src/assets/data/reviews.json', 'w', encoding='utf-8') as file:
+with open('src/reviews.json', 'w', encoding='utf-8') as file:
   file.write(json.dumps(result, indent=2, ensure_ascii=False))
 
 chrome.quit()
