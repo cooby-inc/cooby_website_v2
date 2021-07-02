@@ -8,14 +8,15 @@
 <!-- Open Graph -->
 <title>@@pageTitle</title>
 <meta property="og:title" content="@@pageTitle" />
+<meta property="og:type" content="website" />
 
 @@if (context.description){
   <meta name="description" content="@@description" />
   <meta property="og:description" content="@@description" />
 }
 @@if (!context.description) {
-  <meta name="description" content="Find inner peace in your messaging apps. Put your customers at ease." />
-  <meta property="og:description" content="Find inner peace in your messaging apps. Put your customers at ease." />
+  <meta name="description" content="Build your sales engine without a spreadsheet. Strengthen your sales relationships." />
+  <meta property="og:description" content="Build your sales engine without a spreadsheet. Strengthen your sales relationships." />
 }
 
 @@if (context.ogImage) {
