@@ -2,12 +2,12 @@
 
 $(function() {
   if (window.location.pathname !== '/extension.html' && window.location.pathname !== 'extension') {
-    return 
+    return
   }
 
   $.getJSON('../reviews.json', function(json) {
     var container = $('#review_cards_container')
-    for(let i=0; i<json.length; i++) {
+    for(var i=0; i<json.length; i++) {
       generateAndAppendReviewCard(container, json[i])
     }
   })
