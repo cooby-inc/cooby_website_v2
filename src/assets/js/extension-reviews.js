@@ -4,6 +4,7 @@ $(function() {
   if (window.location.pathname !== '/extension.html' && window.location.pathname !== 'extension') {
     return
   }
+  console.log(reviews.default)
   var container = $('#review_cards_container')
   for(var i=0; i<reviews.default.length; i++) {
     generateAndAppendReviewCard(container, reviews.default[i])
