@@ -25,7 +25,7 @@ result = []
 reviewBlocks = soup.find_all('div', { 'class': 'ba-bc-Xb' })
 for review in reviewBlocks:
   stars = review.find_all('div', { 'class': 'rsw-starred' })
-  if len(stars) == 5:
+  if len(stars) == 5 or len(stars) == 4:
     data = {}
     
     thumbnail = review.find('img', { 'class': 'Lg-ee-A-O-xb' })
@@ -40,6 +40,8 @@ for review in reviewBlocks:
     
     content = review.find('div', { 'class': 'ba-Eb-ba' })
     data['content'] = content.getText()
+
+    data['stars'] = len(stars)
 
     result.append(data)
 
