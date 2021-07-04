@@ -5,7 +5,8 @@ $(function() {
     return
   }
 
-  $.getJSON('../reviews.json', function(json) {
+  console.log('ready to get json')
+  $.getJSON(window.location.origin + '/reviews.json', function(json) {
     var container = $('#review_cards_container')
     for(var i=0; i<json.length; i++) {
       generateAndAppendReviewCard(container, json[i])
