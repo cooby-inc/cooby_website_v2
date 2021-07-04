@@ -1,17 +1,13 @@
-
+import * as reviews from '../../reviews.json' assert { type: "json" };
 
 $(function() {
   if (window.location.pathname !== '/extension.html' && window.location.pathname !== 'extension') {
     return
   }
-
-  console.log('ready to get json')
-  $.getJSON(window.location.origin + '/reviews.json', function(json) {
-    var container = $('#review_cards_container')
-    for(var i=0; i<json.length; i++) {
-      generateAndAppendReviewCard(container, json[i])
-    }
-  })
+  var container = $('#review_cards_container')
+  for(var i=0; i<reviews.default.length; i++) {
+    generateAndAppendReviewCard(container, reviews.default[i])
+  }
 })
 
 // obj structure:
