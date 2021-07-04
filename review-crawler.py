@@ -48,4 +48,4 @@ for review in reviewBlocks:
 with open('./src/reviews.json', 'w', encoding='utf-8') as file:
   file.write(json.dumps(result, indent=2, ensure_ascii=False))
 
-# chrome.quit()
+chrome.quit()
