@@ -27,7 +27,11 @@ function generateAndAppendReviewCard(parent, data) {
   var divider = $('<hr>', { class: 'card-meta-divider' })
   var content = $('<p>', { class: 'mb-0 text-muted' }).text(data.content)
   var metaBox = $('<div>', { class: 'card-meta mt-auto' })
-  var startBox = $('<div>', { class: 'col-12 d-flex justify-content-end' }).html('&#11088 &#11088 &#11088 &#11088 &#11088')
+  var starsHtml = ""
+  for(var i=0; i<data.stars; i++) {
+    starsHtml += " &#11088"
+  }
+  var startBox = $('<div>', { class: 'col-12 d-flex justify-content-end px-0' }).html(starsHtml)
   
   avatarBox.append([avatarImg, avatarName])
   cardBody.append([avatarBox, divider, content])
