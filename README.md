@@ -58,7 +58,7 @@ Checkout `./gulpfule.js` for more settings.
 
 ### Review Crawler
 
-We use `./review-crawler.py` to grab cooby extension reviews from Chrome web store.
-If you want to get latest reviews, please install [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) and add excutable file into project root path.
-Also, you need to install python3 and related modules used in review-crawler file.
-Finally, execute `python3 review-crawler.py` in your terminal at project root path, and json file will be outputed in src folder.
+We use `./review-crawler.py` to grab cooby extension reviews from Chrome web store. <br>
+If you want to get latest reviews, please install [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) and add excutable file into project root path. <br>
+Also, you need to install python3 and related modules used in review-crawler file. <br>
+Finally, execute `python3 review-crawler.py` in your terminal at project root path, and json file will be outputed in src folder. <br>
