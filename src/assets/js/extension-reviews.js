@@ -1,7 +1,7 @@
 
 
 $(function() {
-  if (window.location.pathname !== '/extension.html' && window.location.pathname !== 'extension') {
+  if (window.location.pathname !== '/extension.html' && window.location.pathname !== '/extension') {
     return
   }
 
