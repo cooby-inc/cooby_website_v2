@@ -40,7 +40,7 @@
       const searchParams = new URLSearchParams(window.location.search)
       const data = {}
       for (let [key, value] of searchParams.entries()) {
-        data[key] = value0
+        data[key] = value
       }
       const { wid, wawVersion, extensionVersion } = data
       amplitude.getInstance(INSTANCE_NAME).init(WA_EXTENSION_API_KEY, wid)
