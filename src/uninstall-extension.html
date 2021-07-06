@@ -44,10 +44,18 @@
       }
       const { wid, wawVersion, extensionVersion } = data
       amplitude.getInstance(INSTANCE_NAME).init(WA_EXTENSION_API_KEY, wid)
-      amplitude.getInstance(INSTANCE_NAME).logEvent(UNINSTALL_EVENT_NAME)
+      amplitude.getInstance(INSTANCE_NAME).setVersionName(extensionVersion)
 
-      // Redirect user to feedback survey
-      window.location.replace(SURVEY_URL)
+      // https://developers.amplitude.com/docs/javascript#setting-a-user-property
+      new amplitude.Identify() // does nothing, must call one of the following methods and pass to client
+      const identify = new amplitude.Identify().set('waw_version', wawVersion)
+      amplitude.getInstance(INSTANCE_NAME).identify(identify)
+
+      amplitude.getInstance(INSTANCE_NAME).logEvent(UNINSTALL_EVENT_NAME, null, () => {
+        // Redirect user to feedback survey
+        window.location.replace(SURVEY_URL)
+      })
+
     </script>
   </body>
 </html>
