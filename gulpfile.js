@@ -52,6 +52,10 @@ const paths = {
       dir: './src',
       files: './src/**/*.html',
     },
+    json: {
+      dir: './src',
+      files: './src/**/*.json'
+    },
     img: {
       dir: './src/assets/img',
       files: './src/assets/img/**/*',
@@ -98,7 +102,7 @@ gulp.task('browsersyncReload', function(callback) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.src.scss.files, gulp.series('scss'));
-  gulp.watch([paths.src.js.files, paths.src.img.files], gulp.series('browsersyncReload'));
+  gulp.watch([paths.src.js.files, paths.src.img.files, paths.src.json.files], gulp.series('browsersyncReload'));
   gulp.watch([paths.src.html.files, paths.src.partials.files], gulp.series('fileinclude', 'browsersyncReload'));
 });
 

@@ -1,11 +1,24 @@
 [
   {
+    "title": "Frustrated with Trying to Tame a Gazillion WhatsApp Chats?",
+    "subTitle": "",
+    "brief": "Emails are prehistoric compared to messaging. Messaging is real-time, and it’s engaging and fun. But before you know it, the fun can get out of hand — suddenly, you have an overwhelming and messy messaging inbox. How can you keep track of all of your conversations?",
+    "tag": "marketing article",
+    "backgroundImage": "assets/img/article-images/wa-chat.jpg",
+    "authorName": "Wen | Cofunder & CEO",
+    "authorImage": "assets/img/avatars/wen.jpg",
+    "date": "JUL 2021",
+    "url": "/blog/frustrated-with-trying-to-tame-a-gazillion-whatsapp-chats.html"
+  },
+  {
     "title": "The Shift to Messaging for Sales",
+    "subTitle": "",
     "brief": "Working in sales is challenging, no doubt. But it's also very rewarding. Excelling in sales requires relationship building — a fundamental human skill. In business, of course, the decision-makers we encounter are human, so trust matters when someone is deciding whether or not to buy your product.",
     "tag": "marketing article",
     "backgroundImage": "assets/img/article-images/texting.jpg",
     "authorName": "Wen | Cofunder & CEO",
     "authorImage": "assets/img/avatars/wen.jpg",
-    "date": "JUL 2021"
+    "date": "JUN 2021",
+    "url": "/blog/the-shift-to-messaging-for-sales.html"
   }
 ]
