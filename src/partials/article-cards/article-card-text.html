@@ -1,0 +1,42 @@
+<!-- Card text on left -->
+<!-- overlayStyle1: overlay-dark overlay-80 -->
+<!-- overlayStyle2: overlay-gradient-dark-right overlay-60 -->
+<div class="card card-row shadow-light-lg bg-cover overlay @@overlayStyle text-white mb-6" style="background-image: url(@@backgroundImage);">
+  <div class="row no-gutters @@justifyContent">
+    <div class="col-12 @@tagDisplayNone">
+      
+      <!-- Badge -->
+      <span class="badge badge-pill badge-gray-600 badge-float badge-float-outside">
+        <span class="h6 text-uppercase">@@tag</span>
+      </span>
+
+    </div>
+    <div class="col-12 col-md-6">
+      
+      <!-- Body -->
+      <a class="card-body" href="#!">
+        <!-- Heading -->
+        <h3>@@title</h3>
+        <!-- Text -->
+        <p class="mb-0 text-white-80">@@brief</p>
+      </a>
+
+      <!-- Meta -->
+      <a class="card-meta" href="#!">
+        <!-- Divider -->
+        <hr class="card-meta-divider border-white-20">
+        <!-- Avatar -->
+        <div class="avatar avatar-sm mr-2">
+          <img src="@@avatarImage" alt="..." class="avatar-img rounded-circle">
+        </div>
+        <!-- Author -->
+        <h6 class="text-uppercase text-white-80 mr-2 mb-0">@@author</h6>
+        <!-- Date -->
+        <p class="h6 text-uppercase text-white-80 mb-0 ml-auto">
+          <time datetime="2019-05-02">@@date</time>
+        </p>
+      </a>
+
+    </div>
+  </div> <!-- / .row -->
+</div>

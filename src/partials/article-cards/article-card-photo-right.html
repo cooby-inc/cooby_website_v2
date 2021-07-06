@@ -1,0 +1,50 @@
+<!-- Card Photo on right -->
+<div class="card card-row shadow-light-lg mb-6">
+  <div class="row no-gutters">
+    <div class="col-12">
+      
+      <!-- Badge -->
+      <span class="badge badge-pill badge-gray-600 badge-float badge-float-outside">
+        <span class="h6 text-uppercase">@@tag</span>
+      </span>
+
+    </div>
+    <a class="col-12 col-md-6 order-md-2 bg-cover card-img-right" style="background-image: url(@@backgroundImage);" href="#!">
+
+      <!-- Image (placeholder) -->
+      <img src="@@backgroundImage" alt="..." class="img-fluid d-md-none invisible">
+      <!-- Shape -->
+      <div class="shape shape-left shape-fluid-y svg-shim text-white d-none d-md-block">
+        @@include("../../assets/img/shapes/curves/curve-5.svg")
+      </div>
+
+    </a>
+    <div class="col-12 col-md-6 order-md-1">
+
+      <!-- Body -->
+      <a class="card-body" href="#!">
+        <!-- Heading -->
+        <h3>@@title</h3>
+        <!-- Text -->
+        <p class="mb-0 text-muted">@@brief</p>
+      </a>
+
+      <!-- Meta -->
+      <a class="card-meta" href="#!">
+        <!-- Divider -->
+        <hr class="card-meta-divider">
+        <!-- Avatar -->
+        <div class="avatar avatar-sm mr-2">
+          <img src="@@avatarImage" alt="..." class="avatar-img rounded-circle">
+        </div>
+        <!-- Author -->
+        <h6 class="text-uppercase text-muted mr-2 mb-0">@@author</h6>
+        <!-- Date -->
+        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+          <time datetime="2019-05-31">@@date</time>
+        </p>
+      </a>
+
+    </div>
+  </div> <!-- / .row -->
+</div>

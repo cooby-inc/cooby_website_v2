@@ -2,25 +2,21 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "pageTitle": "Landkit"
+      "pageTitle": "Cooby | Build Stronger Sales Relationships"
     })
   </head>
   <body class="bg-light">
-
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
     
     <!-- NAVBAR
     ================================================== -->
     @@include("partials/navbar.html", {
-      "classList": "navbar-light bg-white",
+      "classList": "navbar-light bg-white font-eng",
       "container": "container"
     })
 
     <!-- WELCOME
     ================================================== -->
-    <section class="pt-4 pt-md-11">
+    <section class="pt-5 pt-md-12">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-5 order-md-2">
@@ -32,7 +28,7 @@
           <div class="col-12 col-md-7 order-md-1">
 
             <!-- Heading -->
-            <h1 class="display-4">
+            <h1 class="display-4 font-eng font-weight-bold">
               We want to showcase all <br>
               <span class="text-primary">the rich blog post options.</span>
             </h1>
@@ -47,255 +43,25 @@
       </div> <!-- / .container -->
     </section>
 
-    <!-- ARTICLES
+    <!-- ARTICLES Horizontal
     ================================================== -->
-    <section class="pt-8 pt-md-11">
+    <section class="pt-8 pt-md-10">
       <div class="container">
         <div class="row">
           <div class="col-12">
             
             <!-- Heading -->
-            <h2 class="mb-0">
-              Horizontal articles
-            </h2>
+            <h2 class="mb-0">Latest Stories</h2>
 
-            <!--  -->
-            <p class="mb-5 text-muted">
-              These span the grid's entire width with several options.
-            </p>
+            <!-- Sub Heading -->
+            <p class="mb-5 text-muted">These span the grid's entire width with several options.</p>
 
           </div>
         </div> <!-- / .row -->
         <div class="row">
-          <div class="col-12">
+          <div class="col-12" id="horizontal-article-container">
             
-            <!-- Card -->
-            <div class="card card-row shadow-light-lg mb-6">
-              <div class="row no-gutters">
-                <div class="col-12">
-                  
-                  <!-- Badge -->
-                  <span class="badge badge-pill badge-gray-600 badge-float badge-float-outside">
-                    <span class="h6 text-uppercase">Featured</span>
-                  </span>
-
-                </div>
-                <a class="col-12 col-md-6 order-md-2 bg-cover card-img-right" style="background-image: url(assets/img/photos/photo-27.jpg);" href="#!">
-
-                  <!-- Image (placeholder) -->
-                  <img src="assets/img/photos/photo-27.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                  <!-- Shape -->
-                  <div class="shape shape-left shape-fluid-y svg-shim text-white d-none d-md-block">
-                    @@include("assets/img/shapes/curves/curve-5.svg")
-                  </div>
-
-                </a>
-                <div class="col-12 col-md-6 order-md-1">
-
-                  <!-- Body -->
-                  <a class="card-body" href="#!">
-
-                    <!-- Heading -->
-                    <h3>
-                      Photo on Right.
-                    </h3>
-
-                    <!-- Text -->
-                    <p class="mb-0 text-muted">
-                      This is the body text of the blog post to give visitors an idea of what the post is about beyond just the title. It can be a long snippet, a short snippet, whatever you prefer the size of card and description to be.
-                    </p>
-
-                  </a>
-
-                  <!-- Meta -->
-                  <a class="card-meta" href="#!">
-
-                    <!-- Divider -->
-                    <hr class="card-meta-divider">
-
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm mr-2">
-                      <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-                    
-                    <!-- Author -->
-                    <h6 class="text-uppercase text-muted mr-2 mb-0">
-                      Ab Hadley
-                    </h6>
-                    
-                    <!-- Date -->
-                    <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                      <time datetime="2019-05-31">May 31</time>
-                    </p>
-
-                  </a>
-
-                </div>
-
-              </div> <!-- / .row -->
-            </div>
-
-            <!-- Card -->
-            <div class="card card-row shadow-light-lg mb-6">
-              <div class="row no-gutters">
-                <div class="col-12">
-                  
-                  <!-- Badge -->
-                  <span class="badge badge-pill badge-gray-600 badge-float badge-float-outside">
-                    <span class="h6 text-uppercase">Featured</span>
-                  </span>
-
-                </div>
-                <a class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(assets/img/photos/photo-28.jpg);" href="#!">
-
-                  <!-- Image (placeholder) -->
-                  <img src="assets/img/photos/photo-28.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                  <!-- Shape -->
-                  <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-                    @@include("assets/img/shapes/curves/curve-4.svg")
-                  </div>
-
-                </a>
-                <div class="col-12 col-md-6">
-
-                  <!-- Body -->
-                  <a class="card-body" href="#!">
-
-                    <!-- Heading -->
-                    <h3>
-                      Photo on Left.
-                    </h3>
-
-                    <!-- Text -->
-                    <p class="mb-0 text-muted">
-                      This is the body text of the blog post to give visitors an idea of what the post is about beyond just the title. It can be a long snippet, a short snippet, whatever you prefer the size of card and description to be.
-                    </p>
-
-                  </a>
-
-                  <!-- Meta -->
-                  <a class="card-meta" href="#!">
-
-                    <!-- Divider -->
-                    <hr class="card-meta-divider">
-
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm mr-2">
-                      <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-                    
-                    <!-- Author -->
-                    <h6 class="text-uppercase text-muted mr-2 mb-0">
-                      Adolfo Hess
-                    </h6>
-                    
-                    <!-- Date -->
-                    <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                      <time datetime="2019-05-29">May 29</time>
-                    </p>
-
-                  </a>
-
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Card -->
-            <div class="card card-row shadow-light-lg bg-cover overlay overlay-dark overlay-80 text-white mb-6" style="background-image: url(assets/img/covers/cover-8.jpg);">
-              <div class="row no-gutters">
-                <div class="col-12 col-md-6">
-                  
-                  <!-- Body -->
-                  <a class="card-body" href="#!">
-
-                    <!-- Heading -->
-                    <h3>
-                      Background Photo + 80% Dark Overlay.
-                    </h3>
-
-                    <!-- Text -->
-                    <p class="mb-0 text-white-80">
-                      It's easy to add a background image for the entire card, plus make text more legible by adding an overlay across the background with simple utility classes. These are all generated from the theme's variables!
-                    </p>
-
-                  </a>
-
-                  <!-- Meta -->
-                  <a class="card-meta" href="#!">
-
-                    <!-- Divider -->
-                    <hr class="card-meta-divider border-white-20">
-
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm mr-2">
-                      <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-                    
-                    <!-- Author -->
-                    <h6 class="text-uppercase text-white-80 mr-2 mb-0">
-                      Ab Hadley
-                    </h6>
-                    
-                    <!-- Date -->
-                    <p class="h6 text-uppercase text-white-80 mb-0 ml-auto">
-                      <time datetime="2019-05-02">May 02</time>
-                    </p>
-
-                  </a>
-
-                </div>
-              </div> <!-- / .row -->
-            </div>
-
-            <!-- Card -->
-            <div class="card card-row shadow-light-lg bg-cover overlay overlay-gradient-dark-right overlay-60 text-white mb-6" style="background-image: url(assets/img/photos/photo-30.jpg);">
-              <div class="row no-gutters justify-content-end">
-                <div class="col-12 col-md-6">
-                  
-                  <!-- Body -->
-                  <a class="card-body" href="#!">
-
-                    <!-- Heading -->
-                    <h3>
-                      Background Photo + Gradient Overlay.
-                    </h3>
-
-                    <!-- Text -->
-                    <p class="mb-0 text-white-80">
-                      This blog card example shows a background image, but instead of an even wash across the entire background, it's a gradient from right to left controlled by another simple utility class.
-                    </p>
-
-                  </a>
-
-                  <!-- Meta -->
-                  <a class="card-meta" href="#!">
-
-                    <!-- Divider -->
-                    <hr class="card-meta-divider border-white-20">
-
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm mr-2">
-                      <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-                    
-                    <!-- Author -->
-                    <h6 class="text-uppercase text-white-80 mr-2 mb-0">
-                      Adolfo Hess
-                    </h6>
-                    
-                    <!-- Date -->
-                    <p class="h6 text-uppercase text-white-80 mb-0 ml-auto">
-                      <time datetime="2019-05-02">May 02</time>
-                    </p>
-
-                  </a>
-
-                </div>
-              </div> <!-- / .row -->
-            </div>
+            <!-- load by articles.js -->
 
           </div>
         </div> <!-- / .row -->
@@ -656,4 +422,5 @@
     @@include("partials/scripts.html")
       
   </body>
+  <script src="@@webRoot/assets/js/articles.js" type="module"></script>
 </html>
