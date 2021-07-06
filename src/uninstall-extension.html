@@ -51,11 +51,10 @@
       const identify = new amplitude.Identify().set('waw_version', wawVersion)
       amplitude.getInstance(INSTANCE_NAME).identify(identify)
 
-      amplitude.getInstance(INSTANCE_NAME).logEvent(UNINSTALL_EVENT_NAME, null, () => {
-        // Redirect user to feedback survey
-        window.location.replace(SURVEY_URL)
-      })
-
+      amplitude.getInstance(INSTANCE_NAME).logEvent(UNINSTALL_EVENT_NAME)
+      
+      // Redirect user to feedback survey
+      window.location.replace(SURVEY_URL)
     </script>
   </body>
 </html>
