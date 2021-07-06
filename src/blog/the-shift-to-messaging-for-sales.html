@@ -7,10 +7,6 @@
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("../partials/modals.html")
-
     <!-- NAVBAR
     ================================================== -->
     @@include("../partials/navbar.html", {
@@ -20,7 +16,7 @@
 
     <!-- IMAGE
     ================================================== -->
-    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(../assets/img/article-images/salesperson.jpg);"></section>
+    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(../assets/img/article-images/phone.jpg);"></section>
 
     <!-- HEADER
     ================================================== -->
@@ -29,14 +25,11 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-9 col-xl-8">
             <!-- Heading -->
-            <h1 class="display-4 text-center">The Shift to Messaging for Sales</h1>
+            <h1 class="display-4 text-center font-eng" id="article-title"></h1>
             <!-- Text -->
-            <p class="lead mb-7 text-center text-gray">subtitle</p>
+            <p class="lead mb-7 text-center text-gray" id="article-subtitle"></p>
 
             @@include("../partials/article-cards/article-author-meta.html", {
-              "authorName": "Wen",
-              "authorTitle": "Cofunder & CEO",
-              "publishDate":  "June 28, 2021"
               })
 
           </div>
@@ -89,11 +82,12 @@
     <!-- Bottom Meta -->
     <section class="mt-8 mb-10">
       <div class="container">
-        @@include("../partials/article-cards/article-author-meta.html", {
-          "authorName": "Wen",
-          "authorTitle": "Cofunder & CEO",
-          "publishDate":  "June 28, 2021"
-          })
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            @@include("../partials/article-cards/article-author-meta.html", {
+              })
+          </div>
+        </div>        
       </div>
     </section>
 
@@ -105,7 +99,7 @@
       </div>
     </div>
 
-    <!-- ARTICLES
+    <!-- Related Articles
     ================================================== -->
     <section class="pt-7 pt-md-10 bg-light">
       <div class="container">
@@ -121,184 +115,11 @@
             <a href="/blog.html" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">View all</a>
           </div>
         </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 d-flex">
-            <!-- Card -->
-            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-              <!-- Image -->
-              <a class="card-img-top" href="#!">
-                <!-- Image -->
-                <img src="@@webRoot/assets/img/photos/photo-15.jpg" alt="..." class="card-img-top">
-                <!-- Shape -->
-                <div class="position-relative">
-                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    @@include("../assets/img/shapes/curves/curve-3.svg")
-                  </div>
-                </div>
-              </a>
-              <!-- Body -->
-              <a class="card-body" href="#!">
-                <!-- Heading -->
-                <h3>
-                  Cafe Coworking Has Become the Norm.
-                </h3>
-                <!-- Text -->
-                <p class="mb-0 text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-                </p>
-              </a>
-              <!-- Meta -->
-              <a class="card-meta mt-auto" href="#!">
-                <!-- Divider -->
-                <hr class="card-meta-divider">
-                <!-- Avatar -->
-                <div class="avatar avatar-sm mr-2">
-                  <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <!-- Author -->
-                <h6 class="text-uppercase text-muted mr-2 mb-0">
-                  Ab Hadley
-                </h6>
-                <!-- Date -->
-                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                  <time datetime="2019-05-02">May 02</time>
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 d-flex">
-            <!-- Card -->
-            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-              <!-- Image -->
-              <a class="card-img-top" href="#!">
-                <!-- Image -->
-                <img src="assets/img/photos/photo-14.jpg" alt="..." class="card-img-top">
-                <!-- Shape -->
-                <div class="position-relative">
-                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    @@include("../assets/img/shapes/curves/curve-3.svg")
-                  </div>
-                </div>
-              </a>
-              <!-- Body -->
-              <a class="card-body" href="#!">
-                <!-- Heading -->
-                <h3>
-                  Weekly Roundtable Meetings Saved Us.
-                </h3>
-                <!-- Text -->
-                <p class="mb-0 text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-                </p>
-              </a>
-              <!-- Meta -->
-              <a class="card-meta mt-auto" href="#!">
-                <!-- Divider -->
-                <hr class="card-meta-divider">
-                <!-- Avatar -->
-                <div class="avatar avatar-sm mr-2">
-                  <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <!-- Author -->
-                <h6 class="text-uppercase text-muted mr-2 mb-0">
-                  Adolfo Hess
-                </h6>
-                <!-- Date -->
-                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                  <time datetime="2019-05-02">May 02</time>
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 d-flex">
-            <!-- Card -->
-            <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
-              <!-- Image -->
-              <a class="card-img-top" href="#!">
-                <!-- Image -->
-                <img src="assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
-                <!-- Shape -->
-                <div class="position-relative">
-                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    @@include("../assets/img/shapes/curves/curve-3.svg")
-                  </div>
-                </div>
-              </a>
-              <!-- Body -->
-              <a class="card-body" href="#!">
-                <!-- Heading -->
-                <h3>
-                  Nature Can Save Your Creative Side.
-                </h3>
 
-                <!-- Text -->
-                <p class="mb-0 text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-                </p>
-              </a>
-              <!-- Meta -->
-              <a class="card-meta mt-auto" href="#!">
-                <!-- Divider -->
-                <hr class="card-meta-divider">
-                <!-- Avatar -->
-                <div class="avatar avatar-sm mr-2">
-                  <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <!-- Author -->
-                <h6 class="text-uppercase text-muted mr-2 mb-0">
-                  Ab Hadley
-                </h6>
-                <!-- Date -->
-                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                  <time datetime="2019-05-02">May 02</time>
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 d-flex">
-            <!-- Card -->
-            <div class="card d-lg-none shadow-light-lg lift lift-lg">
-              <!-- Image -->
-              <a class="card-img-top" href="#!">
-                <!-- Image -->
-                <img src="assets/img/photos/photo-5.jpg" alt="..." class="card-img-top">
-                <!-- Shape -->
-                <div class="position-relative">
-                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    @@include("../assets/img/shapes/curves/curve-3.svg")
-                  </div>
-                </div>
-              </a>
-              <!-- Body -->
-              <a class="card-body" href="#!">
-                <!-- Heading -->
-                <h3>
-                  Coffee Can Keep You Going, But At What Cost?
-                </h3>
-                <!-- Text -->
-                <p class="mb-0 text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-                </p>
-              </a>
-              <!-- Meta -->
-              <a class="card-meta mt-auto" href="#!">
-                <!-- Divider -->
-                <hr class="card-meta-divider">
-                <!-- Avatar -->
-                <div class="avatar avatar-sm mr-2">
-                  <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <!-- Author -->
-                <h6 class="text-uppercase text-muted mr-2 mb-0">
-                  Ab Hadley
-                </h6>
-                <!-- Date -->
-                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                  <time datetime="2019-05-02">May 02</time>
-                </p>
-              </a>
-            </div>
-          </div>
+        <div class="row" id="related-article-container">
+
+          <!-- load by article.js -->
+
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
@@ -350,4 +171,5 @@
     @@include("../partials/scripts.html")
 
   </body>
+  <script src="@@webRoot/assets/js/article.js"></script>
 </html>

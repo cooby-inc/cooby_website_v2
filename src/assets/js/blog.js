@@ -11,6 +11,7 @@ $(function() {
 // tag: String
 // backgroundImage: String
 // title: String
+// subtitle: String
 // brief: String
 // authorImage: String
 // authorName: String
@@ -31,12 +32,14 @@ function generateAndAppendArticleCard(parent, data) {
   image.append([imageImg, imageShape])
   // card's children 3
   var contentBodyTitle = $('<h3>').text(data.title)
-  var contentBodyBrief = $('<p>', {class: 'mb-0 text-muted'}).text(data.brief)
+  var contentBodyBrief = $('<p>', {class: 'mb-0 text-muted'}).text(data.description)
   var contentBody = $('<a>', {class: 'card-body', href: data.url}).append([contentBodyTitle, contentBodyBrief])
   var contentMetaDivider = $('<hr>', {class: 'card-meta-divider'})
   var contentMetaAvatarImg = $('<img>', {class: 'avatar-img rounded-circle', src: data.authorImage})
   var contentMetaAvatar = $('<div>', {class: 'avatar avatar-sm mr-2'}).append(contentMetaAvatarImg)
-  var contentMetaAuthor = $('<h6>', {class: 'text-uppercase text-muted mr-2 mb-0'}).text(data.authorName)
+  var contentMetaAuthor = $('<h6>', {class: 'text-uppercase text-muted mr-2 mb-0'}).html(
+    '<strong>' + data.authorName + '</strong> | ' + data.authorTitle
+    )
   var contentMetaDate = $('<p>', {class: 'h6 text-uppercase text-muted mb-0 ml-auto'}).text(data.date)
   var contentMeta = $('<a>', {class: 'card-meta', href: data.url}).append([contentMetaDivider, contentMetaAvatar, contentMetaAuthor, contentMetaDate])
   var content = $('<div>', {class: 'col-12 col-md-6'}).append([contentBody, contentMeta])
