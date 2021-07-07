@@ -118,8 +118,7 @@ dd {
 blockquote {
   margin: 0 0 1rem; }
 
-b,
-strong {
+b {
   font-weight: bolder; }
 
 small {
