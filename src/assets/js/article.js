@@ -1,5 +1,9 @@
 $(function() {
-  console.log('ready to get json')
+  var pathnames = window.location.pathname.split('/')
+  if (!pathnames.includes('blog')) {
+    return
+  }
+
   $.getJSON(window.location.origin + '/articles.json', function(json) {
     var data = json.en
     // set title/subtitle/author

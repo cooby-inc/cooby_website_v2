@@ -1,5 +1,7 @@
 $(function() {
-  console.log('ready to get json')
+  if (window.location.pathname !== '/blog.html' && window.location.pathname !== '/blog') {
+    return
+  }
   $.getJSON(window.location.origin + '/articles.json', function(json) {
     var data = json.en
     var container = $('#horizontal-article-container')
