@@ -14,10 +14,11 @@ $(function() {
   })
 })
 
-// obj structure:
+// data structure:
 // thumbnail: String
 // reviewer: String
 // content: String
+// stars: Int
 function generateAndAppendReviewCard(parent, data) {
   var cardBox = $('<div>', { class: 'col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 d-flex' })
   var card = $('<div>', { class: 'card mb-6 mb-lg-0 shadow-light-lg lift lift-lg' })
