@@ -3,7 +3,7 @@ $(function() {
   if (!pathnames.includes('blog')) {
     return
   }
-
+  
   $.getJSON(window.location.origin + '/articles.json', function(json) {
     var data
     if (pathnames.includes('blog')) {

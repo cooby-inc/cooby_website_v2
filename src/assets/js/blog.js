@@ -5,7 +5,7 @@ $(function() {
     && window.location.pathname !== '/zh-tw/blog') {
     return
   }
-
+  
   $.getJSON(window.location.origin + '/articles.json', function(json) {
     var data
     if (window.location.pathname === '/blog.html' || window.location.pathname === '/blog') {
