@@ -5,19 +5,31 @@ $(function() {
   }
 
   $.getJSON(window.location.origin + '/articles.json', function(json) {
-    var data = json.en
+    var data
+    if (pathnames.includes('blog')) {
+      if (pathnames.includes('zh-tw')) {
+        data = json.zh
+      } else {
+        data = json.en
+      }
+    } else {
+      console.log('wrong path')
+      return
+    }
+    
     // set title/subtitle/author
     var articleURL = window.location.pathname
     var currentArticle = data.find(function(article) {
       return article.url === articleURL
     })
-    $('#article-image').attr('src', currentArticle.backgroundImage)
-    $('#article-image-caption').text(currentArticle.imageCaption)
+    $('.article-meta-avatar').attr('src', currentArticle.authorImage)
+    $('#article-banner-image').css('background-image', 'url('+ currentArticle.bannerImage +')')
+    $('#article-image').attr('src', currentArticle.articleImage)
+    $('#article-image-caption').text(currentArticle.articleImageCaption)
     $('#article-title').text(currentArticle.title)
     $('#article-subtitle').text(currentArticle.brief)
     $('.article-author').html('<strong>' + currentArticle.authorName + '</strong> | ' + currentArticle.authorTitle)
     $('.article-published-date').text('Published on ' + currentArticle.date)
-
 
     // set related articles
     var container = $('#related-article-container')
@@ -49,7 +61,7 @@ function generateAndAppendRelatedArticle(parent, data) {
   var cardBox = $('<div>', {class: 'col-12 col-md-6 col-lg-4 d-flex'})
   var card = $('<div>', {class: 'card mb-6 mb-lg-0 shadow-light-lg lift lift-lg'})
   
-  var imageImg = $('<img>', {class: 'card-img-top', src: data.backgroundImage})
+  var imageImg = $('<img>', {class: 'card-img-top', src: data.articleImage})
   var imageDivShape = $('<div>', {class: 'shape shape-bottom shape-fluid-x svg-shim text-white'}).load('/assets/img/shapes/curves/curve-3.svg')
   var imageDiv = $('<div>', {class: 'position-relative'}).append(imageDivShape)
   var image = $('<a>', {class: 'card-img-top', href: data.url}).append([imageImg, imageDiv])
