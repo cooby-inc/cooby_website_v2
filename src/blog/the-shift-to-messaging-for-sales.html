@@ -16,7 +16,7 @@
 
     <!-- IMAGE
     ================================================== -->
-    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(../assets/img/article-images/phone.jpg);"></section>
+    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(../assets/img/article-images/phone.jpg)"></section>
 
     <!-- HEADER
     ================================================== -->
@@ -29,8 +29,7 @@
             <!-- Text -->
             <p class="lead mb-7 text-center text-gray" id="article-subtitle"></p>
 
-            @@include("../partials/article-cards/article-author-meta.html", {
-              })
+            @@include("../partials/article-cards/article-author-meta.html")
 
           </div>
         </div>
@@ -46,24 +45,33 @@
             <!-- Fugure -->
             <figure class="figure mb-7">
               <!-- Image -->
-              <img class="figure-img img-fluid rounded lift lift-lg" src="@@webRoot/assets/img/article-images/texting.jpg" alt="...">
+              <img class="figure-img img-fluid rounded lift lift-lg" id="article-image" alt="...">
               <!-- Caption -->
-              <figcaption class="figure-caption text-center">Relationship building is an overused term, but it’s at the core of salesmanship.</figcaption>
+              <figcaption class="figure-caption text-center" id="article-image-caption"></figcaption>
             </figure>
 
             <!-- Contents -->
+            <h2 class="font-weight-bold">
+              Relationship building is at the core of salesmanship.
+            </h2>
             <p>
               Working in sales is challenging, no doubt. But it's also very rewarding. Excelling in sales requires relationship building — a fundamental human skill. In business, of course, the decision-makers we encounter are human, so trust matters when someone is deciding whether or not to buy your product.
             </p>
             <p>
               Relationship building is an overused term, but it’s at the core of salesmanship. Think about it — people can do research online today on their own, but they don’t know if they can trust that information. So, consider the alternative. A sales process focused on interaction and connection lets a good salesperson step in, ask the right questions to understand what customers are thinking, and can provide the trust and human touch needed in making the deal.
             </p>
+            <h2 class="pt-3 pt-md-5 font-weight-bold">
+              The traditional business culture is more transactional and aggressive. 
+            </h2>
             <p>
               That said, the traditional business culture within sales makes relationship-building much harder. The culture is more transactional and inclined towards an “aggressive” type of sales (which isn’t necessarily even effective). This approach suggests that delivering a single “strong and compelling” pitch will shove any resistance out of the way and make customers buy “immediately.” Yet, overpowering words show no sign of relationship building at all.
             </p>
             <p>
               This company started 6 months ago, and I’ve personally been getting tons of spam from a variety of companies, all with generic (and automated) “personalized” messages. I toss them into the trash within seconds.
             </p>
+            <h2 class="pt-3 pt-md-5 font-weight-bold">
+              Salespeople use WhatsApp to build stronger relationships now.
+            </h2>
             <p>
               Thankfully, these tactics are slowly starting to change. One notable trend is that salespeople around the globe are ditching emails and turning to messaging to build stronger sales relationships.
             </p>
@@ -84,8 +92,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-9 col-xl-8">
-            @@include("../partials/article-cards/article-author-meta.html", {
-              })
+            @@include("../partials/article-cards/article-author-meta.html")
           </div>
         </div>        
       </div>

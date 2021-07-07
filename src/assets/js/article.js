@@ -1,11 +1,14 @@
 $(function() {
   console.log('ready to get json')
   $.getJSON(window.location.origin + '/articles.json', function(json) {
+    var data = json.en
     // set title/subtitle/author
     var articleURL = window.location.pathname
-    var currentArticle = json.find(function(article) {
+    var currentArticle = data.find(function(article) {
       return article.url === articleURL
     })
+    $('#article-image').attr('src', currentArticle.backgroundImage)
+    $('#article-image-caption').text(currentArticle.imageCaption)
     $('#article-title').text(currentArticle.title)
     $('#article-subtitle').text(currentArticle.brief)
     $('.article-author').html('<strong>' + currentArticle.authorName + '</strong> | ' + currentArticle.authorTitle)
@@ -15,7 +18,7 @@ $(function() {
     // set related articles
     var container = $('#related-article-container')
     var articleIndex = 0
-    var otherArticles = json.filter(function(article) {
+    var otherArticles = data.filter(function(article) {
       return article.url !== articleURL
     })
     var relatedArticles = otherArticles.filter(function(article) {
@@ -42,7 +45,7 @@ function generateAndAppendRelatedArticle(parent, data) {
   var cardBox = $('<div>', {class: 'col-12 col-md-6 col-lg-4 d-flex'})
   var card = $('<div>', {class: 'card mb-6 mb-lg-0 shadow-light-lg lift lift-lg'})
   
-  var imageImg = $('<img>', {class: 'card-img-top', src: "/" + data.backgroundImage})
+  var imageImg = $('<img>', {class: 'card-img-top', src: data.backgroundImage})
   var imageDivShape = $('<div>', {class: 'shape shape-bottom shape-fluid-x svg-shim text-white'}).load('/assets/img/shapes/curves/curve-3.svg')
   var imageDiv = $('<div>', {class: 'position-relative'}).append(imageDivShape)
   var image = $('<a>', {class: 'card-img-top', href: data.url}).append([imageImg, imageDiv])
@@ -52,7 +55,7 @@ function generateAndAppendRelatedArticle(parent, data) {
   var body = $('<a>', {class: 'card-body', href: data.url}).append([bodyHeading, bodyText])
 
   var metaDivider = $('<hr>', {class: 'card-meta-divider'})
-  var metaAvatarImg = $('<img>', {class: 'avatar-img rounded-circle', src: "/" + data.authorImage})
+  var metaAvatarImg = $('<img>', {class: 'avatar-img rounded-circle', src: data.authorImage})
   var metaAvatar = $('<div>', {class: 'avatar avatar-sm mr-2'}).append(metaAvatarImg)
   var metaAuthor = $('<h6>', {class: 'text-uppercase text-muted mr-2 mb-0'}).text(data.authorName)
   var metaDate = $('<p>', {class: 'h6 text-uppercase text-muted mb-0 ml-auto'}).text(data.date)

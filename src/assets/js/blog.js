@@ -1,9 +1,10 @@
 $(function() {
   console.log('ready to get json')
   $.getJSON(window.location.origin + '/articles.json', function(json) {
+    var data = json.en
     var container = $('#horizontal-article-container')
-    for(var i=0; i<json.length; i++) {
-      generateAndAppendArticleCard(container, json[i])
+    for(var i=0; i<data.length; i++) {
+      generateAndAppendArticleCard(container, data[i])
     }
   })
 })
@@ -25,7 +26,7 @@ function generateAndAppendArticleCard(parent, data) {
   var badgeSpan = $('<span>', {class: 'badge badge-pill badge-gray-600 badge-float badge-float-outside'}).append(badgeSpanSpan)
   var badge = $('<div>', {class: 'col-12'}).append(badgeSpan)
   // card's children 2
-  var imageImg = $('<img>', {class: 'img-fluid d-md-none invisible'})
+  var imageImg = $('<img>', {class: 'img-fluid d-md-none invisible', src: data.backgroundImage})
   // var test = require('assets/img/shapes/curves/curve-4.svg')
   var imageShape = $('<div>', {class: 'shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block'}).load('assets/img/shapes/curves/curve-4.svg')
   var image = $('<a>', {class: 'col-12 col-md-6 bg-cover card-img-left', href: data.url}).css('background-image', 'url('+ data.backgroundImage +')')

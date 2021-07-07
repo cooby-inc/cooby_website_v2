@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+    "pageTitle": "Cooby | Blog Post: Frustrated with trying to tame a gazillion WhatsApp chats"
+    })
+  </head>
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    @@include("../partials/navbar.html", {
+    "classList": "navbar-light bg-white",
+    "container": "container"
+    })
+
+    <!-- IMAGE
+    ================================================== -->
+    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(../assets/img/article-images/phone.jpg);"></section>
+
+    <!-- HEADER
+    ================================================== -->
+    <section class="pt-8 pt-md-11">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Heading -->
+            <h1 class="display-4 text-center font-eng" id="article-title"></h1>
+            <!-- Text -->
+            <p class="lead mb-7 text-center text-gray" id="article-subtitle"></p>
+
+            @@include("../partials/article-cards/article-author-meta.html", {
+              })
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- SECTION
+    ================================================== -->
+    <section class="pt-6 pt-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            <!-- Fugure -->
+            <figure class="figure mb-7">
+              <!-- Image -->
+              <img class="figure-img img-fluid rounded lift lift-lg" id="article-image" alt="...">
+              <!-- Caption -->
+              <figcaption class="figure-caption text-center" id="article-image-caption"></figcaption>
+            </figure>
+
+            <!-- Contents -->
+            <h2 class="font-weight-bold">
+              On WhatsApp, keeping track of conversations is tough.
+            </h2>
+            <p>
+              Emails are prehistoric compared to messaging. Messaging is real-time, and it’s engaging and fun. But before you know it, the fun can get out of hand — suddenly, you have an overwhelming and messy messaging inbox. How can you keep track of all of your conversations?
+            </p>
+            <p>
+              Popular messaging apps like WhatsApp, Telegram or Facebook Messenger don’t provide much functionality to help alleviate the frustration of information overload. Their emphasis on simplicity — and a lack of developer access — mean that users aren’t equipped to organize their chaotic messaging inboxes.
+            </p>
+            <p>
+              What’s the solution? A flexible workflow tool for your WhatsApp inbox. 
+            </p>
+
+            <h2 class="pt-3 pt-md-5 font-weight-bold">
+              Monday morning scenario: So many conversations!
+            </h2>
+            <p>
+              You get to the office and open your laptop. You see 20-ish WhatsApp chats demanding your attention — a mix of personal chats and business chats. You are trying to sort out which ones are more important than others. You’re scrolling up, you’re scrolling down, then up again, then going back to — Agghh! You think to yourself, “Isn’t there a way to group chats based on priority?!” 
+            </p>
+            <p>
+              After lunch, your boss asks you to write up a retrospective summary of a recent project, so you dig into the company’s old client chats on WhatsApp. There are dozens of them, with different stakeholders across multiple teams, and you wish you could have taken notes when the conversations were happening so you wouldn’t need to scroll thousands of messages just to write a summary. 
+            </p>
+            <p>
+              Later, a client sends you a Google Doc link on WhatsApp. You want to save it before it gets buried in new messages so you can look it up easily, but there isn’t a way to do that. And you’re frustrated — again. 
+            </p>
+            <p>
+              Does all that sound really familiar? You aren’t alone. WhatsApp is the most popular messaging app in the world. It has over 2 billion monthly active users, and 70% of them use it on a daily basis. But believe it or not, there are still no good workflow tools for WhatsApp.
+            </p>
+
+            <h2 class="pt-3 pt-md-5 font-weight-bold">
+              Email has better productivity tools.
+            </h2>
+            <p>
+              Email is different, though. There are plenty of innovative email productivity tools that triumphantly apply workflows to your email inbox. Remember Mailbox, which was acquired by Dropbox? Their philosophy of Inbox Zero was loved by millions of people worldwide. To achieve Inbox Zero, you need to either Snooze your emails to a certain time, like Tomorrow or Later Tonight, or Archive the emails that you’re done with and Label your emails so you can group them. Gmail has similar and more advanced organization features, like nested labels, multiple inboxes, etc. 
+            </p>
+            <p>
+              The latest popular innovation for emails is Superhuman, a premium email client that charges $30 a month!
+            </p>
+
+            <h2 class="pt-3 pt-md-5 font-weight-bold">
+              Messaging apps haven’t opened up developer access.
+            </h2>
+            <p>
+              So why haven’t the innovations in email productivity crossed over to messaging? The biggest challenge here is the lack of developer access. The companies that run the biggest messaging apps in the world, like WhatsApp, Facebook Messenger, Line, WeChat, etc. have been slow to open up access to personal accounts for developers. Some of these messaging apps provide open APIs for business accounts, and the APIs are used by businesses to help them connect with their customers. But if you’re just a person and not a business, you use a personal account — and as of this writing, there is still no access for developers to build anything for personal accounts. Ongoing attempts are being made to create an open chat network, providing space for innovation without restriction (like the Matrix open protocol). While none have achieved large-scale success so far, at Cooby, we fully support and believe in the vision of an open chat network.
+            </p>
+
+            <h2 class="pt-3 pt-md-5 font-weight-bold">
+              Silver lining: We have a solution for people who use WhatsApp. 
+            </h2>
+            <p>
+              At Cooby, our mission is to help people use messaging more productively, and we’ve built a solution that works for people who use WhatsApp Web. Our solution provides simple yet powerful and intuitive tab management for WhatsApp chats. You can sort WhatsApp chats into tabs, create your own tab, and move any chats in or from the tab. There are out-of-the-box default system tabs that improve your productivity, like Unread, Needs Reply, Awaiting Reply, Groups, 1:1, and an Official Accounts tab. It’s 100% privacy-safe, and it currently works for Chrome. Add it to Chrome now: <a href="https://cooby.co/extension">cooby.co/extension</a> 
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- Bottom Meta -->
+    <section class="mt-8 mb-10">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            @@include("../partials/article-cards/article-author-meta.html", {
+              })
+          </div>
+        </div>        
+      </div>
+    </section>
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        @@include("../assets/img/shapes/curves/curve-1.svg")
+      </div>
+    </div>
+
+    <!-- Related Articles
+    ================================================== -->
+    <section class="pt-7 pt-md-10 bg-light">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md">
+            <!-- Heading -->
+            <h3 class="mb-0">Latest Stories</h3>
+            <!-- Text -->
+            <p class="mb-0 text-muted">Here’s what we've been up to recently.</p>
+          </div>
+          <div class="col-12 col-md-auto">
+            <!-- Button -->
+            <a href="/blog.html" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">View all</a>
+          </div>
+        </div> <!-- / .row -->
+
+        <div class="row" id="related-article-container">
+
+          <!-- load by article.js -->
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- CTA
+    ================================================== -->
+    <section class="pt-7 pt-md-10 bg-light">
+      <div class="container py-6 py-md-8 border-top border-bottom border-gray-300">
+        <div class="row align-items-center">
+          <div class="col-12 col-md">
+            <!-- Heading -->
+            <h3 class="mb-1 font-weight-bold">
+              Get our stories delivered
+            </h3>
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-6 mb-md-0">
+              From us to your inbox weekly.
+            </p>
+          </div>
+          <div class="col-12 col-md-5">
+            <!-- Form -->
+            <form>
+              <div class="row">
+                <div class="col">
+                  <!-- Input -->
+                  <input type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="col-auto ml-n5">
+                  <!-- Button -->
+                  <button class="btn btn-primary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </div> <!-- / .row -->
+            </form>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- FOOTER
+    ================================================== -->
+    @@include("../partials/footer.html", {
+    "classList": "bg-light"
+    })
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("../partials/scripts.html")
+
+  </body>
+  <script src="@@webRoot/assets/js/article.js"></script>
+</html>
