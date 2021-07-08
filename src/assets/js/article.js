@@ -18,7 +18,7 @@ $(function() {
     }
     
     // set title/subtitle/author
-    var articleURL = window.location.pathname
+    var articleURL = window.location.pathname.split('.')[0] + '.html'
     var currentArticle = data.find(function(article) {
       return article.url === articleURL
     })
