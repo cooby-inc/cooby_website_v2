@@ -615,8 +615,8 @@
         <div class="modal-content">
           <div class="card card-row">
             <div class="row">
-              <div class="col-12 col-md-6">
-               <div class="bg-cover card-body bg-cooby-light-gray">
+              <div class="col-12 col-md-5">
+               <div class="bg-cover card-body bg-cooby-light-gray h-100">
                 <!-- Close -->
                   <button type="button" class="modal-close close d-md-none" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
@@ -664,7 +664,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-7">
                 <div class="card-body" style="text-align:center;">
 
                   <!-- Close -->
@@ -674,7 +674,7 @@
 
                   <!-- Heading -->
                   <h2 class="mb-0 font-weight-bold text-center" id="modalSignupHorizontalTitle">
-                    Request Access
+                    Request Access haha
                   </h2>
 
                   <!-- Text -->
@@ -684,37 +684,47 @@
 
                   <form id="signup_form">
                     <div class="row">
+                      <!-- First Name -->
                       <div class="col-12 col-md-6">
-
-                        <!-- First name -->
                         <div class="form-label-group" style="text-align:left">
-                          <input type="text" class="form-control form-control-flush" name="name" placeholder="Name" required>
-                          <label for="registrationFirstName">Name</label>
+                          <input type="text" class="form-control form-control-flush" name="firstName" placeholder="First Name" required>
+                          <label for="registrationFirstName">First Name</label>
                         </div>
-
                       </div>
+                      <!-- Last Name -->
                       <div class="col-12 col-md-6">
-
-                        <!-- Last name -->
                         <div class="form-label-group" style="text-align:left">
-                          <input type="text" class="form-control form-control-flush" name="title" placeholder="Title">
-                          <label for="registrationRole">Title</label>
+                          <input type="text" class="form-control form-control-flush" name="lastName" placeholder="Last Name" required>
+                          <label for="registrationLastName">Last Name</label>
                         </div>
-
                       </div>
                     </div>
                     <div class="row">
+                      <!-- Company -->
                       <div class="col-12 col-md-6">
-
-                        <!-- First name -->
                         <div class="form-label-group" style="text-align:left">
                           <input type="text" class="form-control form-control-flush" name="company" placeholder="Company">
                           <label for="registrationCompany">Company</label>
                         </div>
-
                       </div>
+                      <!--Title -->
                       <div class="col-12 col-md-6">
-                        <!-- Last name -->
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="text" class="form-control form-control-flush" name="title" placeholder="Title">
+                          <label for="registrationRole">Title</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!-- Email -->
+                      <div class="col-12 col-md-6">
+                        <div class="form-label-group" style="text-align:left">
+                          <input type="email" class="form-control form-control-flush" name="email" placeholder="Email" required>
+                          <label for="registrationEmail">Email</label>
+                        </div>
+                      </div>
+                      <!-- Why Cooby -->
+                      <div class="col-12 col-md-6">
                         <div class="form-label-group">
                           <select class="form-control form-select custom-select" aria-label="Why Cooby?" name="motivation" required>
                             <option value="">Why Cooby?</option>
@@ -730,23 +740,21 @@
                       </div>
                     </div>
                     <div class="row">
+                      <!-- Country Code -->
                       <div class="col-12 col-md-6">
-
-                        <!-- Email -->
                         <div class="form-label-group" style="text-align:left">
-                          <input type="email" class="form-control form-control-flush" name="email" placeholder="Email" required>
-                          <label for="registrationEmail">Email</label>
+                          <select class="form-control form-select custom-select" id="country-code-selector" aria-label="Country Code" name="countryCode">
+                            <option value="">Country Code</option>
+                            <!-- load by js -->
+                          </select>
                         </div>
-
                       </div>
+                      <!-- WA Number -->
                       <div class="col-12 col-md-6">
-
-                        <!-- Password -->
                         <div class="form-label-group" style="text-align:left">
                           <input type="phone" class="form-control form-control-flush" name="phone" placeholder="WhatsApp number">
                           <label for="registrationPhone">WhatsApp number</label>
                         </div>
-
                       </div>
                     </div>
                     <div class="row">
