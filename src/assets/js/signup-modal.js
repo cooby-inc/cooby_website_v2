@@ -4,19 +4,20 @@ $('#signup_form').submit(function(e){
   $('#signup_form :input').each(function(input) {
     inputData[this.name] = $(this).val().trim()
   })
-  var outputData = {
-    name: inputData.firstName + ' ' + inputData.lastName,
-    company: inputData.company,
-    email: inputData.email,
-    title: inputData.title,
-    motivation: inputData.motivation,
-    phone: inputData.countryCode + ' ' + inputData.phone
-  }
+  var outputData = new FormData()
+  outputData.append('name', inputData.firstName + ' ' + inputData.lastName)
+  outputData.append('company', inputData.company)
+  outputData.append('email', inputData.email)
+  outputData.append('title', inputData.title)
+  outputData.append('motivation', inputData.motivation)
+  outputData.append('phone', inputData.countryCode + ' ' + inputData.phone)
 
   //do some verification
   $.post({
     url: "https://api.cooby.co/leads",
-    data: JSON.stringify(outputData),
+    data: outputData,
+    processData: false,
+    contentType: false,
     success: function(data)
     {
       console.log("success");
