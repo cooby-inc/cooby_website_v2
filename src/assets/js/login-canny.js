@@ -37,11 +37,12 @@ $(function() {
       success: function(res) {
         console.log('success')
         setLoading(false, loginForm)
+        showModalWithMsg(true, 'redirecting to Canny...')
       },
       error: function(res) {
         console.log('failed')
         setLoading(false, loginForm)
-        showErrorModalWithMsg(res.responseJSON.error_message)
+        showModalWithMsg(false, res.responseJSON.error_message)
       }
     })
   })
@@ -58,17 +59,21 @@ $(function() {
     }
 
     // create user api
+    // $.ajax({
+    //   type: 'PUT',
+    //   url: 
+    // })
   })
 
 
   // functions
   function checkPassword(data, hasConfirmPassword) {
     if (data.password.length < 8 || (hasConfirmPassword && data.confirmPassword.length < 8)) {
-      showErrorModalWithMsg('Password should be minimum 8 characters')
+      showModalWithMsg(false, 'Password should be minimum 8 characters')
       return false
     }
     if (hasConfirmPassword && (data.password !== data.confirmPassword)) {
-      showErrorModalWithMsg('Passwords do not match')
+      showModalWithMsg(false, 'Passwords do not match')
       return false
     }
     return true
@@ -104,9 +109,17 @@ $(function() {
     }
   }
 
-  function showErrorModalWithMsg(msg) {
-    $('#errorModal').modal('show')
-    $('#errorModal #errorMsg').text(msg)
+  function showModalWithMsg(isSuccess, msg) {
+    if (isSuccess) {
+      $('#popupModal button').hide()
+      $('#popupModal .btn').hide()
+    } else {
+      $('#popupModal button').show()
+      $('#popupModal .btn').show()
+    }
+    $('#popupModal').modal('show')
+    $('#popupModal #modalExampleTitle').text(isSuccess ? 'Success' : 'Error')
+    $('#popupModal #popupMsg').text(msg)
   }
   
   // function getQueryParameterByName(name) {
