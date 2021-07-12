@@ -12,7 +12,8 @@ $(function() {
     switchToLogInForm(true)
   })
 
-  var apiURL = 'https://api-staging.cooby.co'
+  var apiURL = 'https://api.cooby.co'
+  var cannyApiURL = '/v1/auth/signon_canny'
   var loginForm = $('#canny-login-form')
   loginForm.on('submit', function(e) {
     e.preventDefault()
@@ -31,16 +32,14 @@ $(function() {
       contentType: 'application/json',
       crossDomain: true,
       data: JSON.stringify(data),
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader('Cooby-App-Platform', 'Canny')
-      },
       success: function(res) {
         console.log('success')
-        setLoading(false, loginForm)
-        showModalWithMsg(true, 'redirecting to Canny...')
+        showModalWithMsg(true, 'Redirecting to Canny...')
+        var authToken = 'Bearer ' + res.token
+        postCannyTokenAndRedirect(authToken)
       },
       error: function(res) {
-        console.log('failed')
+        console.log('log in failed')
         setLoading(false, loginForm)
         showModalWithMsg(false, res.responseJSON.error_message)
       }
@@ -59,12 +58,49 @@ $(function() {
     }
 
     // create user api
-    // $.ajax({
-    //   type: 'PUT',
-    //   url: 
-    // })
+    $.ajax({
+      type: 'PUT',
+      url: apiURL + '/users',
+      contentType: 'application/json',
+      crossDomain: true,
+      data: JSON.stringify(data),
+      success: function(res) {
+        console.log('success')
+        showModalWithMsg(true, 'You created a Cooby account. Redirecting to Canny...')
+        var authToken = 'Bearer ' + res.token
+        postCannyTokenAndRedirect(authToken)
+      },
+      error: function(res) {
+        console.log('sign up failed')
+        setLoading(false, signupForm)
+        showModalWithMsg(false, res.responseJSON.error_message)
+      }
+    })
   })
 
+
+  function postCannyTokenAndRedirect(authToken) {
+    $.ajax({
+      type: 'POST',
+      url: apiURL + cannyApiURL,
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('Authorization', authToken)
+        xhr.setRequestHeader('Cooby-App-Platform', 'Canny')
+      },
+      success: function(res) {
+        setLoading(false, loginForm)
+        var redirectURL = getRedirectURL(res.token);
+        if (redirectURL) {
+          window.location.assign(redirectURL);
+        }
+      },
+      error: function(res) {
+        setLoading(false, loginForm)
+        console.log('canny token failed')
+        showModalWithMsg(false, res.responseJSON.error_message)
+      }
+    })
+  }
 
   // functions
   function checkPassword(data, hasConfirmPassword) {
@@ -122,29 +158,22 @@ $(function() {
     $('#popupModal #popupMsg').text(msg)
   }
   
-  // function getQueryParameterByName(name) {
-  //   var pairStrings = window.location.search.slice(1).split('&');
-  //   var pairs = pairStrings.map(function(pair) {
-  //     return pair.split('=');
-  //   });
-  //   return pairs.reduce(function(value, pair) {
-  //     if (value) return value;
-  //     return pair[0] === name ? decodeURIComponent(pair[1]) : null;
-  //   }, null);
-  // }
+  function getQueryParameterByName(name) {
+    var pairStrings = window.location.search.slice(1).split('&');
+    var pairs = pairStrings.map(function(pair) {
+      return pair.split('=');
+    });
+    return pairs.reduce(function(value, pair) {
+      if (value) return value;
+      return pair[0] === name ? decodeURIComponent(pair[1]) : null;
+    }, null);
+  }
   function getRedirectURL(ssoToken) {
-    // var redirectURL = getQueryParameterByName('redirect')
-    var redirectURL = 'https://cooby.co/login-canny.html'
-    // var companyID = getQueryParameterByName('companyID')
-    var companyID = '60e6bb7514f82a74118c91da'
+    var redirectURL = getQueryParameterByName('redirect')
+    var companyID = getQueryParameterByName('companyID')
     if (redirectURL.indexOf('https://') !== 0 || !companyID) {
       return null;
     }
     return 'https://canny.io/api/redirects/sso?companyID=' + companyID + '&ssoToken=' + ssoToken + '&redirect=' + redirectURL;
   }
 })
-
-// var redirectURL = getRedirectURL(ssoToken);
-// if (redirectURL) {
-//   window.location.assign(redirectURL);
-// }

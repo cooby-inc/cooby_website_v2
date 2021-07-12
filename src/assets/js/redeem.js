@@ -29,9 +29,9 @@ $(function() {
     }
   
     // sign up user
-    // production: 'https://cooby-taroko.herokuapp.com'
+    // production: 'https://api.cooby.co'
     // staging: 'https://api-staging.cooby.co'
-    var apiURL = 'https://cooby-taroko.herokuapp.com'
+    var apiURL = 'https://api.cooby.co'
   
     $.ajax({
       type: 'POST',
