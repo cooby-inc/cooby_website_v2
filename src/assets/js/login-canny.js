@@ -2,6 +2,13 @@ $(function() {
   if (window.location.pathname !== '/login-canny.html' && window.location.pathname !== '/login-canny') {
     return
   }
+  // check search params
+  var urlParams = new URLSearchParams(window.location.search)
+  var companyID = urlParams.get('companyID')
+  var redirect = urlParams.get('redirect')
+  if (companyID === null || redirect === null) {
+    window.location.pathname = '/'
+  }
 
   switchToLogInForm(true)
 
@@ -59,7 +66,7 @@ $(function() {
 
     // create user api
     $.ajax({
-      type: 'PUT',
+      type: 'POST',
       url: apiURL + '/users',
       contentType: 'application/json',
       crossDomain: true,
@@ -71,7 +78,7 @@ $(function() {
         postCannyTokenAndRedirect(authToken)
       },
       error: function(res) {
-        console.log('sign up failed')
+        console.log(res)
         setLoading(false, signupForm)
         showModalWithMsg(false, res.responseJSON.error_message)
       }
