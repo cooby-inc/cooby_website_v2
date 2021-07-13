@@ -50,7 +50,7 @@ $(function() {
             lang: 'en',
             name: data.name,
             company: data.company,
-            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            timezone: 'Asia/Taipei'
           }),
           beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', authToken)
@@ -60,13 +60,14 @@ $(function() {
             window.location = window.location.protocol + '/redeem-success.html?email=' + data.email
           },
           error: function(res) {
+            console.log('info', res)
             setActivateAccountLoading(false)
-            showErrorModalWithMsg(res)
+            showErrorModalWithMsg(res.responseJSON.error_message)
           }
         })
       },
       error: function(res) {
-        console.log(res)
+        console.log('users', res)
         setActivateAccountLoading(false)
         showErrorModalWithMsg(res.responseJSON.error_message)
       }
