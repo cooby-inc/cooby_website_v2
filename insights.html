@@ -166,6 +166,10 @@
     /></noscript>
     <!-- End Facebook Pixel Code -->
 
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly link widget end -->
   </head>
   <style>
 
@@ -515,7 +519,7 @@
               </div>
              </li>
           </ul>
-          <ul class="navbar-nav ml-auto" style="margin-right: 1rem;">
+          <ul class="navbar-nav ml-auto d-none" style="margin-right: 1rem;">
             <li class="nav-item">
               <a id="signInSignUp"
                  href="https://cooby.app.link/SqNxlEma8db?utm_content=navbar"
@@ -527,7 +531,7 @@
             </li>
           </ul>
           <!-- Button -->
-          <div class="text-center pb-md-0 pb-8">
+          <div class="text-center pb-md-0 pb-8  d-none">
             <a class="navbar-btn btn btn-sm btn-primary lift"
                data-toggle="modal"
                href="#modalSignupHorizontal"
@@ -569,14 +573,13 @@
               <section id='cooby-insight-btn-and-ps'
               class="d-flex flex-column align-items-start">
                 <div>
-                  <div id='BZ0_entry_button' onclick="onBZ0EntryButtonClick()">
-                    <span
-                      class="btn btn-primary lift mb-3"
-                    >Get Your Free Report Now</span>
-                  </div>
-                  <div id='BZ0_ps' style="color: #06BF9D; font-size: 12px; text-align: center;">
-                    *No signup required
-                  </div>
+                  <a id='BZ0_entry_button'
+                    href=''
+                    onclick="gaTracking('try_insights', 'click', 'TalkToExpertsBtn'); Calendly.initPopupWidget({url: 'https://calendly.com/cooby/cooby-insights-demo'});return false;">
+                    <span class="btn btn-primary lift mb-3">
+                      Talk to Our Experts
+                    </span>
+                  </a>
                 </div>
               </section>
             </div>
