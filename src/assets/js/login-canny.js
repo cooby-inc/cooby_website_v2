@@ -41,7 +41,7 @@ $(function() {
       data: JSON.stringify(data),
       success: function(res) {
         console.log('success')
-        showModalWithMsg(true, 'Redirecting to Canny...')
+        showModalWithMsg(true, 'Redirecting to our roadmap...')
         var authToken = 'Bearer ' + res.token
         postCannyTokenAndRedirect(authToken)
       },
@@ -73,7 +73,7 @@ $(function() {
       data: JSON.stringify(data),
       success: function(res) {
         console.log('success')
-        showModalWithMsg(true, 'You created a Cooby account. Redirecting to Canny...')
+        showModalWithMsg(true, 'You created a Cooby account. Redirecting to our roadmap...')
         var authToken = 'Bearer ' + res.token
         postCannyTokenAndRedirect(authToken)
       },
